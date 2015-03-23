@@ -1,5 +1,6 @@
 module.exports =
 	name: 'Raspberry Pi'
+	arch: 'rpi'
 	state: 'released'
 	isDefault: true
 

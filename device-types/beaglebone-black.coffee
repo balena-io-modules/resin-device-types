@@ -1,5 +1,6 @@
 module.exports =
 	name: 'BeagleBone Black'
+	arch: 'armv7hf'
 	state: 'released'
 
 	instructions: [
