@@ -1,5 +1,6 @@
 module.exports =
 	name: 'Intel Edison'
+	arch: 'i386'
 	state: 'preview'
 
 	forceNetwork: 'wifi'
