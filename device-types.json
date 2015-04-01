@@ -20,7 +20,29 @@
 		"state": "PREVIEW",
 		"forceNetwork": "wifi",
 		"gettingStartedLink": "http://docs.resin.io/#/pages/gettingStarted-Edison.md",
-		"instructions": []
+		"instructions": {
+			"osx": [
+				"You need either <a href=\"http://brew.sh/\">Homebrew</a> or <a href=\"https://www.macports.org/\">MacPorts</a> installed on your system.\n<br>\nFor Homebrew - run the following to install <code>dfu-util</code>:\n<br>\n<code>brew install dfu-util</code>\n<br>\nFor MacPorts - run the following to install <code>dfu-util</code>:\n<br>\n<code>sudo port install dfu-util</code>",
+				"Unplug the Intel Edison board from your system.",
+				"Unzip the downloaded Device OS file.",
+				"Execute the following from the unzipped directory:\n<br>\n<code>sudo ./flash.sh</code>",
+				"Plug the Intel Edison as per the instructions on your terminal.\n<br>\nYou can check the progress of the provisioning on your terminal."
+			],
+			"windows": [
+				"Install Windows drivers for Edison from <a href=\"http://downloadmirror.intel.com/24698/eng/IntelEdisonDriverSetup1.2.1.exe\">here</a>",
+				"Unplug the Intel Edison board from your system.",
+				"Unzip the downloaded Device OS file.",
+				"Open a terminal with administrative privileges and execute the following from the unzipped directory:\n<br>\n<code>flashall.bat</code>",
+				"Plug the Intel Edison as per the instructions on your terminal.\n<br>\nYou can check the progress of the provisioning on your terminal."
+			],
+			"linux": [
+				"Install <code>dfu-util</code> from your distributions repos. For example, for Ubuntu:\n<br>\n<code>apt-get install dfu-util</code>",
+				"Unplug the Intel Edison board from your system.",
+				"Unzip the downloaded Device OS file.",
+				"Execute the following from the unzipped directory:\n<br>\n<code>sudo ./flash.sh</code>",
+				"Plug the Intel Edison as per the instructions on your terminal.\n<br>\nYou can check the progress of the provisioning on your terminal."
+			]
+		}
 	},
 	{
 		"slug": "raspberry-pi",
