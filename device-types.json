@@ -25,7 +25,7 @@
 				"You need either <a href=\"http://brew.sh/\">Homebrew</a> or <a href=\"https://www.macports.org/\">MacPorts</a> installed on your system.\n<br>\nFor Homebrew - run the following to install <code>dfu-util</code>:\n<br>\n<code>brew install dfu-util</code>\n<br>\nFor MacPorts - run the following to install <code>dfu-util</code>:\n<br>\n<code>sudo port install dfu-util</code>",
 				"Unplug the Intel Edison board from your system.",
 				"Unzip the downloaded Device OS file.",
-				"Execute the following from the unzipped directory:\n<br>\n<code>sudo ./flash.sh</code>",
+				"Execute the following from the unzipped directory:\n<br>\n<code>sudo ./flashall.sh</code>",
 				"Plug the Intel Edison as per the instructions on your terminal.\n<br>\nYou can check the progress of the provisioning on your terminal."
 			],
 			"windows": [
@@ -39,7 +39,7 @@
 				"Install <code>dfu-util</code> from your distributions repos. For example, for Ubuntu:\n<br>\n<code>apt-get install dfu-util</code>",
 				"Unplug the Intel Edison board from your system.",
 				"Unzip the downloaded Device OS file.",
-				"Execute the following from the unzipped directory:\n<br>\n<code>sudo ./flash.sh</code>",
+				"Execute the following from the unzipped directory:\n<br>\n<code>sudo ./flashall.sh</code>",
 				"Plug the Intel Edison as per the instructions on your terminal.\n<br>\nYou can check the progress of the provisioning on your terminal."
 			]
 		}

@@ -17,7 +17,7 @@ UNZIP = 'Unzip the downloaded Device OS file.'
 OSX_LINUX_FLASH = '''
 	Execute the following from the unzipped directory:
 	<br>
-	<code>sudo ./flash.sh</code>
+	<code>sudo ./flashall.sh</code>
 '''
 
 PLUG = '''
