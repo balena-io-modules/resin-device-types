@@ -5,12 +5,12 @@
 		"arch": "armv7hf",
 		"state": "RELEASED",
 		"instructions": [
-			"Use <code>dd</code> or <code>Pi Filler</code> software to burn the .img to your SD card.<br>\n<strong>Warning!</strong>&nbsp;This step is dangerous. You can see a full description of this process\n<a href=\"http://docs.resin.io/#/pages/gettingStarted-BBB.md\">here</a>.",
+			"Use <code>dd</code> or <code>Pi Filler</code> software to burn the .img to your SD card.<br>\n<strong>Warning!</strong>&nbsp;This step is dangerous. You can see a full description of this process\n<a href=\"http://docs.resin.io/#/pages/installing/gettingStarted-BBB.md\">here</a>.",
 			"Safely eject the freshly burnt SD card and insert into the BeagleBone Black.",
 			"Connect your device to the internet.",
 			"Power up the BBB while holding down the small button near the SD slot. You need to keep it pressed until the blue LEDs start flashing wildly."
 		],
-		"gettingStartedLink": "http://docs.resin.io/#/pages/gettingStarted-BBB.md",
+		"gettingStartedLink": "http://docs.resin.io/#/pages/installing/gettingStarted-BBB.md",
 		"supportsBlink": true
 	},
 	{
@@ -19,7 +19,7 @@
 		"arch": "i386",
 		"state": "PREVIEW",
 		"forceNetwork": "wifi",
-		"gettingStartedLink": "http://docs.resin.io/#/pages/gettingStarted-Edison.md",
+		"gettingStartedLink": "http://docs.resin.io/#/pages/installing/gettingStarted-Edison.md",
 		"instructions": {
 			"osx": [
 				"You need either <a href=\"http://brew.sh/\">Homebrew</a> or <a href=\"https://www.macports.org/\">MacPorts</a> installed on your system.\n<br>\nFor Homebrew - run the following to install <code>dfu-util</code>:\n<br>\n<code>brew install dfu-util</code>\n<br>\nFor MacPorts - run the following to install <code>dfu-util</code>:\n<br>\n<code>sudo port install dfu-util</code>",
@@ -51,11 +51,11 @@
 		"state": "RELEASED",
 		"isDefault": true,
 		"instructions": [
-			"Use <code>dd</code> or <code>Pi Filler</code> software to burn the .img to your SD card.<br>\n<strong>Warning!</strong>&nbsp;This step is dangerous. You can see a full description of this process\n<a href=\"http://docs.resin.io/#/pages/gettingStarted.md\">here</a>.",
+			"Use <code>dd</code> or <code>Pi Filler</code> software to burn the .img to your SD card.<br>\n<strong>Warning!</strong>&nbsp;This step is dangerous. You can see a full description of this process\n<a href=\"http://docs.resin.io/#/pages/installing/gettingStarted.md\">here</a>.",
 			"Safely eject the freshly burnt SD card and insert into the Raspberry Pi.",
 			"Connect your device to the internet, then boot it up."
 		],
-		"gettingStartedLink": "http://docs.resin.io/#/pages/gettingStarted.md",
+		"gettingStartedLink": "http://docs.resin.io/#/pages/installing/gettingStarted.md",
 		"supportsBlink": true
 	},
 	{
@@ -64,11 +64,11 @@
 		"arch": "armv7hf",
 		"state": "RELEASED",
 		"instructions": [
-			"Use <code>dd</code> or <code>Pi Filler</code> software to burn the .img to your SD card.<br>\n<strong>Warning!</strong>&nbsp;This step is dangerous. You can see a full description of this process\n<a href=\"http://docs.resin.io/#/pages/gettingStarted.md\">here</a>.",
+			"Use <code>dd</code> or <code>Pi Filler</code> software to burn the .img to your SD card.<br>\n<strong>Warning!</strong>&nbsp;This step is dangerous. You can see a full description of this process\n<a href=\"http://docs.resin.io/#/pages/installing/gettingStarted.md\">here</a>.",
 			"Safely eject the freshly burnt SD card and insert into the Raspberry Pi 2.",
 			"Connect your device to the internet, then boot it up."
 		],
-		"gettingStartedLink": "http://docs.resin.io/#/pages/gettingStarted.md",
+		"gettingStartedLink": "http://docs.resin.io/#/pages/installing/gettingStarted.md",
 		"supportsBlink": true
 	}
 ]
