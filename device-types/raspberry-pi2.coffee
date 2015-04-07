@@ -8,5 +8,5 @@ module.exports =
 		'EJECT'
 		'CONNECT_AND_BOOT'
 	]
-	gettingStartedLink: 'http://docs.resin.io/#/pages/gettingStarted-RPI2.md'
+	gettingStartedLink: 'http://docs.resin.io/#/pages/gettingStarted.md'
 	supportsBlink: true
