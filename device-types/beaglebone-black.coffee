@@ -10,5 +10,5 @@ module.exports =
 		'Power up the BBB while holding down the small button near the SD slot.
 		You need to keep it pressed until the blue LEDs start flashing wildly.'
 	]
-	gettingStartedLink: 'http://docs.resin.io/#/pages/gettingStarted-BBB.md'
+	gettingStartedLink: 'http://docs.resin.io/#/pages/installing/gettingStarted-BBB.md'
 	supportsBlink: true

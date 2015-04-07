@@ -9,5 +9,5 @@ module.exports =
 		'EJECT'
 		'CONNECT_AND_BOOT'
 	]
-	gettingStartedLink: 'http://docs.resin.io/#/pages/gettingStarted.md'
+	gettingStartedLink: 'http://docs.resin.io/#/pages/installing/gettingStarted.md'
 	supportsBlink: true

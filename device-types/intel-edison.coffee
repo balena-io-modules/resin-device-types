@@ -47,7 +47,7 @@ module.exports =
 	state: 'preview'
 
 	forceNetwork: 'wifi'
-	gettingStartedLink: 'http://docs.resin.io/#/pages/gettingStarted-Edison.md'
+	gettingStartedLink: 'http://docs.resin.io/#/pages/installing/gettingStarted-Edison.md'
 
 	instructions:
 		osx: [ OSX_DFU, UNPLUG, UNZIP, OSX_LINUX_FLASH, PLUG ]
