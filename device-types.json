@@ -15,9 +15,9 @@
 	},
 	{
 		"slug": "intel-edison",
-		"name": "Intel Edison (PREVIEW)",
+		"name": "Intel Edison (EXPERIMENTAL)",
 		"arch": "i386",
-		"state": "PREVIEW",
+		"state": "EXPERIMENTAL",
 		"forceNetwork": "wifi",
 		"gettingStartedLink": "http://docs.resin.io/#/pages/installing/gettingStarted-Edison.md",
 		"instructions": {
