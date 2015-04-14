@@ -44,7 +44,7 @@ LINUX_DFU = '''
 module.exports =
 	name: 'Intel Edison'
 	arch: 'i386'
-	state: 'preview'
+	state: 'experimental'
 
 	forceNetwork: 'wifi'
 	gettingStartedLink: 'http://docs.resin.io/#/pages/installing/gettingStarted-Edison.md'
