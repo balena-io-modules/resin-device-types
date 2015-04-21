@@ -4,6 +4,8 @@ module.exports =
 	state: 'released'
 	isDefault: true
 
+	configPartition: '4:1'
+
 	instructions: [
 		'BURN_IMAGE'
 		'EJECT'
