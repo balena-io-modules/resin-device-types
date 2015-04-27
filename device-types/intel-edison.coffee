@@ -1,12 +1,7 @@
 OSX_DFU = '''
-	You need either <a href="http://brew.sh/">Homebrew</a> or <a href="https://www.macports.org/">MacPorts</a> installed on your system.
+	You need <a href="https://www.macports.org/">MacPorts</a> installed on your system.
 	<br>
-	For Homebrew - run the following to install <code>dfu-util</code>:
-	<br>
-	<code>brew install dfu-util</code>
-	<br>
-	For MacPorts - run the following to install <code>dfu-util</code>:
-	<br>
+	Run the following to install <code>dfu-util</code>:
 	<code>sudo port install dfu-util</code>
 '''
 
