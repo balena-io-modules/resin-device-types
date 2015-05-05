@@ -19,7 +19,7 @@ module.exports =
 		type: 'select'
 		values: [ 'Z7010', 'Z7020' ]
 	,
-		label: 'Coprocessor core'
+		label: 'Coprocessor cores'
 		name: 'coprocessorCore'
 		type: 'select'
 		values: [ '16', '64' ]
