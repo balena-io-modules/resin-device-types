@@ -1,6 +1,6 @@
 module.exports =
 	name: 'Parallella'
-	arch: '???'
+	arch: 'armv7hf'
 	state: 'preview'
 
 	configPartition: '???'
