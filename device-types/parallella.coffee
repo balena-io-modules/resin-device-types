@@ -3,8 +3,6 @@ module.exports =
 	arch: 'armv7hf'
 	state: 'preview'
 
-	configPartition: '???'
-
 	instructions: [
 		'BURN_IMAGE'
 		'EJECT'
