@@ -46,6 +46,45 @@
 		}
 	},
 	{
+		"slug": "parallella",
+		"name": "Parallella (PREVIEW)",
+		"arch": "armv7hf",
+		"state": "PREVIEW",
+		"instructions": [
+			"Use <code>dd</code> or <code>Pi Filler</code> software to burn the .img to your SD card.<br>\n<strong>Warning!</strong>&nbsp;This step is dangerous. You can see a full description of this process\n<a href=\"http://docs.resin.io/#/pages/installing/gettingStarted-Parallella.md\">here</a>.",
+			"Safely eject the freshly burnt SD card and insert into the Parallella.",
+			"Connect your device to the internet, then boot it up."
+		],
+		"gettingStartedLink": "http://docs.resin.io/#/pages/installing/gettingStarted-Parallella.md",
+		"supportsBlink": false,
+		"extraOptions": [
+			{
+				"label": "Processor",
+				"name": "processorType",
+				"type": "select",
+				"values": [
+					"Z7010",
+					"Z7020"
+				]
+			},
+			{
+				"label": "Coprocessor cores",
+				"name": "coprocessorCore",
+				"type": "select",
+				"values": [
+					"16",
+					"64"
+				]
+			},
+			{
+				"label": "HDMI",
+				"name": "hdmi",
+				"type": "checkbox",
+				"value": 1
+			}
+		]
+	},
+	{
 		"slug": "raspberry-pi",
 		"name": "Raspberry Pi",
 		"arch": "rpi",
