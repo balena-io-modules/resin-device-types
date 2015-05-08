@@ -22,7 +22,7 @@ PLUG = '''
 '''
 
 WINDOWS_DRIVERS = 'Install Windows drivers for Edison from
-	<a href="http://downloadmirror.intel.com/24698/eng/IntelEdisonDriverSetup1.2.1.exe">here</a>'
+	<a href="http://downloadmirror.intel.com/24909/eng/IntelEdisonDriverSetup1.2.1.exe">here</a>'
 
 WINDOWS_FLASH = '''
 	Open a terminal with administrative privileges and execute the following from the unzipped directory:
