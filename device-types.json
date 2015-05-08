@@ -30,7 +30,7 @@
 				"Plug the Intel Edison as per the instructions on your terminal.\n<br>\nYou can check the progress of the provisioning on your terminal."
 			],
 			"windows": [
-				"Install Windows drivers for Edison from <a href=\"http://downloadmirror.intel.com/24698/eng/IntelEdisonDriverSetup1.2.1.exe\">here</a>",
+				"Install Windows drivers for Edison from <a href=\"http://downloadmirror.intel.com/24909/eng/IntelEdisonDriverSetup1.2.1.exe\">here</a>",
 				"Unplug the Intel Edison board from your system.",
 				"Unzip the downloaded Device OS file.",
 				"Open a terminal with administrative privileges and execute the following from the unzipped directory:\n<br>\n<code>flashall.bat</code>",
