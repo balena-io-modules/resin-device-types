@@ -9,7 +9,7 @@ module.exports =
 		'CONNECT_AND_BOOT'
 	]
 	gettingStartedLink: 'http://docs.resin.io/#/pages/installing/gettingStarted-Parallella.md'
-	supportsBlink: false
+	supportsBlink: true
 
 	extraOptions: [
 		label: 'Processor'
