@@ -23,7 +23,7 @@
 		"gettingStartedLink": "http://docs.resin.io/#/pages/installing/gettingStarted-Edison.md",
 		"instructions": {
 			"osx": [
-				"You need <a href=\"https://www.macports.org/\">MacPorts</a> installed on your system.\n<br>\nRun the following to install <code>dfu-util</code>:\n<code>sudo port install dfu-util @0.7 && sudo port activate dfu-util @0.7</code>",
+				"You need <a href=\"https://www.macports.org/\">MacPorts</a> installed on your system.\n<br>\nRun the following to install <code>dfu-util</code>:\n<code>sudo port install dfu-util</code>",
 				"Unplug the Intel Edison board from your system.",
 				"Unzip the downloaded Device OS file.",
 				"Execute the following from the unzipped directory:\n<br>\n<code>sudo ./flashall.sh</code>",
@@ -56,7 +56,7 @@
 			"Connect your device to the internet, then boot it up."
 		],
 		"gettingStartedLink": "http://docs.resin.io/#/pages/installing/gettingStarted-Parallella.md",
-		"supportsBlink": false,
+		"supportsBlink": true,
 		"extraOptions": [
 			{
 				"label": "Processor",
