@@ -2,7 +2,7 @@ OSX_DFU = '''
 	You need <a href="https://www.macports.org/">MacPorts</a> installed on your system.
 	<br>
 	Run the following to install <code>dfu-util</code>:
-	<code>sudo port install dfu-util</code>
+	<code>sudo port install dfu-util @0.7 && sudo port activate dfu-util @0.7</code>
 '''
 
 UNPLUG = 'Unplug the Intel Edison board from your system.'
