@@ -47,9 +47,9 @@
 	},
 	{
 		"slug": "parallella",
-		"name": "Parallella (PREVIEW)",
+		"name": "Parallella (EXPERIMENTAL)",
 		"arch": "armv7hf",
-		"state": "PREVIEW",
+		"state": "EXPERIMENTAL",
 		"instructions": [
 			"Use <code>dd</code> or <code>Pi Filler</code> software to burn the .img to your SD card.<br>\n<strong>Warning!</strong>&nbsp;This step is dangerous. You can see a full description of this process\n<a href=\"http://docs.resin.io/#/pages/installing/gettingStarted-Parallella.md\">here</a>.",
 			"Safely eject the freshly burnt SD card and insert into the Parallella.",
