@@ -1,7 +1,7 @@
 module.exports =
 	name: 'Parallella'
 	arch: 'armv7hf'
-	state: 'preview'
+	state: 'experimental'
 
 	instructions: [
 		'BURN_IMAGE'
