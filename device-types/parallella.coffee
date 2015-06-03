@@ -27,3 +27,8 @@ module.exports =
 		type: 'checkbox'
 		value: 1
 	]
+
+	yocto:
+		machine: 'parallella-hdmi-resin'
+		image: 'resin-image'
+		fstype: 'resin-sdcard'

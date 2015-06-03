@@ -14,3 +14,8 @@ module.exports =
 	]
 	gettingStartedLink: 'http://docs.resin.io/#/pages/installing/gettingStarted-BBB.md'
 	supportsBlink: true
+
+	yocto:
+		machine: 'beaglebone'
+		image: 'resin-image-flasher'
+		fstype: 'resin-sdcard'
