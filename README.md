@@ -7,6 +7,7 @@ The current process for making changes and propagating them to other repos is:
 * make your changes to the source files (`device-types` folder, or the `build.coffee` script) in a separate branch and send a PR
 * once it's approved merge the PR
 * checkout the master branch on your machine and pull your recent changes
+* get the needed npm modules by running `npm install`
 * run `npm run prepublish`, also open the `package.json` file and bump the package version there (normally bump minor for new features, patch for small fixes, and major for serious refactoring or breaking changes)
 * commit your changes (yes, to master): `git commit -am "version bump"`
 * tag your changes: `git tag v2.x.x` (substitute with the actual version)
