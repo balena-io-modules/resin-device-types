@@ -12,7 +12,31 @@
 			"Power up the BBB while holding down the small button near the SD slot. You need to keep it pressed until the blue LEDs start flashing wildly."
 		],
 		"gettingStartedLink": "http://docs.resin.io/#/pages/installing/gettingStarted-BBB.md",
-		"supportsBlink": true
+		"supportsBlink": true,
+		"yocto": {
+			"machine": "beaglebone",
+			"image": "resin-image-flasher",
+			"fstype": "resin-sdcard"
+		}
+	},
+	{
+		"slug": "hummingboard",
+		"name": "Hummingboard (PREVIEW)",
+		"arch": "armv7hf",
+		"state": "PREVIEW",
+		"configPartition": "4:1",
+		"instructions": [
+			"Use <code>dd</code> or <code>Pi Filler</code> software to burn the .img to your SD card.<br>\n<strong>Warning!</strong>&nbsp;This step is dangerous. You can see a full description of this process\n<a href=\"http://docs.resin.io/#/pages/installing/gettingStarted-Hummingboard.md\">here</a>.",
+			"Safely eject the freshly burnt SD card and insert into the Hummingboard.",
+			"Connect your device to the internet, then boot it up."
+		],
+		"gettingStartedLink": "http://docs.resin.io/#/pages/installing/gettingStarted-Hummingboard.md",
+		"supportsBlink": false,
+		"yocto": {
+			"machine": "cubox-i",
+			"image": "resin-image",
+			"fstype": "resin-sdcard"
+		}
 	},
 	{
 		"slug": "intel-edison",
@@ -43,6 +67,25 @@
 				"Execute the following from the unzipped directory:\n<br>\n<code>sudo ./flashall.sh</code>",
 				"Plug the Intel Edison as per the instructions on your terminal.\n<br>\nYou can check the progress of the provisioning on your terminal."
 			]
+		}
+	},
+	{
+		"slug": "nitrogen6x",
+		"name": "Nitrogen 6X (PREVIEW)",
+		"arch": "armv7hf",
+		"state": "PREVIEW",
+		"configPartition": "4:1",
+		"instructions": [
+			"Use <code>dd</code> or <code>Pi Filler</code> software to burn the .img to your SD card.<br>\n<strong>Warning!</strong>&nbsp;This step is dangerous. You can see a full description of this process\n<a href=\"http://docs.resin.io/#/pages/installing/gettingStarted-Nitrogen6x.md\">here</a>.",
+			"Safely eject the freshly burnt SD card and insert into the Nitrogen 6X.",
+			"Connect your device to the internet, then boot it up."
+		],
+		"gettingStartedLink": "http://docs.resin.io/#/pages/installing/gettingStarted-Nitrogen6x.md",
+		"supportsBlink": false,
+		"yocto": {
+			"machine": "nitrogen6x",
+			"image": "resin-image",
+			"fstype": "resin-sdcard"
 		}
 	},
 	{
@@ -82,7 +125,12 @@
 				"type": "checkbox",
 				"value": 1
 			}
-		]
+		],
+		"yocto": {
+			"machine": "parallella-hdmi-resin",
+			"image": "resin-image",
+			"fstype": "resin-sdcard"
+		}
 	},
 	{
 		"slug": "raspberry-pi",
@@ -96,7 +144,12 @@
 			"Connect your device to the internet, then boot it up."
 		],
 		"gettingStartedLink": "http://docs.resin.io/#/pages/installing/gettingStarted.md",
-		"supportsBlink": true
+		"supportsBlink": true,
+		"yocto": {
+			"machine": "raspberrypi",
+			"image": "resin-image",
+			"fstype": "resin-sdcard"
+		}
 	},
 	{
 		"slug": "raspberry-pi2",
@@ -111,6 +164,11 @@
 			"Connect your device to the internet, then boot it up."
 		],
 		"gettingStartedLink": "http://docs.resin.io/#/pages/installing/gettingStarted.md",
-		"supportsBlink": true
+		"supportsBlink": true,
+		"yocto": {
+			"machine": "raspberrypi2",
+			"image": "resin-image",
+			"fstype": "resin-sdcard"
+		}
 	}
 ]

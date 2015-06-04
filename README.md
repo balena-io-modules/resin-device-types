@@ -4,7 +4,7 @@
 
 The current process for making changes and propagating them to other repos is:
 
-* make your changes to the source files (`device-types` folder, or the `build.coffee` script) in a separate branch and send a PR
+* make your changes to the source files (`device-types` folder, or the `build.coffee` script) in a separate branch and send a PR. See https://resinio.atlassian.net/wiki/display/RES/Adding+device+types+definitions for instructions
 * once it's approved merge the PR
 * checkout the master branch on your machine and pull your recent changes
 * get the needed npm modules by running `npm install`
