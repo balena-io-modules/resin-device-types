@@ -3,7 +3,7 @@ module.exports =
 	arch: 'armv7hf'
 	state: 'released'
 
-	configPartition: 3
+	configPartition: '4:1'
 
 	instructions: [
 		'BURN_IMAGE'
