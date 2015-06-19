@@ -12,20 +12,19 @@ module.exports =
 	supportsBlink: true
 
 	extraOptions: [
-		label: 'Processor'
+		message: 'Processor'
 		name: 'processorType'
-		type: 'select'
-		values: [ 'Z7010', 'Z7020' ]
+		type: 'list'
+		choices: [ 'Z7010', 'Z7020' ]
 	,
-		label: 'Coprocessor cores'
+		message: 'Coprocessor cores'
 		name: 'coprocessorCore'
-		type: 'select'
-		values: [ '16', '64' ]
+		type: 'list'
+		choices: [ '16', '64' ]
 	,
-		label: 'HDMI'
+		message: 'HDMI'
 		name: 'hdmi'
-		type: 'checkbox'
-		value: 1
+		type: 'confirm'
 	]
 
 	yocto:
