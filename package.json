@@ -1,6 +1,6 @@
 {
   "name": "resin-device-types",
-  "version": "2.9.0",
+  "version": "3.0.0",
   "description": "Metadata about supported device types",
   "main": "device-types.json",
   "scripts": {
