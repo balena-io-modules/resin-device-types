@@ -21,10 +21,6 @@ module.exports =
 		name: 'coprocessorCore'
 		type: 'list'
 		choices: [ '16', '64' ]
-	,
-		message: 'HDMI'
-		name: 'hdmi'
-		type: 'confirm'
 	]
 
 	yocto:
