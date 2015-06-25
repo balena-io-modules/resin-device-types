@@ -118,11 +118,6 @@
 					"16",
 					"64"
 				]
-			},
-			{
-				"message": "HDMI",
-				"name": "hdmi",
-				"type": "confirm"
 			}
 		],
 		"yocto": {
