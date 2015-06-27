@@ -5,6 +5,13 @@ OSX_DFU = '''
 	<code>sudo port install dfu-util @0.7 && sudo port activate dfu-util @0.7</code>
 '''
 
+COREUTILS = '''
+    You need <code>coreutils</code> installed on your system.
+
+    Run the following to install <code>coreutils</code>:
+	<code>sudo port install dfu-util</code>
+'''
+
 UNPLUG = 'Unplug the Intel Edison board from your system.'
 
 UNZIP = 'Unzip the downloaded Device OS file.'
@@ -45,6 +52,6 @@ module.exports =
 	gettingStartedLink: 'http://docs.resin.io/#/pages/installing/gettingStarted-Edison.md'
 
 	instructions:
-		osx: [ OSX_DFU, UNPLUG, UNZIP, OSX_LINUX_FLASH, PLUG ]
+		osx: [ OSX_DFU, UNPLUG, UNZIP, COREUTILS, OSX_LINUX_FLASH, PLUG ]
 		windows: [ WINDOWS_DRIVERS, UNPLUG, UNZIP, WINDOWS_FLASH, PLUG ]
 		linux:  [ LINUX_DFU, UNPLUG, UNZIP, OSX_LINUX_FLASH, PLUG ]
