@@ -47,10 +47,9 @@
 		"gettingStartedLink": "http://docs.resin.io/#/pages/installing/gettingStarted-Edison.md",
 		"instructions": {
 			"osx": [
-				"You need <a href=\"https://www.macports.org/\">MacPorts</a> installed on your system.\n<br>\nRun the following to install <code>coreutils</code>:\n<code>sudo port install coreutils</code>\n<br>\nRun the following to install <code>dfu-util</code>:\n<code>sudo port install dfu-util @0.7 && sudo port activate dfu-util @0.7</code>",
+				"You need <a href=\"https://www.macports.org/\">MacPorts</a> installed on your system.\n<br>\nRun the following to install <code>dfu-util</code> and <code>coreutils</code>:\n<code>sudo port install coreutils dfu-util @0.7 && sudo port activate dfu-util @0.7</code>",
 				"Unplug the Intel Edison board from your system.",
 				"Unzip the downloaded Device OS file.",
-                "",
 				"Execute the following from the unzipped directory:\n<br>\n<code>sudo ./flashall.sh</code>",
 				"Plug the Intel Edison as per the instructions on your terminal.\n<br>\nYou can check the progress of the provisioning on your terminal."
 			],
@@ -62,8 +61,7 @@
 				"Plug the Intel Edison as per the instructions on your terminal.\n<br>\nYou can check the progress of the provisioning on your terminal."
 			],
 			"linux": [
-				"Install <code>dfu-util</code> from your distributions repos. For example, for Ubuntu:\n<br>\n<code>apt-get install dfu-util</code>",
-				"Install <code>coreutils</code> from your distributions repos. For example, for Ubuntu:\n<br>\n<code>apt-get install coreutils</code>",
+				"Install <code>dfu-util</code> and <code>coreutils</code> from your distributions repos. For example, for Ubuntu:\n<br>\n<code>apt-get install dfu-util coreutils</code>",
 				"Unplug the Intel Edison board from your system.",
 				"Unzip the downloaded Device OS file.",
 				"Execute the following from the unzipped directory:\n<br>\n<code>sudo ./flashall.sh</code>",
