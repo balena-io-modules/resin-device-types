@@ -1,15 +1,8 @@
-OSX_DFU = '''
+OSX_DFU_COREUTILS = '''
 	You need <a href="https://www.macports.org/">MacPorts</a> installed on your system.
 	<br>
-	Run the following to install <code>dfu-util</code>:
-	<code>sudo port install dfu-util @0.7 && sudo port activate dfu-util @0.7</code>
-'''
-
-COREUTILS = '''
-    You need <code>coreutils</code> installed on your system.
-
-    Run the following to install <code>coreutils</code>:
-	<code>sudo port install dfu-util</code>
+	Run the following to install <code>dfu-util</code> and <code>coreutils</code>:
+	<code>sudo port install coreutils dfu-util @0.7 && sudo port activate dfu-util @0.7</code>
 '''
 
 UNPLUG = 'Unplug the Intel Edison board from your system.'
@@ -37,10 +30,10 @@ WINDOWS_FLASH = '''
 	<code>flashall.bat</code>
 '''
 
-LINUX_DFU = '''
-	Install <code>dfu-util</code> from your distributions repos. For example, for Ubuntu:
+LINUX_DFU_COREUTILS = '''
+	Install <code>dfu-util</code> and <code>coreutils</code> from your distributions repos. For example, for Ubuntu:
 	<br>
-	<code>apt-get install dfu-util</code>
+	<code>apt-get install dfu-util coreutils</code>
 '''
 
 module.exports =
@@ -52,6 +45,6 @@ module.exports =
 	gettingStartedLink: 'http://docs.resin.io/#/pages/installing/gettingStarted-Edison.md'
 
 	instructions:
-		osx: [ OSX_DFU, UNPLUG, UNZIP, COREUTILS, OSX_LINUX_FLASH, PLUG ]
+		osx: [ OSX_DFU_COREUTILS, UNPLUG, UNZIP, OSX_LINUX_FLASH, PLUG ]
 		windows: [ WINDOWS_DRIVERS, UNPLUG, UNZIP, WINDOWS_FLASH, PLUG ]
-		linux:  [ LINUX_DFU, UNPLUG, UNZIP, OSX_LINUX_FLASH, PLUG ]
+		linux:  [ LINUX_DFU_COREUTILS, UNPLUG, UNZIP, OSX_LINUX_FLASH, PLUG ]
