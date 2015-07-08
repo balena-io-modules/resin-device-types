@@ -1,7 +1,7 @@
 module.exports =
 	name: 'Nitrogen 6X'
 	arch: 'armv7hf'
-	state: 'preview'
+	state: 'experimental'
 
 	configPartition: '4:1'
 
