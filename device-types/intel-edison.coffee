@@ -1,8 +1,8 @@
-OSX_DFU_COREUTILS = '''
+OSX_DFU_COREUTILS_USBUTILS = '''
 	You need <a href="https://www.macports.org/">MacPorts</a> installed on your system.
 	<br>
-	Run the following to install <code>dfu-util</code> and <code>coreutils</code>:
-	<code>sudo port install coreutils dfu-util @0.7 && sudo port activate dfu-util @0.7</code>
+	Run the following to install <code>dfu-util</code>, <code>usbutils</code> and <code>coreutils</code>:
+	<code>sudo port install dfu-util@0.7 usbutils coreutils && sudo port activate dfu-util@0.7</code>
 '''
 
 UNPLUG = 'Unplug the Intel Edison board from your system.'
@@ -45,6 +45,6 @@ module.exports =
 	gettingStartedLink: 'http://docs.resin.io/#/pages/installing/gettingStarted-Edison.md'
 
 	instructions:
-		osx: [ OSX_DFU_COREUTILS, UNPLUG, UNZIP, OSX_LINUX_FLASH, PLUG ]
+		osx: [ OSX_DFU_COREUTILS_USBUTILS, UNPLUG, UNZIP, OSX_LINUX_FLASH, PLUG ]
 		windows: [ WINDOWS_DRIVERS, UNPLUG, UNZIP, WINDOWS_FLASH, PLUG ]
 		linux:  [ LINUX_DFU_COREUTILS, UNPLUG, UNZIP, OSX_LINUX_FLASH, PLUG ]
