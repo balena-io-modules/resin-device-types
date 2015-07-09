@@ -1,7 +1,7 @@
 module.exports =
 	name: 'Hummingboard'
 	arch: 'armv7hf'
-	state: 'preview'
+	state: 'experimental'
 
 	configPartition: '4:1'
 
