@@ -21,9 +21,9 @@
 	},
 	{
 		"slug": "hummingboard",
-		"name": "Hummingboard (PREVIEW)",
+		"name": "Hummingboard (EXPERIMENTAL)",
 		"arch": "armv7hf",
-		"state": "PREVIEW",
+		"state": "EXPERIMENTAL",
 		"configPartition": "4:1",
 		"instructions": [
 			"Use <code>dd</code> or <code>Pi Filler</code> software to burn the .img to your SD card.<br>\n<strong>Warning!</strong>&nbsp;This step is dangerous. You can see a full description of this process\n<a href=\"http://docs.resin.io/#/pages/installing/gettingStarted-Hummingboard.md\">here</a>.",
@@ -47,7 +47,7 @@
 		"gettingStartedLink": "http://docs.resin.io/#/pages/installing/gettingStarted-Edison.md",
 		"instructions": {
 			"osx": [
-				"You need <a href=\"https://www.macports.org/\">MacPorts</a> installed on your system.\n<br>\nRun the following to install <code>dfu-util</code> and <code>coreutils</code>:\n<code>sudo port install coreutils dfu-util @0.7 && sudo port activate dfu-util @0.7</code>",
+				"You need <a href=\"https://www.macports.org/\">MacPorts</a> installed on your system.\n<br>\nRun the following to install <code>dfu-util</code>, <code>usbutils</code> and <code>coreutils</code>:\n<code>sudo port install dfu-util@0.7 usbutils coreutils && sudo port activate dfu-util@0.7</code>",
 				"Unplug the Intel Edison board from your system.",
 				"Unzip the downloaded Device OS file.",
 				"Execute the following from the unzipped directory:\n<br>\n<code>sudo ./flashall.sh</code>",
@@ -71,9 +71,9 @@
 	},
 	{
 		"slug": "nitrogen6x",
-		"name": "Nitrogen 6X (PREVIEW)",
+		"name": "Nitrogen 6X (EXPERIMENTAL)",
 		"arch": "armv7hf",
-		"state": "PREVIEW",
+		"state": "EXPERIMENTAL",
 		"configPartition": "4:1",
 		"instructions": [
 			"Use <code>dd</code> or <code>Pi Filler</code> software to burn the .img to your SD card.<br>\n<strong>Warning!</strong>&nbsp;This step is dangerous. You can see a full description of this process\n<a href=\"http://docs.resin.io/#/pages/installing/gettingStarted-Nitrogen6x.md\">here</a>.",
