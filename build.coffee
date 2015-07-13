@@ -15,14 +15,16 @@ deviceTypes = fs.readdirSync(path.join(__dirname, 'device-types'))
 	# don't send types that don't have explicitly defined state
 	return !!typeDefinition.state
 .map (typeDefinition) ->
-	processInstructionsArray = (instructions) ->
-		_.map instructions, (line) ->
+	processInstructionsArray = (instructions, os) ->
+		gettingStartedLink = os and typeDefinition.gettingStartedLink[os] or typeDefinition.gettingStartedLink
+		context = _.extend {}, sharedInstructionsSteps,
+			GETTING_STARTED_LINK: gettingStartedLink
+			TYPE_NAME: typeDefinition.name
+			TYPE_SLUG: typeDefinition.slug
+
+		return _.map instructions, (line) ->
 			line = sharedInstructionsSteps[line] ? line
 			template = compileTemplate(line)
-			context = _.extend {}, sharedInstructionsSteps,
-				GETTING_STARTED_LINK: typeDefinition.gettingStartedLink
-				TYPE_NAME: typeDefinition.name
-				TYPE_SLUG: typeDefinition.slug
 			return template(context)
 
 	typeDefinition.instructions = if _.isArray(typeDefinition.instructions)

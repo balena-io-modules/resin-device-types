@@ -4,7 +4,10 @@ module.exports =
 	state: 'experimental'
 
 	instructions: require('./_common-img').instructions
-	gettingStartedLink: 'http://docs.resin.io/#/pages/installing/gettingStarted-Parallella.md'
+	gettingStartedLink:
+		windows: 'http://docs.resin.io/#/pages/installing/gettingStarted-Parallella.md#windows'
+		osx: 'http://docs.resin.io/#/pages/installing/gettingStarted-Parallella.md#on-mac-and-linux'
+		linux: 'http://docs.resin.io/#/pages/installing/gettingStarted-Parallella.md#on-mac-and-linux'
 	supportsBlink: true
 
 	extraOptions: [

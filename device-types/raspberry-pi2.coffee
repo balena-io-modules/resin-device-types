@@ -7,7 +7,10 @@ module.exports =
 	configPartition: '4:1'
 
 	instructions: require('./_common-img').instructions
-	gettingStartedLink: 'http://docs.resin.io/#/pages/installing/gettingStarted.md'
+	gettingStartedLink:
+		windows: 'http://docs.resin.io/#/pages/installing/gettingStarted.md#windows'
+		osx: 'http://docs.resin.io/#/pages/installing/gettingStarted.md#on-mac-and-linux'
+		linux: 'http://docs.resin.io/#/pages/installing/gettingStarted.md#on-mac-and-linux'
 	supportsBlink: true
 
 	yocto:

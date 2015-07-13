@@ -28,7 +28,10 @@ module.exports =
 			BBB_FLASH
 		]
 
-	gettingStartedLink: 'http://docs.resin.io/#/pages/installing/gettingStarted-BBB.md'
+	gettingStartedLink:
+		windows: 'http://docs.resin.io/#/pages/installing/gettingStarted-BBB.md#windows'
+		osx: 'http://docs.resin.io/#/pages/installing/gettingStarted-BBB.md#on-mac-and-linux'
+		linux: 'http://docs.resin.io/#/pages/installing/gettingStarted-BBB.md#on-mac-and-linux'
 	supportsBlink: true
 
 	yocto:
