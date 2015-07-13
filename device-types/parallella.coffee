@@ -3,11 +3,7 @@ module.exports =
 	arch: 'armv7hf'
 	state: 'experimental'
 
-	instructions: [
-		'BURN_IMAGE'
-		'EJECT'
-		'CONNECT_AND_BOOT'
-	]
+	instructions: require('./_common-img').instructions
 	gettingStartedLink: 'http://docs.resin.io/#/pages/installing/gettingStarted-Parallella.md'
 	supportsBlink: true
 

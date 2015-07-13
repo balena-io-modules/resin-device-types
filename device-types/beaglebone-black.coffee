@@ -1,3 +1,6 @@
+BBB_FLASH = 'Power up the <%= TYPE_NAME %> while holding down the small button near the SD slot.
+You need to keep it pressed until the blue LEDs start flashing wildly.'
+
 module.exports =
 	name: 'BeagleBone Black'
 	arch: 'armv7hf'
@@ -5,13 +8,26 @@ module.exports =
 
 	configPartition: '4:1'
 
-	instructions: [
-		'BURN_IMAGE'
-		'EJECT'
-		'CONNECT'
-		'Power up the BBB while holding down the small button near the SD slot.
-		You need to keep it pressed until the blue LEDs start flashing wildly.'
-	]
+	instructions:
+		windows: [
+			'WINDOWS_DISK_IMAGER'
+			'EJECT'
+			BBB_FLASH
+		]
+		osx: [
+			'OSX_PLUG'
+			'OSX_UNMOUNT'
+			'DD_BURN_IMAGE'
+			'EJECT'
+			BBB_FLASH
+		]
+		linux: [
+			'LINUX_DF'
+			'DD_BURN_IMAGE'
+			'EJECT'
+			BBB_FLASH
+		]
+
 	gettingStartedLink: 'http://docs.resin.io/#/pages/installing/gettingStarted-BBB.md'
 	supportsBlink: true
 
