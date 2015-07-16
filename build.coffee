@@ -2,15 +2,7 @@ fs = require 'fs'
 path = require 'path'
 _ = require 'lodash'
 
-SHARED_INSTRUCTIONS_STEPS =
-	CONNECT: 'Connect your device to the internet.'
-	CONNECT_AND_BOOT: 'Connect your device to the internet, then boot it up.'
-	BURN_IMAGE: '''
-		Use <code>dd</code> or <code>Pi Filler</code> software to burn the .img to your SD card.<br>
-		<strong>Warning!</strong>&nbsp;This step is dangerous. You can see a full description of this process
-		<a href="<%= GETTING_STARTED_LINK %>">here</a>.
-	'''
-	EJECT: 'Safely eject the freshly burnt SD card and insert into the <%= TYPE_NAME %>.'
+sharedInstructionsSteps = require('./common').instructions
 
 compileTemplate = _.memoize(_.template)
 
@@ -20,17 +12,22 @@ deviceTypes = fs.readdirSync(path.join(__dirname, 'device-types'))
 	typeDefinition = require("./device-types/#{slug}")
 	return _.extend({ slug }, typeDefinition)
 .filter (typeDefinition) ->
-	# don't send types that don't have explicitly defined state
-	return !!typeDefinition.state
+	if not typeDefinition.state
+		console.warn("Ignored #{typeDefinition.slug}: `state` is not set")
+		return false
+	return true
 .map (typeDefinition) ->
-	processInstructionsArray = (instructions) ->
-		_.map instructions, (line) ->
-			line = SHARED_INSTRUCTIONS_STEPS[line] ? line
+	processInstructionsArray = (instructions, os) ->
+		gettingStartedLink = os and typeDefinition.gettingStartedLink[os] or typeDefinition.gettingStartedLink
+		context = _.extend {}, sharedInstructionsSteps,
+			GETTING_STARTED_LINK: gettingStartedLink
+			TYPE_NAME: typeDefinition.name
+			TYPE_SLUG: typeDefinition.slug
+
+		return _.map instructions, (line) ->
+			line = sharedInstructionsSteps[line] ? line
 			template = compileTemplate(line)
-			return template
-				GETTING_STARTED_LINK: typeDefinition.gettingStartedLink
-				TYPE_NAME: typeDefinition.name
-				TYPE_SLUG: typeDefinition.slug
+			return template(context)
 
 	typeDefinition.instructions = if _.isArray(typeDefinition.instructions)
 		processInstructionsArray(typeDefinition.instructions)

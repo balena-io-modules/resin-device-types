@@ -3,12 +3,11 @@ module.exports =
 	arch: 'armv7hf'
 	state: 'experimental'
 
-	instructions: [
-		'BURN_IMAGE'
-		'EJECT'
-		'CONNECT_AND_BOOT'
-	]
-	gettingStartedLink: 'http://docs.resin.io/#/pages/installing/gettingStarted-Parallella.md'
+	instructions: require('../common/common-img').instructions
+	gettingStartedLink:
+		windows: 'http://docs.resin.io/#/pages/installing/gettingStarted-Parallella.md#windows'
+		osx: 'http://docs.resin.io/#/pages/installing/gettingStarted-Parallella.md#on-mac-and-linux'
+		linux: 'http://docs.resin.io/#/pages/installing/gettingStarted-Parallella.md#on-mac-and-linux'
 	supportsBlink: true
 
 	extraOptions: [
