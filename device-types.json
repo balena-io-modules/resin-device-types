@@ -39,9 +39,9 @@
 	},
 	{
 		"slug": "hummingboard",
-		"name": "Hummingboard (EXPERIMENTAL)",
+		"name": "Hummingboard (PREVIEW)",
 		"arch": "armv7hf",
-		"state": "EXPERIMENTAL",
+		"state": "PREVIEW",
 		"configPartition": "4:1",
 		"instructions": {
 			"windows": [
@@ -108,9 +108,9 @@
 	},
 	{
 		"slug": "nitrogen6x",
-		"name": "Nitrogen 6X (EXPERIMENTAL)",
+		"name": "Nitrogen 6X (PREVIEW)",
 		"arch": "armv7hf",
-		"state": "EXPERIMENTAL",
+		"state": "PREVIEW",
 		"configPartition": "4:1",
 		"instructions": {
 			"windows": [

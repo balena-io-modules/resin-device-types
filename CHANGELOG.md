@@ -1,3 +1,6 @@
+## 07/16 - v. 4.0.1
+* Unpublish Hummingboard and Nitrogen6x
+
 ## 07/16 - v. 4.0.0
 * OS-specific instructions and getting started links
 
