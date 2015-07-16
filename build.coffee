@@ -2,7 +2,7 @@ fs = require 'fs'
 path = require 'path'
 _ = require 'lodash'
 
-sharedInstructionsSteps = require('./device-types/_common').instructions
+sharedInstructionsSteps = require('./common').instructions
 
 compileTemplate = _.memoize(_.template)
 
@@ -12,8 +12,10 @@ deviceTypes = fs.readdirSync(path.join(__dirname, 'device-types'))
 	typeDefinition = require("./device-types/#{slug}")
 	return _.extend({ slug }, typeDefinition)
 .filter (typeDefinition) ->
-	# don't send types that don't have explicitly defined state
-	return !!typeDefinition.state
+	if not typeDefinition.state
+		console.warn("Ignored #{typeDefinition.slug}: `state` is not set")
+		return false
+	return true
 .map (typeDefinition) ->
 	processInstructionsArray = (instructions, os) ->
 		gettingStartedLink = os and typeDefinition.gettingStartedLink[os] or typeDefinition.gettingStartedLink

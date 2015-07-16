@@ -3,7 +3,7 @@ module.exports =
 	arch: 'armv7hf'
 	state: 'experimental'
 
-	instructions: require('./_common-img').instructions
+	instructions: require('../common/common-img').instructions
 	gettingStartedLink:
 		windows: 'http://docs.resin.io/#/pages/installing/gettingStarted-Parallella.md#windows'
 		osx: 'http://docs.resin.io/#/pages/installing/gettingStarted-Parallella.md#on-mac-and-linux'

@@ -5,7 +5,7 @@ module.exports =
 
 	configPartition: '4:1'
 
-	instructions: require('./_common-img').instructions
+	instructions: require('../common/common-img').instructions
 	gettingStartedLink:
 		windows: 'http://docs.resin.io/#/pages/installing/gettingStarted.md#windows'
 		osx: 'http://docs.resin.io/#/pages/installing/gettingStarted.md#on-mac-and-linux'
