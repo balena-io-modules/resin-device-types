@@ -1,4 +1,5 @@
 module.exports =
+	aliases: [ 'cubox-i' ]
 	name: 'Hummingboard'
 	arch: 'armv7hf'
 	state: 'preview'

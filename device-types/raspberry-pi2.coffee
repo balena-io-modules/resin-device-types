@@ -1,4 +1,5 @@
 module.exports =
+	aliases: [ 'raspberrypi2' ]
 	name: 'Raspberry Pi 2'
 	arch: 'armv7hf'
 	state: 'released'

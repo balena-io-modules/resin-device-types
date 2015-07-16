@@ -1,4 +1,6 @@
 module.exports =
+	# TODO: why HDMI if it's broken?
+	aliases: [ 'parallella-hdmi-resin' ]
 	name: 'Parallella'
 	arch: 'armv7hf'
 	state: 'experimental'

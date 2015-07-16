@@ -1,6 +1,9 @@
 [
 	{
 		"slug": "beaglebone-black",
+		"aliases": [
+			"beaglebone"
+		],
 		"name": "BeagleBone Black",
 		"arch": "armv7hf",
 		"state": "RELEASED",
@@ -39,6 +42,9 @@
 	},
 	{
 		"slug": "hummingboard",
+		"aliases": [
+			"cubox-i"
+		],
 		"name": "Hummingboard (PREVIEW)",
 		"arch": "armv7hf",
 		"state": "PREVIEW",
@@ -77,6 +83,9 @@
 	},
 	{
 		"slug": "intel-edison",
+		"aliases": [
+			"edison"
+		],
 		"name": "Intel Edison (EXPERIMENTAL)",
 		"arch": "i386",
 		"state": "EXPERIMENTAL",
@@ -104,10 +113,19 @@
 				"Execute the following from the unzipped directory:\n<br>\n<code>sudo ./flashall.sh</code>",
 				"Plug the Intel Edison as per the instructions on your terminal.\n<br>\nYou can check the progress of the provisioning on your terminal."
 			]
+		},
+		"yocto": {
+			"machine": "edison",
+			"image": "resin-image",
+			"deployArtifact": "resin-edison",
+			"archive": true
 		}
 	},
 	{
 		"slug": "nitrogen6x",
+		"aliases": [
+			"nitrogen6x"
+		],
 		"name": "Nitrogen 6X (PREVIEW)",
 		"arch": "armv7hf",
 		"state": "PREVIEW",
@@ -146,6 +164,9 @@
 	},
 	{
 		"slug": "parallella",
+		"aliases": [
+			"parallella-hdmi-resin"
+		],
 		"name": "Parallella (EXPERIMENTAL)",
 		"arch": "armv7hf",
 		"state": "EXPERIMENTAL",
@@ -203,6 +224,9 @@
 	},
 	{
 		"slug": "raspberry-pi",
+		"aliases": [
+			"raspberrypi"
+		],
 		"name": "Raspberry Pi",
 		"arch": "rpi",
 		"state": "RELEASED",
@@ -241,6 +265,9 @@
 	},
 	{
 		"slug": "raspberry-pi2",
+		"aliases": [
+			"raspberrypi2"
+		],
 		"name": "Raspberry Pi 2",
 		"arch": "armv7hf",
 		"state": "RELEASED",

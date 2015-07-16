@@ -2,9 +2,9 @@
   "name": "resin-device-types",
   "version": "4.0.1",
   "description": "Metadata about supported device types",
-  "main": "device-types.json",
+  "main": "index.js",
   "scripts": {
-    "prepublish": "node_modules/.bin/coffee ./build.coffee"
+    "prepublish": "coffee -c ./index.coffee && coffee ./build.coffee"
   },
   "repository": {
     "type": "git",
@@ -12,8 +12,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "coffee-script": "~1.9.1",
-    "lodash": "^3.6.0"
+    "coffee-script": "~1.9.3",
+    "lodash": "^3.9.10"
   },
   "optionalDependencies": {},
   "engines": {
