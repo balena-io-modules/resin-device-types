@@ -51,4 +51,6 @@ module.exports =
 
 	yocto:
 		machine: 'edison'
-		image: 'resin-zip'
+		image: 'resin-image'
+		deployArtifact: 'resin-edison'
+		archive: true
