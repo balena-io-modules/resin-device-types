@@ -48,3 +48,9 @@ module.exports =
 		windows: [ WINDOWS_DRIVERS, UNPLUG, UNZIP, WINDOWS_FLASH, PLUG ]
 		osx: [ OSX_DFU_COREUTILS_USBUTILS, UNPLUG, UNZIP, OSX_LINUX_FLASH, PLUG ]
 		linux:  [ LINUX_DFU_COREUTILS, UNPLUG, UNZIP, OSX_LINUX_FLASH, PLUG ]
+
+	yocto:
+		machine: 'edison'
+		image: 'resin-image'
+		deployArtifact: 'resin-edison'
+		archive: true
