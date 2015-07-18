@@ -1,3 +1,7 @@
+## 07/19 - v. 5.0.0
+* Aliases
+* Edison yocto info
+
 ## 07/16 - v. 4.0.1
 * Unpublish Hummingboard and Nitrogen6x
 
