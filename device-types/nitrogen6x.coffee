@@ -1,4 +1,5 @@
 module.exports =
+	aliases: [ 'nitrogen6x' ]
 	name: 'Nitrogen 6X'
 	arch: 'armv7hf'
 	state: 'preview'

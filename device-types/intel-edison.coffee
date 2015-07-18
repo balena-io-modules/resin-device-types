@@ -37,6 +37,7 @@ LINUX_DFU_COREUTILS = '''
 '''
 
 module.exports =
+	aliases: [ 'edison' ]
 	name: 'Intel Edison'
 	arch: 'i386'
 	state: 'experimental'

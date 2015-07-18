@@ -2,6 +2,7 @@ BBB_FLASH = 'Power up the <%= TYPE_NAME %> while holding down the small button n
 You need to keep it pressed until the blue LEDs start flashing wildly.'
 
 module.exports =
+	aliases: [ 'beaglebone' ]
 	name: 'BeagleBone Black'
 	arch: 'armv7hf'
 	state: 'released'
