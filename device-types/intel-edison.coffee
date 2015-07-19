@@ -42,7 +42,6 @@ module.exports =
 	arch: 'i386'
 	state: 'experimental'
 
-	forceNetwork: 'wifi'
 	gettingStartedLink: 'http://docs.resin.io/#/pages/installing/gettingStarted-Edison.md'
 
 	instructions:
@@ -57,3 +56,26 @@ module.exports =
 		version: 'yocto-daisy'
 		deployArtifact: 'resin-edison'
 		archive: true
+
+	options: [
+		message: 'Network Type'
+		name: 'network'
+		type: 'list'
+		choices: [ 'wifi' ]
+	,
+		message: 'Wifi Ssid'
+		name: 'wifiSsid'
+		type: 'text'
+		when:
+			network: 'wifi'
+	,
+		message: 'Wifi Key'
+		name: 'wifiKey'
+		type: 'text'
+		when:
+			network: 'wifi'
+	]
+
+
+	configuration:
+		configPartition: 'config.img'

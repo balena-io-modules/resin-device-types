@@ -12,7 +12,24 @@ module.exports =
 		linux: 'http://docs.resin.io/#/pages/installing/gettingStarted-Parallella.md#on-mac-and-linux'
 	supportsBlink: true
 
-	extraOptions: [
+	options: [
+		message: 'Network Connection'
+		name: 'network'
+		type: 'list'
+		choices: [ 'ethernet', 'wifi' ]
+	,
+		message: 'Wifi SSID'
+		name: 'wifiSsid'
+		type: 'text'
+		when:
+			network: 'wifi'
+	,
+		message: 'Wifi Passphrase'
+		name: 'wifiKey'
+		type: 'password'
+		when:
+			network: 'wifi'
+	,
 		message: 'Processor'
 		name: 'processorType'
 		type: 'list'
@@ -29,3 +46,41 @@ module.exports =
 		image: 'resin-image'
 		fstype: 'resin-sdcard'
 		version: 'yocto-fido'
+		deployArtifact: 'resin-image-parallella.resin-sdcard'
+
+	configuration:
+		configPartition: '(4:1)'
+		
+		operations: [
+			command: 'copy'
+			from: '(1):/bitstreams/parallella_e16_headless_gpiose_7010.bit.bin'
+			to: '(1):/parallella.bit.bin'
+			when:
+				coprocessorCore: 16
+				processorType: 7010
+		,
+			command: 'copy'
+			from: '(1):/bistreams/parallella_e16_headless_gpiose_7020.bit.bin'
+			to: '(1):/parallella.bit.bin'
+			when:
+				coprocessorCore: 16
+				processorType: 7020
+		,
+			command: 'copy'
+			from: '(1):/bistreams/parallella_e64_headless_gpiose_7010.bit.bin'
+			to: '(1):/parallella.bit.bin'
+			when:
+				coprocessorCore: 64
+				processorType: 7010
+		,
+			command: 'copy'
+			from: '(1):/bistreams/parallella_e64_headless_gpiose_7020.bit.bin'
+			to: '(1):/parallella.bit.bin'
+			when:
+				coprocessorCore: 64
+				processorType: 7020
+		,
+			command: 'copy'
+			from: '(1):/device-trees/parallella-mmc-boot.dtb'
+			to: '(1):/devicetree.dtb'
+		]

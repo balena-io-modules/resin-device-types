@@ -12,9 +12,11 @@ deviceTypes = fs.readdirSync(path.join(__dirname, 'device-types'))
 	typeDefinition = require("./device-types/#{slug}")
 	return _.extend({ slug }, typeDefinition)
 .filter (typeDefinition) ->
-	if not typeDefinition.state
-		console.warn("Ignored #{typeDefinition.slug}: `state` is not set")
-		return false
+	requiredFields = [ 'state', 'yocto.deployArtifact', 'yocto.machine' ]
+	for field in requiredFields
+		if not _.has(typeDefinition, field)
+			console.warn("Ignored #{typeDefinition.slug}: `#{field}` is not set")
+			return false
 	return true
 .map (typeDefinition) ->
 	processInstructionsArray = (instructions, os) ->
