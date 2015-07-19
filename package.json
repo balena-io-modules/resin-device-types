@@ -13,7 +13,7 @@
   "dependencies": {},
   "devDependencies": {
     "coffee-script": "~1.9.3",
-    "lodash": "^3.9.10"
+    "lodash": "^3.10.0"
   },
   "optionalDependencies": {},
   "engines": {
