@@ -122,6 +122,21 @@
 		}
 	},
 	{
+		"slug": "intel-nuc",
+		"aliases": [
+			"nuc"
+		],
+		"name": "Intel NUC (PREVIEW)",
+		"arch": "amd64",
+		"state": "PREVIEW",
+		"yocto": {
+			"machine": "nuc",
+			"image": "resin-image-flasher",
+			"fstype": "resin-sdcard"
+		},
+		"instructions": {}
+	},
+	{
 		"slug": "nitrogen6x",
 		"aliases": [
 			"nitrogen6x"

@@ -1,4 +1,7 @@
-## 07/19 - v. 5.1.0
+## 07/20 - v. 5.2.0
+* Intel NUC [Florin]
+
+## 07/20 - v. 5.1.0
 * normalizeDeviceType [Eugene]
 
 ## 07/19 - v. 5.0.0
