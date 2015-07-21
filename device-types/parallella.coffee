@@ -53,34 +53,54 @@ module.exports =
 		
 		operations: [
 			command: 'copy'
-			from: '(1):/bitstreams/parallella_e16_headless_gpiose_7010.bit.bin'
-			to: '(1):/parallella.bit.bin'
+			from:
+				partition: '(1)'
+				path: '/bitstreams/parallella_e16_headless_gpiose_7010.bit.bin'
+			to:
+				partition: '(1)'
+				path: '/parallella.bit.bin'
 			when:
 				coprocessorCore: 16
 				processorType: 7010
 		,
 			command: 'copy'
-			from: '(1):/bistreams/parallella_e16_headless_gpiose_7020.bit.bin'
-			to: '(1):/parallella.bit.bin'
+			from:
+				partition: '(1)'
+				path: '/bistreams/parallella_e16_headless_gpiose_7020.bit.bin'
+			to:
+				partition: '(1)'
+				path: '/parallella.bit.bin'
 			when:
 				coprocessorCore: 16
 				processorType: 7020
 		,
 			command: 'copy'
-			from: '(1):/bistreams/parallella_e64_headless_gpiose_7010.bit.bin'
-			to: '(1):/parallella.bit.bin'
+			from:
+				partition: '(1)'
+				path: '/bistreams/parallella_e64_headless_gpiose_7010.bit.bin'
+			to:
+				partition: '(1)'
+				path: '/parallella.bit.bin'
 			when:
 				coprocessorCore: 64
 				processorType: 7010
 		,
 			command: 'copy'
-			from: '(1):/bistreams/parallella_e64_headless_gpiose_7020.bit.bin'
-			to: '(1):/parallella.bit.bin'
+			from:
+				partition: '(1)'
+				path: '/bistreams/parallella_e64_headless_gpiose_7020.bit.bin'
+			to:
+				partition: '(1)'
+				path: '/parallella.bit.bin'
 			when:
 				coprocessorCore: 64
 				processorType: 7020
 		,
 			command: 'copy'
-			from: '(1):/device-trees/parallella-mmc-boot.dtb'
-			to: '(1):/devicetree.dtb'
+			from:
+				partition: '(1)'
+				path: '/device-trees/parallella-mmc-boot.dtb'
+			to:
+				partition: '(1)'
+				path: '/devicetree.dtb'
 		]
