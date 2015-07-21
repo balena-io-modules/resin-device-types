@@ -17,3 +17,4 @@ module.exports =
 		machine: 'cubox-i'
 		image: 'resin-image'
 		fstype: 'resin-sdcard'
+		version: 'yocto-fido'

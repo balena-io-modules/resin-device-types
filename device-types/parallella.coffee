@@ -28,3 +28,4 @@ module.exports =
 		machine: 'parallella-hdmi-resin'
 		image: 'resin-image'
 		fstype: 'resin-sdcard'
+		version: 'yocto-fido'

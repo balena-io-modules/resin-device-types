@@ -17,3 +17,4 @@ module.exports =
 		machine: 'raspberrypi'
 		image: 'resin-image'
 		fstype: 'resin-sdcard'
+		version: 'yocto-fido'

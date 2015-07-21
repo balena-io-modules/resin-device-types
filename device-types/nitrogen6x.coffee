@@ -17,3 +17,4 @@ module.exports =
 		machine: 'nitrogen6x'
 		image: 'resin-image'
 		fstype: 'resin-sdcard'
+		version: 'yocto-fido'

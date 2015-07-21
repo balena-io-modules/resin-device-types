@@ -39,3 +39,4 @@ module.exports =
 		machine: 'beaglebone'
 		image: 'resin-image-flasher'
 		fstype: 'resin-sdcard'
+		version: 'yocto-fido'
