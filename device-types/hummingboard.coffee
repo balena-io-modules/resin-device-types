@@ -1,4 +1,4 @@
-networkOptions = require('../common/network-options').options
+networkOptions = require '../common/network-options'
 
 module.exports =
 	aliases: [ 'cubox-i' ]
@@ -13,7 +13,7 @@ module.exports =
 		linux: 'http://docs.resin.io/#/pages/installing/gettingStarted-Hummingboard.md#on-mac-and-linux'
 	supportsBlink: false
 
-	options: networkOptions
+	options: [ networkOptions.group ]
 
 	yocto:
 		machine: 'cubox-i'

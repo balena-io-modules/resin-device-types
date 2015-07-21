@@ -18,4 +18,12 @@ exports.wifiKey = wifiKey =
 	when:
 		network: 'wifi'
 
-exports.options = [ network, wifiSsid, wifiKey ]
+exports.options = options = [ network, wifiSsid, wifiKey ]
+
+exports.group =
+	isGroup: true
+	name: 'network'
+	message: 'Network'
+	isCollapsible: true
+	collapsed: false
+	options: options

@@ -1,4 +1,4 @@
-networkOptions = require('../common/network-options').options
+networkOptions = require '../common/network-options'
 
 BBB_FLASH = 'Power up the <%= TYPE_NAME %> while holding down the small button near the SD slot.
 You need to keep it pressed until the blue LEDs start flashing wildly.'
@@ -43,7 +43,7 @@ module.exports =
 		version: 'yocto-fido'
 		deployArtifact: 'resin-image-beaglebone.resin-sdcard'
 
-	options: networkOptions
+	options: [ networkOptions.group ]
 
 	configuration:
 		configPartition: '(4:1)'

@@ -1,4 +1,4 @@
-networkOptions = require('../common/network-options').options
+networkOptions = require '../common/network-options'
 
 module.exports =
 	aliases: [ 'nitrogen6x' ]
@@ -20,7 +20,7 @@ module.exports =
 		version: 'yocto-fido'
 		deployArtifact: 'resin-image-nitrogen6x'
 
-	options: networkOptions
+	options: [ networkOptions.group ]
 
 	configuration:
 		configPartition: '(4:1)'

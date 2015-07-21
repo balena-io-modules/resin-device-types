@@ -1,4 +1,4 @@
-networkOptions = require('../common/network-options')
+networkOptions = require '../common/network-options'
 
 module.exports =
 	# TODO: why HDMI if it's broken?
@@ -15,11 +15,7 @@ module.exports =
 	supportsBlink: true
 
 	options: [
-		networkOptions.network
-	,
-		networkOptions.wifiSsid,
-	,
-		networkOptions.wifiKey
+		networkOptions.group
 	,
 		message: 'Processor'
 		name: 'processorType'

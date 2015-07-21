@@ -1,4 +1,4 @@
-networkOptions = require('../common/network-options').options
+networkOptions = require '../common/network-options'
 
 module.exports =
 	aliases: [ 'raspberrypi2' ]
@@ -14,7 +14,7 @@ module.exports =
 		linux: 'http://docs.resin.io/#/pages/installing/gettingStarted.md#on-mac-and-linux'
 	supportsBlink: true
 
-	options: networkOptions
+	options: [ networkOptions.group ]
 
 	yocto:
 		machine: 'raspberrypi2'

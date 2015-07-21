@@ -1,4 +1,4 @@
-networkOptions = require('../common/network-options')
+networkOptions = require '../common/network-options'
 
 OSX_DFU_COREUTILS_USBUTILS = '''
 	You need <a href="https://www.macports.org/">MacPorts</a> installed on your system.
@@ -59,18 +59,27 @@ module.exports =
 		deployArtifact: 'resin-edison'
 		archive: true
 
-	options: [
-		message: 'Network Type'
-		name: 'network'
-		type: 'list'
-		choices: [ 'wifi' ]
-		hidden: true
-	,
-		networkOptions.wifiSsid
-	,
-		networkOptions.wifiKey
-	]
+	optionGroups: [ networkOptions.group ]
 
+	options: [ 
+		isGroup: true
+		name: 'network'
+		message: 'Network'
+		isCollapsible: true
+		collapsed: false
+		options: [
+			message: 'Network Type'
+			name: 'network'
+			group: 'network'
+			type: 'list'
+			choices: [ 'wifi' ]
+			hidden: true
+		,
+			networkOptions.wifiSsid,
+		,
+			networkOptions.wifiKey
+		]
+	]
 
 	configuration:
 		configPartition: 'config.img'
