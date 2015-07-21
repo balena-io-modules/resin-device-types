@@ -1,3 +1,5 @@
+networkOptions = require('../common/network-options')
+
 module.exports =
 	# TODO: why HDMI if it's broken?
 	aliases: [ 'parallella-hdmi-resin' ]
@@ -13,22 +15,11 @@ module.exports =
 	supportsBlink: true
 
 	options: [
-		message: 'Network Connection'
-		name: 'network'
-		type: 'list'
-		choices: [ 'ethernet', 'wifi' ]
+		networkOptions.network
 	,
-		message: 'Wifi SSID'
-		name: 'wifiSsid'
-		type: 'text'
-		when:
-			network: 'wifi'
+		networkOptions.wifiSsid,
 	,
-		message: 'Wifi Passphrase'
-		name: 'wifiKey'
-		type: 'password'
-		when:
-			network: 'wifi'
+		networkOptions.wifiKey
 	,
 		message: 'Processor'
 		name: 'processorType'

@@ -1,3 +1,5 @@
+networkOptions = require('../common/network-options')
+
 OSX_DFU_COREUTILS_USBUTILS = '''
 	You need <a href="https://www.macports.org/">MacPorts</a> installed on your system.
 	<br>
@@ -63,17 +65,9 @@ module.exports =
 		type: 'list'
 		choices: [ 'wifi' ]
 	,
-		message: 'Wifi Ssid'
-		name: 'wifiSsid'
-		type: 'text'
-		when:
-			network: 'wifi'
+		networkOptions.wifiSsid
 	,
-		message: 'Wifi Key'
-		name: 'wifiKey'
-		type: 'text'
-		when:
-			network: 'wifi'
+		networkOptions.wifiKey
 	]
 
 
