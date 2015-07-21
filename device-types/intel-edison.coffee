@@ -64,6 +64,7 @@ module.exports =
 		name: 'network'
 		type: 'list'
 		choices: [ 'wifi' ]
+		hidden: true
 	,
 		networkOptions.wifiSsid
 	,
