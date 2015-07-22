@@ -1,3 +1,6 @@
+## 07/22 - v. 5.3.0
+* yocto version for all boards [Andrei]
+
 ## 07/20 - v. 5.2.0
 * Intel NUC [Florin]
 

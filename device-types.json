@@ -37,7 +37,8 @@
 		"yocto": {
 			"machine": "beaglebone",
 			"image": "resin-image-flasher",
-			"fstype": "resin-sdcard"
+			"fstype": "resin-sdcard",
+			"version": "yocto-fido"
 		}
 	},
 	{
@@ -78,7 +79,8 @@
 		"yocto": {
 			"machine": "cubox-i",
 			"image": "resin-image",
-			"fstype": "resin-sdcard"
+			"fstype": "resin-sdcard",
+			"version": "yocto-fido"
 		}
 	},
 	{
@@ -117,6 +119,8 @@
 		"yocto": {
 			"machine": "edison",
 			"image": "resin-image",
+			"fstype": "zip",
+			"version": "yocto-daisy",
 			"deployArtifact": "resin-edison",
 			"archive": true
 		}
@@ -132,7 +136,8 @@
 		"yocto": {
 			"machine": "nuc",
 			"image": "resin-image-flasher",
-			"fstype": "resin-sdcard"
+			"fstype": "resin-sdcard",
+			"version": "yocto-fido"
 		},
 		"instructions": {}
 	},
@@ -174,7 +179,8 @@
 		"yocto": {
 			"machine": "nitrogen6x",
 			"image": "resin-image",
-			"fstype": "resin-sdcard"
+			"fstype": "resin-sdcard",
+			"version": "yocto-fido"
 		}
 	},
 	{
@@ -234,7 +240,8 @@
 		"yocto": {
 			"machine": "parallella-hdmi-resin",
 			"image": "resin-image",
-			"fstype": "resin-sdcard"
+			"fstype": "resin-sdcard",
+			"version": "yocto-fido"
 		}
 	},
 	{
@@ -275,7 +282,8 @@
 		"yocto": {
 			"machine": "raspberrypi",
 			"image": "resin-image",
-			"fstype": "resin-sdcard"
+			"fstype": "resin-sdcard",
+			"version": "yocto-fido"
 		}
 	},
 	{
@@ -317,7 +325,8 @@
 		"yocto": {
 			"machine": "raspberrypi2",
 			"image": "resin-image",
-			"fstype": "resin-sdcard"
+			"fstype": "resin-sdcard",
+			"version": "yocto-fido"
 		}
 	}
 ]
