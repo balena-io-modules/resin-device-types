@@ -8,3 +8,4 @@ module.exports =
 		machine: 'nuc'
 		image: 'resin-image-flasher'
 		fstype: 'resin-sdcard'
+		version: 'yocto-fido'

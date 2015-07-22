@@ -53,5 +53,7 @@ module.exports =
 	yocto:
 		machine: 'edison'
 		image: 'resin-image'
+		fstype: 'zip'
+		version: 'yocto-daisy'
 		deployArtifact: 'resin-edison'
 		archive: true
