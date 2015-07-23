@@ -7,7 +7,6 @@
 		"name": "BeagleBone Black",
 		"arch": "armv7hf",
 		"state": "RELEASED",
-		"configPartition": "4:1",
 		"instructions": {
 			"windows": [
 				"Install <a href=\"http://sourceforge.net/projects/win32diskimager/\">Win32 Disk Imager</a>.\n<br>\nStart Win32 Disk Imager and navigate to the Device OS <code>.img</code> in your downloads.\nSelect &lt;OS-image-download&gt;.img (but replacing <code>&lt;OS-image-download&gt;</code> with your download name)\nas your “Image File”.'\n<br>\nInsert your SD card. In Win32 Disk Imager, select your SD in the drop down for “Device”\n<br>\nMake 100% sure it is the correct drive and click “Write”.\n<br>\nWait until it's finished writing.",
@@ -38,7 +37,47 @@
 			"machine": "beaglebone",
 			"image": "resin-image-flasher",
 			"fstype": "resin-sdcard",
-			"version": "yocto-fido"
+			"version": "yocto-fido",
+			"deployArtifact": "resin-image-beaglebone.resin-sdcard"
+		},
+		"options": [
+			{
+				"isGroup": true,
+				"name": "network",
+				"message": "Network",
+				"isCollapsible": true,
+				"collapsed": false,
+				"options": [
+					{
+						"message": "Network Connection",
+						"name": "network",
+						"type": "list",
+						"choices": [
+							"ethernet",
+							"wifi"
+						]
+					},
+					{
+						"message": "Wifi SSID",
+						"name": "wifiSsid",
+						"type": "text",
+						"when": {
+							"network": "wifi"
+						}
+					},
+					{
+						"message": "Wifi Passphrase",
+						"name": "wifiKey",
+						"type": "text",
+						"when": {
+							"network": "wifi"
+						}
+					}
+				]
+			}
+		],
+		"configuration": {
+			"configPartition": "(4:1)"
 		}
 	},
 	{
@@ -49,7 +88,6 @@
 		"name": "Hummingboard (PREVIEW)",
 		"arch": "armv7hf",
 		"state": "PREVIEW",
-		"configPartition": "4:1",
 		"instructions": {
 			"windows": [
 				"Install <a href=\"http://sourceforge.net/projects/win32diskimager/\">Win32 Disk Imager</a>.\n<br>\nStart Win32 Disk Imager and navigate to the Device OS <code>.img</code> in your downloads.\nSelect &lt;OS-image-download&gt;.img (but replacing <code>&lt;OS-image-download&gt;</code> with your download name)\nas your “Image File”.'\n<br>\nInsert your SD card. In Win32 Disk Imager, select your SD in the drop down for “Device”\n<br>\nMake 100% sure it is the correct drive and click “Write”.\n<br>\nWait until it's finished writing.",
@@ -76,11 +114,51 @@
 			"linux": "http://docs.resin.io/#/pages/installing/gettingStarted-Hummingboard.md#on-mac-and-linux"
 		},
 		"supportsBlink": false,
+		"options": [
+			{
+				"isGroup": true,
+				"name": "network",
+				"message": "Network",
+				"isCollapsible": true,
+				"collapsed": false,
+				"options": [
+					{
+						"message": "Network Connection",
+						"name": "network",
+						"type": "list",
+						"choices": [
+							"ethernet",
+							"wifi"
+						]
+					},
+					{
+						"message": "Wifi SSID",
+						"name": "wifiSsid",
+						"type": "text",
+						"when": {
+							"network": "wifi"
+						}
+					},
+					{
+						"message": "Wifi Passphrase",
+						"name": "wifiKey",
+						"type": "text",
+						"when": {
+							"network": "wifi"
+						}
+					}
+				]
+			}
+		],
 		"yocto": {
 			"machine": "cubox-i",
 			"image": "resin-image",
 			"fstype": "resin-sdcard",
-			"version": "yocto-fido"
+			"version": "yocto-fido",
+			"deployArtifact": "resin-image-cubox-i.resin-sdcard"
+		},
+		"configuration": {
+			"configPartition": "(4:1)"
 		}
 	},
 	{
@@ -91,7 +169,6 @@
 		"name": "Intel Edison (EXPERIMENTAL)",
 		"arch": "i386",
 		"state": "EXPERIMENTAL",
-		"forceNetwork": "wifi",
 		"gettingStartedLink": "http://docs.resin.io/#/pages/installing/gettingStarted-Edison.md",
 		"instructions": {
 			"windows": [
@@ -123,23 +200,83 @@
 			"version": "yocto-daisy",
 			"deployArtifact": "resin-edison",
 			"archive": true
-		}
-	},
-	{
-		"slug": "intel-nuc",
-		"aliases": [
-			"nuc"
-		],
-		"name": "Intel NUC (PREVIEW)",
-		"arch": "amd64",
-		"state": "PREVIEW",
-		"yocto": {
-			"machine": "nuc",
-			"image": "resin-image-flasher",
-			"fstype": "resin-sdcard",
-			"version": "yocto-fido"
 		},
-		"instructions": {}
+		"optionGroups": [
+			{
+				"isGroup": true,
+				"name": "network",
+				"message": "Network",
+				"isCollapsible": true,
+				"collapsed": false,
+				"options": [
+					{
+						"message": "Network Connection",
+						"name": "network",
+						"type": "list",
+						"choices": [
+							"ethernet",
+							"wifi"
+						]
+					},
+					{
+						"message": "Wifi SSID",
+						"name": "wifiSsid",
+						"type": "text",
+						"when": {
+							"network": "wifi"
+						}
+					},
+					{
+						"message": "Wifi Passphrase",
+						"name": "wifiKey",
+						"type": "text",
+						"when": {
+							"network": "wifi"
+						}
+					}
+				]
+			}
+		],
+		"options": [
+			{
+				"isGroup": true,
+				"name": "network",
+				"message": "Network",
+				"isCollapsible": true,
+				"collapsed": false,
+				"options": [
+					{
+						"message": "Network Type",
+						"name": "network",
+						"group": "network",
+						"type": "list",
+						"choices": [
+							"wifi"
+						],
+						"hidden": true
+					},
+					{
+						"message": "Wifi SSID",
+						"name": "wifiSsid",
+						"type": "text",
+						"when": {
+							"network": "wifi"
+						}
+					},
+					{
+						"message": "Wifi Passphrase",
+						"name": "wifiKey",
+						"type": "text",
+						"when": {
+							"network": "wifi"
+						}
+					}
+				]
+			}
+		],
+		"configuration": {
+			"configPartition": "config.img"
+		}
 	},
 	{
 		"slug": "nitrogen6x",
@@ -149,7 +286,6 @@
 		"name": "Nitrogen 6X (PREVIEW)",
 		"arch": "armv7hf",
 		"state": "PREVIEW",
-		"configPartition": "4:1",
 		"instructions": {
 			"windows": [
 				"Install <a href=\"http://sourceforge.net/projects/win32diskimager/\">Win32 Disk Imager</a>.\n<br>\nStart Win32 Disk Imager and navigate to the Device OS <code>.img</code> in your downloads.\nSelect &lt;OS-image-download&gt;.img (but replacing <code>&lt;OS-image-download&gt;</code> with your download name)\nas your “Image File”.'\n<br>\nInsert your SD card. In Win32 Disk Imager, select your SD in the drop down for “Device”\n<br>\nMake 100% sure it is the correct drive and click “Write”.\n<br>\nWait until it's finished writing.",
@@ -180,7 +316,47 @@
 			"machine": "nitrogen6x",
 			"image": "resin-image",
 			"fstype": "resin-sdcard",
-			"version": "yocto-fido"
+			"version": "yocto-fido",
+			"deployArtifact": "resin-image-nitrogen6x"
+		},
+		"options": [
+			{
+				"isGroup": true,
+				"name": "network",
+				"message": "Network",
+				"isCollapsible": true,
+				"collapsed": false,
+				"options": [
+					{
+						"message": "Network Connection",
+						"name": "network",
+						"type": "list",
+						"choices": [
+							"ethernet",
+							"wifi"
+						]
+					},
+					{
+						"message": "Wifi SSID",
+						"name": "wifiSsid",
+						"type": "text",
+						"when": {
+							"network": "wifi"
+						}
+					},
+					{
+						"message": "Wifi Passphrase",
+						"name": "wifiKey",
+						"type": "text",
+						"when": {
+							"network": "wifi"
+						}
+					}
+				]
+			}
+		],
+		"configuration": {
+			"configPartition": "(4:1)"
 		}
 	},
 	{
@@ -217,7 +393,41 @@
 			"linux": "http://docs.resin.io/#/pages/installing/gettingStarted-Parallella.md#on-mac-and-linux"
 		},
 		"supportsBlink": true,
-		"extraOptions": [
+		"options": [
+			{
+				"isGroup": true,
+				"name": "network",
+				"message": "Network",
+				"isCollapsible": true,
+				"collapsed": false,
+				"options": [
+					{
+						"message": "Network Connection",
+						"name": "network",
+						"type": "list",
+						"choices": [
+							"ethernet",
+							"wifi"
+						]
+					},
+					{
+						"message": "Wifi SSID",
+						"name": "wifiSsid",
+						"type": "text",
+						"when": {
+							"network": "wifi"
+						}
+					},
+					{
+						"message": "Wifi Passphrase",
+						"name": "wifiKey",
+						"type": "text",
+						"when": {
+							"network": "wifi"
+						}
+					}
+				]
+			},
 			{
 				"message": "Processor",
 				"name": "processorType",
@@ -241,7 +451,84 @@
 			"machine": "parallella-hdmi-resin",
 			"image": "resin-image",
 			"fstype": "resin-sdcard",
-			"version": "yocto-fido"
+			"version": "yocto-fido",
+			"deployArtifact": "resin-image-parallella.resin-sdcard"
+		},
+		"configuration": {
+			"configPartition": "(4:1)",
+			"operations": [
+				{
+					"command": "copy",
+					"from": {
+						"partition": "(1)",
+						"path": "/bitstreams/parallella_e16_headless_gpiose_7010.bit.bin"
+					},
+					"to": {
+						"partition": "(1)",
+						"path": "/parallella.bit.bin"
+					},
+					"when": {
+						"coprocessorCore": 16,
+						"processorType": 7010
+					}
+				},
+				{
+					"command": "copy",
+					"from": {
+						"partition": "(1)",
+						"path": "/bistreams/parallella_e16_headless_gpiose_7020.bit.bin"
+					},
+					"to": {
+						"partition": "(1)",
+						"path": "/parallella.bit.bin"
+					},
+					"when": {
+						"coprocessorCore": 16,
+						"processorType": 7020
+					}
+				},
+				{
+					"command": "copy",
+					"from": {
+						"partition": "(1)",
+						"path": "/bistreams/parallella_e64_headless_gpiose_7010.bit.bin"
+					},
+					"to": {
+						"partition": "(1)",
+						"path": "/parallella.bit.bin"
+					},
+					"when": {
+						"coprocessorCore": 64,
+						"processorType": 7010
+					}
+				},
+				{
+					"command": "copy",
+					"from": {
+						"partition": "(1)",
+						"path": "/bistreams/parallella_e64_headless_gpiose_7020.bit.bin"
+					},
+					"to": {
+						"partition": "(1)",
+						"path": "/parallella.bit.bin"
+					},
+					"when": {
+						"coprocessorCore": 64,
+						"processorType": 7020
+					}
+				},
+				{
+					"command": "copy",
+					"from": {
+						"partition": "(1)",
+						"path": "/device-trees/parallella-mmc-boot.dtb"
+					},
+					"to": {
+						"partition": "(1)",
+						"path": "/devicetree.dtb"
+					}
+				}
+			]
 		}
 	},
 	{
@@ -252,7 +539,6 @@
 		"name": "Raspberry Pi",
 		"arch": "rpi",
 		"state": "RELEASED",
-		"configPartition": "4:1",
 		"instructions": {
 			"windows": [
 				"Install <a href=\"http://sourceforge.net/projects/win32diskimager/\">Win32 Disk Imager</a>.\n<br>\nStart Win32 Disk Imager and navigate to the Device OS <code>.img</code> in your downloads.\nSelect &lt;OS-image-download&gt;.img (but replacing <code>&lt;OS-image-download&gt;</code> with your download name)\nas your “Image File”.'\n<br>\nInsert your SD card. In Win32 Disk Imager, select your SD in the drop down for “Device”\n<br>\nMake 100% sure it is the correct drive and click “Write”.\n<br>\nWait until it's finished writing.",
@@ -279,11 +565,51 @@
 			"linux": "http://docs.resin.io/#/pages/installing/gettingStarted.md#on-mac-and-linux"
 		},
 		"supportsBlink": true,
+		"options": [
+			{
+				"isGroup": true,
+				"name": "network",
+				"message": "Network",
+				"isCollapsible": true,
+				"collapsed": false,
+				"options": [
+					{
+						"message": "Network Connection",
+						"name": "network",
+						"type": "list",
+						"choices": [
+							"ethernet",
+							"wifi"
+						]
+					},
+					{
+						"message": "Wifi SSID",
+						"name": "wifiSsid",
+						"type": "text",
+						"when": {
+							"network": "wifi"
+						}
+					},
+					{
+						"message": "Wifi Passphrase",
+						"name": "wifiKey",
+						"type": "text",
+						"when": {
+							"network": "wifi"
+						}
+					}
+				]
+			}
+		],
 		"yocto": {
 			"machine": "raspberrypi",
 			"image": "resin-image",
 			"fstype": "resin-sdcard",
-			"version": "yocto-fido"
+			"version": "yocto-fido",
+			"deployArtifact": "resin-image-raspberrypi.resin-sdcard"
+		},
+		"configuration": {
+			"configPartition": "(4:1)"
 		}
 	},
 	{
@@ -295,7 +621,6 @@
 		"arch": "armv7hf",
 		"state": "RELEASED",
 		"isDefault": true,
-		"configPartition": "4:1",
 		"instructions": {
 			"windows": [
 				"Install <a href=\"http://sourceforge.net/projects/win32diskimager/\">Win32 Disk Imager</a>.\n<br>\nStart Win32 Disk Imager and navigate to the Device OS <code>.img</code> in your downloads.\nSelect &lt;OS-image-download&gt;.img (but replacing <code>&lt;OS-image-download&gt;</code> with your download name)\nas your “Image File”.'\n<br>\nInsert your SD card. In Win32 Disk Imager, select your SD in the drop down for “Device”\n<br>\nMake 100% sure it is the correct drive and click “Write”.\n<br>\nWait until it's finished writing.",
@@ -322,11 +647,51 @@
 			"linux": "http://docs.resin.io/#/pages/installing/gettingStarted.md#on-mac-and-linux"
 		},
 		"supportsBlink": true,
+		"options": [
+			{
+				"isGroup": true,
+				"name": "network",
+				"message": "Network",
+				"isCollapsible": true,
+				"collapsed": false,
+				"options": [
+					{
+						"message": "Network Connection",
+						"name": "network",
+						"type": "list",
+						"choices": [
+							"ethernet",
+							"wifi"
+						]
+					},
+					{
+						"message": "Wifi SSID",
+						"name": "wifiSsid",
+						"type": "text",
+						"when": {
+							"network": "wifi"
+						}
+					},
+					{
+						"message": "Wifi Passphrase",
+						"name": "wifiKey",
+						"type": "text",
+						"when": {
+							"network": "wifi"
+						}
+					}
+				]
+			}
+		],
 		"yocto": {
 			"machine": "raspberrypi2",
 			"image": "resin-image",
 			"fstype": "resin-sdcard",
-			"version": "yocto-fido"
+			"version": "yocto-fido",
+			"deployArtifact": "resin-image-raspberrypi2.resin-sdcard"
+		},
+		"configuration": {
+			"configPartition": "(4:1)"
 		}
 	}
 ]
