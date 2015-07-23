@@ -1,3 +1,5 @@
+networkOptions = require '../common/network-options'
+
 module.exports =
 	# TODO: why HDMI if it's broken?
 	aliases: [ 'parallella-hdmi-resin' ]
@@ -12,7 +14,9 @@ module.exports =
 		linux: 'http://docs.resin.io/#/pages/installing/gettingStarted-Parallella.md#on-mac-and-linux'
 	supportsBlink: true
 
-	extraOptions: [
+	options: [
+		networkOptions.group
+	,
 		message: 'Processor'
 		name: 'processorType'
 		type: 'list'
@@ -29,3 +33,61 @@ module.exports =
 		image: 'resin-image'
 		fstype: 'resin-sdcard'
 		version: 'yocto-fido'
+		deployArtifact: 'resin-image-parallella.resin-sdcard'
+
+	configuration:
+		configPartition: '(4:1)'
+		
+		operations: [
+			command: 'copy'
+			from:
+				partition: '(1)'
+				path: '/bitstreams/parallella_e16_headless_gpiose_7010.bit.bin'
+			to:
+				partition: '(1)'
+				path: '/parallella.bit.bin'
+			when:
+				coprocessorCore: 16
+				processorType: 7010
+		,
+			command: 'copy'
+			from:
+				partition: '(1)'
+				path: '/bistreams/parallella_e16_headless_gpiose_7020.bit.bin'
+			to:
+				partition: '(1)'
+				path: '/parallella.bit.bin'
+			when:
+				coprocessorCore: 16
+				processorType: 7020
+		,
+			command: 'copy'
+			from:
+				partition: '(1)'
+				path: '/bistreams/parallella_e64_headless_gpiose_7010.bit.bin'
+			to:
+				partition: '(1)'
+				path: '/parallella.bit.bin'
+			when:
+				coprocessorCore: 64
+				processorType: 7010
+		,
+			command: 'copy'
+			from:
+				partition: '(1)'
+				path: '/bistreams/parallella_e64_headless_gpiose_7020.bit.bin'
+			to:
+				partition: '(1)'
+				path: '/parallella.bit.bin'
+			when:
+				coprocessorCore: 64
+				processorType: 7020
+		,
+			command: 'copy'
+			from:
+				partition: '(1)'
+				path: '/device-trees/parallella-mmc-boot.dtb'
+			to:
+				partition: '(1)'
+				path: '/devicetree.dtb'
+		]

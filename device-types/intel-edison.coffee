@@ -1,3 +1,5 @@
+networkOptions = require '../common/network-options'
+
 OSX_DFU_COREUTILS_USBUTILS = '''
 	You need <a href="https://www.macports.org/">MacPorts</a> installed on your system.
 	<br>
@@ -42,7 +44,6 @@ module.exports =
 	arch: 'i386'
 	state: 'experimental'
 
-	forceNetwork: 'wifi'
 	gettingStartedLink: 'http://docs.resin.io/#/pages/installing/gettingStarted-Edison.md'
 
 	instructions:
@@ -57,3 +58,28 @@ module.exports =
 		version: 'yocto-daisy'
 		deployArtifact: 'resin-edison'
 		archive: true
+
+	optionGroups: [ networkOptions.group ]
+
+	options: [ 
+		isGroup: true
+		name: 'network'
+		message: 'Network'
+		isCollapsible: true
+		collapsed: false
+		options: [
+			message: 'Network Type'
+			name: 'network'
+			group: 'network'
+			type: 'list'
+			choices: [ 'wifi' ]
+			hidden: true
+		,
+			networkOptions.wifiSsid,
+		,
+			networkOptions.wifiKey
+		]
+	]
+
+	configuration:
+		configPartition: 'config.img'

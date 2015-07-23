@@ -1,10 +1,10 @@
+networkOptions = require '../common/network-options'
+
 module.exports =
 	aliases: [ 'nitrogen6x' ]
 	name: 'Nitrogen 6X'
 	arch: 'armv7hf'
 	state: 'preview'
-
-	configPartition: '4:1'
 
 	instructions: require('../common/common-img').instructions
 	gettingStartedLink:
@@ -18,3 +18,9 @@ module.exports =
 		image: 'resin-image'
 		fstype: 'resin-sdcard'
 		version: 'yocto-fido'
+		deployArtifact: 'resin-image-nitrogen6x'
+
+	options: [ networkOptions.group ]
+
+	configuration:
+		configPartition: '(4:1)'
