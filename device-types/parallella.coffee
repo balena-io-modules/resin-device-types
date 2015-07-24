@@ -25,7 +25,7 @@ module.exports =
 		message: 'Coprocessor cores'
 		name: 'coprocessorCore'
 		type: 'list'
-		choices: [ 16, 64 ]
+		choices: [ '16', '64' ]
 	]
 
 	yocto:
@@ -47,7 +47,7 @@ module.exports =
 				partition: '(1)'
 				path: '/parallella.bit.bin'
 			when:
-				coprocessorCore: 16
+				coprocessorCore: '16'
 				processorType: 'Z7010'
 		,
 			command: 'copy'
@@ -58,7 +58,7 @@ module.exports =
 				partition: '(1)'
 				path: '/parallella.bit.bin'
 			when:
-				coprocessorCore: 16
+				coprocessorCore: '16'
 				processorType: 'Z7020'
 		,
 			command: 'copy'
@@ -69,7 +69,7 @@ module.exports =
 				partition: '(1)'
 				path: '/parallella.bit.bin'
 			when:
-				coprocessorCore: 64
+				coprocessorCore: '64'
 				processorType: 'Z7010'
 		,
 			command: 'copy'
@@ -80,7 +80,7 @@ module.exports =
 				partition: '(1)'
 				path: '/parallella.bit.bin'
 			when:
-				coprocessorCore: 64
+				coprocessorCore: '64'
 				processorType: 'Z7020'
 		,
 			command: 'copy'
