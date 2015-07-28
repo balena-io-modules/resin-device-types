@@ -9,3 +9,7 @@ module.exports =
 		image: 'resin-image-flasher'
 		fstype: 'resin-sdcard'
 		version: 'yocto-fido'
+		deployArtifact: 'resin-image-flasher-nuc.resin-sdcard'
+
+	configuration:
+		configPartition: '(4:1)'
