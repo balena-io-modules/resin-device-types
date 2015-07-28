@@ -1,8 +1,13 @@
+## 07/28 - v. 6.1.0
+* Intel NUC [Florin]
+* Fix for beaglbone [Florin]
+
+## v6.0.1
+
+## v6.0.0
+
 ## 07/22 - v. 5.3.0
 * yocto version for all boards [Andrei]
-
-## 07/20 - v. 5.2.0
-* Intel NUC [Florin]
 
 ## 07/20 - v. 5.1.0
 * normalizeDeviceType [Eugene]
