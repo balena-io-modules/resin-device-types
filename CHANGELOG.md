@@ -1,3 +1,6 @@
+## 07/30 - v. 6.1.1
+* Fix parallella deploy artifact [Page]
+
 ## 07/28 - v. 6.1.0
 * Intel NUC [Florin]
 * Fix for beaglbone [Florin]
