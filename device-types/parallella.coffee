@@ -33,7 +33,7 @@ module.exports =
 		image: 'resin-image'
 		fstype: 'resin-sdcard'
 		version: 'yocto-fido'
-		deployArtifact: 'resin-image-parallella.resin-sdcard'
+		deployArtifact: 'resin-image-parallella-hdmi-resin.resin-sdcard'
 
 	configuration:
 		configPartition: '(4:1)'
