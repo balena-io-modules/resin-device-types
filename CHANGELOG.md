@@ -1,3 +1,5 @@
+## 07/31 - v. 6.1.2
+
 * Fix nitrogen6x deploy artifact [Page]
 
 ## 07/30 - v. 6.1.1
