@@ -1,3 +1,5 @@
+* Fix nitrogen6x deploy artifact [Page]
+
 ## 07/30 - v. 6.1.1
 * Fix parallella deploy artifact [Page]
 
