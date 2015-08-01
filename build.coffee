@@ -20,7 +20,7 @@ deviceTypes = fs.readdirSync(path.join(__dirname, 'device-types'))
 	return true
 .map (typeDefinition) ->
 	processInstructionsArray = (instructions, os) ->
-		gettingStartedLink = os and typeDefinition.gettingStartedLink[os] or typeDefinition.gettingStartedLink
+		gettingStartedLink = os and typeDefinition.gettingStartedLink?[os] or typeDefinition.gettingStartedLink
 		context = _.extend {}, sharedInstructionsSteps,
 			GETTING_STARTED_LINK: gettingStartedLink
 			TYPE_NAME: typeDefinition.name
