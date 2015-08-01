@@ -65,6 +65,11 @@ module.exports =
 			NUC_FLASH
 		]
 
+	gettingStartedLink:
+		windows: 'http://docs.resin.io/#/pages/installing/gettingStarted-NUC.md#windows'
+		osx: 'http://docs.resin.io/#/pages/installing/gettingStarted-NUC.md#on-mac-and-linux'
+		linux: 'http://docs.resin.io/#/pages/installing/gettingStarted-NUC.md#on-mac-and-linux'
+
 	yocto:
 		machine: 'nuc'
 		image: 'resin-image-flasher'
