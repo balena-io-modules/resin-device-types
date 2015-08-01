@@ -1,6 +1,6 @@
 networkOptions = require '../common/network-options'
 
-NUC_WINDOWS_DISK_IMAGER: '''
+NUC_WINDOWS_DISK_IMAGER = '''
 	Install <a href="http://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a>.
 	<br>
 	Start Win32 Disk Imager and navigate to the Device OS <code>.img</code> in your downloads.
@@ -14,14 +14,14 @@ NUC_WINDOWS_DISK_IMAGER: '''
 	Wait until it's finished writing.
 '''
 
-NUC_EJECT: 'Safely eject the freshly burnt USB key and insert into the <%= TYPE_NAME %>.'
+NUC_EJECT = 'Safely eject the freshly burnt USB key and insert into the <%= TYPE_NAME %>.'
 
-NUC_OSX_PLUG: 'Plug your USB key into your computer and in a terminal run <code>diskutil list</code>.
+NUC_OSX_PLUG = 'Plug your USB key into your computer and in a terminal run <code>diskutil list</code>.
 You should see your USB key as <code>/dev/diskN</code>, (N=1,2,3,4…)'
 
-NUC_OSX_UNMOUNT: 'Unmount your USB key with <code>diskutil umountDisk /dev/diskN</code> <%= SUBSTITUTE_DISK %>.'
+NUC_OSX_UNMOUNT = 'Unmount your USB key with <code>diskutil umountDisk /dev/diskN</code> <%= SUBSTITUTE_DISK %>.'
 
-NUC_LINUX_DF: '''
+NUC_LINUX_DF = '''
 	Run <code>df -h</code> to see what devices are currently mounted.
 	<br>
 	Insert your USB key.
