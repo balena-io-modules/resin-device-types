@@ -1,3 +1,5 @@
+* Add support for via-vab820-quad
+
 ## 08/26 - v. 8.0.0
 
 * Add initialization property to device types [Juan]
