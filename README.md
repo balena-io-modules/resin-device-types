@@ -1,14 +1,15 @@
-**This repo is a temporary solutuion for reusable device types info used in the API (-> UI) and other parts of the system. It meant to be replaced by something easier to manage.**
+**This repo holds the reusable device types info used in the API (-> UI) and other parts of the system.**
 
 ## Updating Device Types
 
 The current process for making changes and propagating them to other repos is:
 
-* make your changes to the source files (`device-types` folder, or the `build.coffee` script) in a separate branch and send a PR. See https://resinio.atlassian.net/wiki/display/RES/Adding+device+types+definitions for instructions
-* once it's approved merge the PR
-* checkout the master branch on your machine and pull your recent changes
-* get the needed npm modules by running `npm install`
-* run `npm run prepublish`, also open the `package.json` file and bump the package version there (normally bump minor for new features, patch for small fixes, and major for serious refactoring or breaking changes)
+* have `node` and `npm` installed, run `npm install` in the repo
+* make your changes to the source files (`device-types` folder, or the `build.coffee` script) in a separate branch. See https://resinio.atlassian.net/wiki/display/RES/Adding+device+types+definitions for instructions
+* verify your changes by running `npm run prepublish`, you should get no errors and an updated JSOP
+* send a PR _but don't include the `device-types.json` in it_, once the PR is approved merge it
+* checkout the `master` branch on your machine and pull your recent changes
+* run `npm run prepublish`, also open the `package.json` file and bump the package version there (normally bump minor for new features, patch for small fixes, and major for serious refactoring or breaking changes), as well as update the CHANGELOG.md
 * commit your changes (yes, to master): `git commit -am "version bump"`
 * tag your changes: `git tag v2.x.x` (substitute with the actual version)
 * push your changes and the tag (yes, to master): `git push; git push --tags`
