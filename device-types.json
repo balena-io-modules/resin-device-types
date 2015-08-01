@@ -286,6 +286,31 @@
 		"name": "Intel NUC (PREVIEW)",
 		"arch": "amd64",
 		"state": "PREVIEW",
+		"instructions": {
+			"windows": [
+				"Install <a href=\"http://sourceforge.net/projects/win32diskimager/\">Win32 Disk Imager</a>.\n<br>\nStart Win32 Disk Imager and navigate to the Device OS <code>.img</code> in your downloads.\nSelect &lt;OS-image-download&gt;.img (but replacing <code>&lt;OS-image-download&gt;</code> with your download name)\nas your “Image File”.'\n<br>\nInsert your USB key. In Win32 Disk Imager, select your USB key in the drop down for “Device”\n<br>\nMake 100% sure it is the correct drive and click “Write”.\n<br>\nWait until it's finished writing.",
+				"Safely eject the freshly burnt USB key and insert into the Intel NUC.",
+				"Power up the Intel NUC. Make sure you have a keyboard connected.\nPress the F10 key while BIOS is loading in order to enter the boot menu. Next, select the \"UEFI : USB\" option."
+			],
+			"osx": [
+				"Plug your USB key into your computer and in a terminal run <code>diskutil list</code>. You should see your USB key as <code>/dev/diskN</code>, (N=1,2,3,4…)",
+				"Unmount your USB key with <code>diskutil umountDisk /dev/diskN</code> where N is your SD disk number.",
+				"Run <code>sudo dd bs=1m if=~/Downloads/&lt;OS-image-download&gt;.img of=/dev/rdiskN</code>\nbut replacing <code>&lt;OS-image-download&gt;</code> with your download name\nand replacing the <code>of=/dev/rdiskN</code> with the appropriate device name.\n<br>\n<strong>Warning!</strong>&nbsp;This step is dangerous. You can see a full description of this process\n<a href=\"http://docs.resin.io/#/pages/installing/gettingStarted-NUC.md#on-mac-and-linux\">here</a>.",
+				"Safely eject the freshly burnt USB key and insert into the Intel NUC.",
+				"Power up the Intel NUC. Make sure you have a keyboard connected.\nPress the F10 key while BIOS is loading in order to enter the boot menu. Next, select the \"UEFI : USB\" option."
+			],
+			"linux": [
+				"Run <code>df -h</code> to see what devices are currently mounted.\n<br>\nInsert your USB key.\n<br>\nRun <code>df -h</code> again,the device that wasn't there last time is your USB key.\nIt will be listed as something like <code>/dev/sdd1</code>.\nThe last part (\"1\") is the partition number,\nso the USB device name is without that suffix: \"/dev/sdd\"\n<br>\nUnmount your USB key with <code>umount /dev/sddN</code> where N is your SD disk number.",
+				"Run <code>sudo dd bs=1m if=~/Downloads/&lt;OS-image-download&gt;.img of=/dev/rdiskN</code>\nbut replacing <code>&lt;OS-image-download&gt;</code> with your download name\nand replacing the <code>of=/dev/rdiskN</code> with the appropriate device name.\n<br>\n<strong>Warning!</strong>&nbsp;This step is dangerous. You can see a full description of this process\n<a href=\"http://docs.resin.io/#/pages/installing/gettingStarted-NUC.md#on-mac-and-linux\">here</a>.",
+				"Safely eject the freshly burnt USB key and insert into the Intel NUC.",
+				"Power up the Intel NUC. Make sure you have a keyboard connected.\nPress the F10 key while BIOS is loading in order to enter the boot menu. Next, select the \"UEFI : USB\" option."
+			]
+		},
+		"gettingStartedLink": {
+			"windows": "http://docs.resin.io/#/pages/installing/gettingStarted-NUC.md#windows",
+			"osx": "http://docs.resin.io/#/pages/installing/gettingStarted-NUC.md#on-mac-and-linux",
+			"linux": "http://docs.resin.io/#/pages/installing/gettingStarted-NUC.md#on-mac-and-linux"
+		},
 		"yocto": {
 			"machine": "nuc",
 			"image": "resin-image-flasher",
@@ -296,7 +321,42 @@
 		"configuration": {
 			"configPartition": "(4:1)"
 		},
-		"instructions": {}
+		"options": [
+			{
+				"isGroup": true,
+				"name": "network",
+				"message": "Network",
+				"isCollapsible": true,
+				"collapsed": false,
+				"options": [
+					{
+						"message": "Network Connection",
+						"name": "network",
+						"type": "list",
+						"choices": [
+							"ethernet",
+							"wifi"
+						]
+					},
+					{
+						"message": "Wifi SSID",
+						"name": "wifiSsid",
+						"type": "text",
+						"when": {
+							"network": "wifi"
+						}
+					},
+					{
+						"message": "Wifi Passphrase",
+						"name": "wifiKey",
+						"type": "text",
+						"when": {
+							"network": "wifi"
+						}
+					}
+				]
+			}
+		]
 	},
 	{
 		"slug": "nitrogen6x",

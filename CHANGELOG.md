@@ -1,3 +1,6 @@
+## 08/01 - v. 6.2.0
+* Add Intel NUC instructions and options [Florin]
+
 ## 07/31 - v. 6.1.2
 
 * Fix nitrogen6x deploy artifact [Page]
