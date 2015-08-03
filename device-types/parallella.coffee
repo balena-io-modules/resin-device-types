@@ -36,15 +36,19 @@ module.exports =
 		deployArtifact: 'resin-image-parallella-hdmi-resin.resin-sdcard'
 
 	configuration:
-		configPartition: '(4:1)'
-		
+		configPartition:
+			primary: 4
+			logical: 1
+
 		operations: [
 			command: 'copy'
 			from:
-				partition: '(1)'
+				partition:
+					primary: 1
 				path: '/bitstreams/parallella_e16_headless_gpiose_7010.bit.bin'
 			to:
-				partition: '(1)'
+				partition:
+					primary: 1
 				path: '/parallella.bit.bin'
 			when:
 				coprocessorCore: '16'
@@ -52,10 +56,12 @@ module.exports =
 		,
 			command: 'copy'
 			from:
-				partition: '(1)'
+				partition:
+					primary: 1
 				path: '/bistreams/parallella_e16_headless_gpiose_7020.bit.bin'
 			to:
-				partition: '(1)'
+				partition:
+					primary: 1
 				path: '/parallella.bit.bin'
 			when:
 				coprocessorCore: '16'
@@ -63,10 +69,12 @@ module.exports =
 		,
 			command: 'copy'
 			from:
-				partition: '(1)'
+				partition:
+					primary: 1
 				path: '/bistreams/parallella_e64_headless_gpiose_7010.bit.bin'
 			to:
-				partition: '(1)'
+				partition:
+					primary: 1
 				path: '/parallella.bit.bin'
 			when:
 				coprocessorCore: '64'
@@ -74,10 +82,12 @@ module.exports =
 		,
 			command: 'copy'
 			from:
-				partition: '(1)'
+				partition:
+					primary: 1
 				path: '/bistreams/parallella_e64_headless_gpiose_7020.bit.bin'
 			to:
-				partition: '(1)'
+				partition:
+					primary: 1
 				path: '/parallella.bit.bin'
 			when:
 				coprocessorCore: '64'
@@ -85,9 +95,11 @@ module.exports =
 		,
 			command: 'copy'
 			from:
-				partition: '(1)'
+				partition:
+					primary: 1
 				path: '/device-trees/parallella-mmc-boot.dtb'
 			to:
-				partition: '(1)'
+				partition:
+					primary: 1
 				path: '/devicetree.dtb'
 		]
