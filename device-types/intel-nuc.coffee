@@ -78,6 +78,8 @@ module.exports =
 		deployArtifact: 'resin-image-flasher-nuc.resin-sdcard'
 
 	configuration:
-		configPartition: '(4:1)'
+		configPartition:
+			primary: 4
+			logical: 1
 
 	options: [ networkOptions.group ]

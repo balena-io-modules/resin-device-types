@@ -61,7 +61,7 @@ module.exports =
 
 	optionGroups: [ networkOptions.group ]
 
-	options: [ 
+	options: [
 		isGroup: true
 		name: 'network'
 		message: 'Network'

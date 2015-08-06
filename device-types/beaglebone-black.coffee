@@ -46,4 +46,6 @@ module.exports =
 	options: [ networkOptions.group ]
 
 	configuration:
-		configPartition: '(4:1)'
+		configPartition:
+			primary: 4
+			logical: 1

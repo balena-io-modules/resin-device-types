@@ -23,4 +23,6 @@ module.exports =
 		deployArtifact: 'resin-image-cubox-i.resin-sdcard'
 
 	configuration:
-		configPartition: '(4:1)'	
+		configPartition:
+			primary: 4
+			logical: 1
