@@ -80,3 +80,21 @@ module.exports =
 		config:
 			image: 'config.img'
 			path: '/config.json'
+
+	initialization:
+		operations: [
+			command: 'run-script'
+			script: 'flashall.bat'
+			when:
+				os: 'win32'
+		,
+			command: 'run-script'
+			script: 'flashall.sh'
+			when:
+				os: 'osx'
+		,
+			command: 'run-script'
+			script: 'flashall.sh'
+			when:
+				os: 'linux'
+		]

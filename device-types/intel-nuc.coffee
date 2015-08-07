@@ -1,4 +1,5 @@
 networkOptions = require '../common/network-options'
+common = require '../common/common-img'
 
 NUC_WINDOWS_DISK_IMAGER = '''
 	Install <a href="http://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a>.
@@ -85,3 +86,5 @@ module.exports =
 			path: '/config.json'
 
 	options: [ networkOptions.group ]
+
+	initialization: common.initialization
