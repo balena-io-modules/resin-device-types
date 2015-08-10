@@ -24,6 +24,4 @@ exports.group =
 	isGroup: true
 	name: 'network'
 	message: 'Network'
-	isCollapsible: true
-	collapsed: false
 	options: options

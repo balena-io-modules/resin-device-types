@@ -59,14 +59,10 @@ module.exports =
 		deployArtifact: 'resin-edison'
 		archive: true
 
-	optionGroups: [ networkOptions.group ]
-
 	options: [
 		isGroup: true
 		name: 'network'
 		message: 'Network'
-		isCollapsible: true
-		collapsed: false
 		options: [
 			message: 'Network Type'
 			name: 'network'
