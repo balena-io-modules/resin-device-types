@@ -66,7 +66,6 @@ module.exports =
 		options: [
 			message: 'Network Type'
 			name: 'network'
-			group: 'network'
 			type: 'list'
 			choices: [ 'wifi' ]
 			hidden: true
