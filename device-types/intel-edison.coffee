@@ -82,4 +82,6 @@ module.exports =
 	]
 
 	configuration:
-		configPartition: 'config.img'
+		config:
+			image: 'config.img'
+			path: '/config.json'
