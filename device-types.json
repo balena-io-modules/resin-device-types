@@ -77,7 +77,10 @@
 			}
 		],
 		"configuration": {
-			"configPartition": "(4:1)"
+			"configPartition": {
+				"primary": 4,
+				"logical": 1
+			}
 		}
 	},
 	{
@@ -158,7 +161,10 @@
 			"deployArtifact": "resin-image-cubox-i.resin-sdcard"
 		},
 		"configuration": {
-			"configPartition": "(4:1)"
+			"configPartition": {
+				"primary": 4,
+				"logical": 1
+			}
 		}
 	},
 	{
@@ -319,7 +325,10 @@
 			"deployArtifact": "resin-image-flasher-nuc.resin-sdcard"
 		},
 		"configuration": {
-			"configPartition": "(4:1)"
+			"configPartition": {
+				"primary": 4,
+				"logical": 1
+			}
 		},
 		"options": [
 			{
@@ -436,7 +445,10 @@
 			}
 		],
 		"configuration": {
-			"configPartition": "(4:1)"
+			"configPartition": {
+				"primary": 4,
+				"logical": 1
+			}
 		}
 	},
 	{
@@ -535,16 +547,23 @@
 			"deployArtifact": "resin-image-parallella-hdmi-resin.resin-sdcard"
 		},
 		"configuration": {
-			"configPartition": "(4:1)",
+			"configPartition": {
+				"primary": 4,
+				"logical": 1
+			},
 			"operations": [
 				{
 					"command": "copy",
 					"from": {
-						"partition": "(1)",
+						"partition": {
+							"primary": 1
+						},
 						"path": "/bitstreams/parallella_e16_headless_gpiose_7010.bit.bin"
 					},
 					"to": {
-						"partition": "(1)",
+						"partition": {
+							"primary": 1
+						},
 						"path": "/parallella.bit.bin"
 					},
 					"when": {
@@ -555,11 +574,15 @@
 				{
 					"command": "copy",
 					"from": {
-						"partition": "(1)",
+						"partition": {
+							"primary": 1
+						},
 						"path": "/bistreams/parallella_e16_headless_gpiose_7020.bit.bin"
 					},
 					"to": {
-						"partition": "(1)",
+						"partition": {
+							"primary": 1
+						},
 						"path": "/parallella.bit.bin"
 					},
 					"when": {
@@ -570,11 +593,15 @@
 				{
 					"command": "copy",
 					"from": {
-						"partition": "(1)",
+						"partition": {
+							"primary": 1
+						},
 						"path": "/bistreams/parallella_e64_headless_gpiose_7010.bit.bin"
 					},
 					"to": {
-						"partition": "(1)",
+						"partition": {
+							"primary": 1
+						},
 						"path": "/parallella.bit.bin"
 					},
 					"when": {
@@ -585,11 +612,15 @@
 				{
 					"command": "copy",
 					"from": {
-						"partition": "(1)",
+						"partition": {
+							"primary": 1
+						},
 						"path": "/bistreams/parallella_e64_headless_gpiose_7020.bit.bin"
 					},
 					"to": {
-						"partition": "(1)",
+						"partition": {
+							"primary": 1
+						},
 						"path": "/parallella.bit.bin"
 					},
 					"when": {
@@ -600,11 +631,15 @@
 				{
 					"command": "copy",
 					"from": {
-						"partition": "(1)",
+						"partition": {
+							"primary": 1
+						},
 						"path": "/device-trees/parallella-mmc-boot.dtb"
 					},
 					"to": {
-						"partition": "(1)",
+						"partition": {
+							"primary": 1
+						},
 						"path": "/devicetree.dtb"
 					}
 				}
@@ -689,7 +724,10 @@
 			"deployArtifact": "resin-image-raspberrypi.resin-sdcard"
 		},
 		"configuration": {
-			"configPartition": "(4:1)"
+			"configPartition": {
+				"primary": 4,
+				"logical": 1
+			}
 		}
 	},
 	{
@@ -771,7 +809,10 @@
 			"deployArtifact": "resin-image-raspberrypi2.resin-sdcard"
 		},
 		"configuration": {
-			"configPartition": "(4:1)"
+			"configPartition": {
+				"primary": 4,
+				"logical": 1
+			}
 		}
 	}
 ]

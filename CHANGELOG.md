@@ -1,3 +1,4 @@
+## 08/10 - v. 7.0.0
 * Verbose partitions config [Juan]
 
 ## 08/01 - v. 6.2.0
