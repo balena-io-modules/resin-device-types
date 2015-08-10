@@ -1,3 +1,5 @@
+* Advanced options group [Eugene]
+
 ## 08/10 - v. 7.0.0
 * Verbose partitions config [Juan]
 
