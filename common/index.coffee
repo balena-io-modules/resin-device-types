@@ -1,3 +1,7 @@
+advancedOptions = require '../common/advanced-options'
+
+exports.sharedOptions = [ advancedOptions.group ]
+
 exports.instructions =
 	CONNECT: 'Connect your device to the internet.'
 

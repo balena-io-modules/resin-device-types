@@ -3,6 +3,7 @@ path = require 'path'
 _ = require 'lodash'
 
 sharedInstructionsSteps = require('./common').instructions
+sharedOptions = require('./common').sharedOptions
 
 compileTemplate = _.memoize(_.template)
 
@@ -19,6 +20,8 @@ deviceTypes = fs.readdirSync(path.join(__dirname, 'device-types'))
 			return false
 	return true
 .map (typeDefinition) ->
+	# process instructions
+
 	processInstructionsArray = (instructions, os) ->
 		gettingStartedLink = os and typeDefinition.gettingStartedLink?[os] or typeDefinition.gettingStartedLink
 		context = _.extend {}, sharedInstructionsSteps,
@@ -37,10 +40,17 @@ deviceTypes = fs.readdirSync(path.join(__dirname, 'device-types'))
 		# handle os-specific instructions objects
 		_.mapValues(typeDefinition.instructions, processInstructionsArray)
 
+	# process state
+
 	typeDefinition.state = typeDefinition.state.toUpperCase()
 
 	if typeDefinition.state isnt 'RELEASED'
 		typeDefinition.name += " (#{typeDefinition.state})"
+
+	# process options
+
+	typeDefinition.options ?= []
+	typeDefinition.options = typeDefinition.options.concat(sharedOptions)
 
 	return typeDefinition
 
