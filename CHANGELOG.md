@@ -1,3 +1,4 @@
+## 08/10 - v. 7.1.0
 * Advanced options group [Eugene]
 
 ## 08/10 - v. 7.0.0
@@ -7,7 +8,6 @@
 * Add Intel NUC instructions and options [Jon]
 
 ## 07/31 - v. 6.1.2
-
 * Fix nitrogen6x deploy artifact [Page]
 
 ## 07/30 - v. 6.1.1

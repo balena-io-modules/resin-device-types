@@ -45,8 +45,6 @@
 				"isGroup": true,
 				"name": "network",
 				"message": "Network",
-				"isCollapsible": true,
-				"collapsed": false,
 				"options": [
 					{
 						"message": "Network Connection",
@@ -72,6 +70,21 @@
 						"when": {
 							"network": "wifi"
 						}
+					}
+				]
+			},
+			{
+				"isGroup": true,
+				"isCollapsible": true,
+				"colapsed": true,
+				"name": "advanced",
+				"message": "Advanced",
+				"options": [
+					{
+						"message": "Check for updates every X minutes",
+						"name": "appUpdatePollInterval",
+						"type": "number",
+						"min": 0
 					}
 				]
 			}
@@ -122,8 +135,6 @@
 				"isGroup": true,
 				"name": "network",
 				"message": "Network",
-				"isCollapsible": true,
-				"collapsed": false,
 				"options": [
 					{
 						"message": "Network Connection",
@@ -149,6 +160,21 @@
 						"when": {
 							"network": "wifi"
 						}
+					}
+				]
+			},
+			{
+				"isGroup": true,
+				"isCollapsible": true,
+				"colapsed": true,
+				"name": "advanced",
+				"message": "Advanced",
+				"options": [
+					{
+						"message": "Check for updates every X minutes",
+						"name": "appUpdatePollInterval",
+						"type": "number",
+						"min": 0
 					}
 				]
 			}
@@ -207,54 +233,15 @@
 			"deployArtifact": "resin-edison",
 			"archive": true
 		},
-		"optionGroups": [
-			{
-				"isGroup": true,
-				"name": "network",
-				"message": "Network",
-				"isCollapsible": true,
-				"collapsed": false,
-				"options": [
-					{
-						"message": "Network Connection",
-						"name": "network",
-						"type": "list",
-						"choices": [
-							"ethernet",
-							"wifi"
-						]
-					},
-					{
-						"message": "Wifi SSID",
-						"name": "wifiSsid",
-						"type": "text",
-						"when": {
-							"network": "wifi"
-						}
-					},
-					{
-						"message": "Wifi Passphrase",
-						"name": "wifiKey",
-						"type": "text",
-						"when": {
-							"network": "wifi"
-						}
-					}
-				]
-			}
-		],
 		"options": [
 			{
 				"isGroup": true,
 				"name": "network",
 				"message": "Network",
-				"isCollapsible": true,
-				"collapsed": false,
 				"options": [
 					{
 						"message": "Network Type",
 						"name": "network",
-						"group": "network",
 						"type": "list",
 						"choices": [
 							"wifi"
@@ -276,6 +263,21 @@
 						"when": {
 							"network": "wifi"
 						}
+					}
+				]
+			},
+			{
+				"isGroup": true,
+				"isCollapsible": true,
+				"colapsed": true,
+				"name": "advanced",
+				"message": "Advanced",
+				"options": [
+					{
+						"message": "Check for updates every X minutes",
+						"name": "appUpdatePollInterval",
+						"type": "number",
+						"min": 0
 					}
 				]
 			}
@@ -335,8 +337,6 @@
 				"isGroup": true,
 				"name": "network",
 				"message": "Network",
-				"isCollapsible": true,
-				"collapsed": false,
 				"options": [
 					{
 						"message": "Network Connection",
@@ -362,6 +362,21 @@
 						"when": {
 							"network": "wifi"
 						}
+					}
+				]
+			},
+			{
+				"isGroup": true,
+				"isCollapsible": true,
+				"colapsed": true,
+				"name": "advanced",
+				"message": "Advanced",
+				"options": [
+					{
+						"message": "Check for updates every X minutes",
+						"name": "appUpdatePollInterval",
+						"type": "number",
+						"min": 0
 					}
 				]
 			}
@@ -413,8 +428,6 @@
 				"isGroup": true,
 				"name": "network",
 				"message": "Network",
-				"isCollapsible": true,
-				"collapsed": false,
 				"options": [
 					{
 						"message": "Network Connection",
@@ -440,6 +453,21 @@
 						"when": {
 							"network": "wifi"
 						}
+					}
+				]
+			},
+			{
+				"isGroup": true,
+				"isCollapsible": true,
+				"colapsed": true,
+				"name": "advanced",
+				"message": "Advanced",
+				"options": [
+					{
+						"message": "Check for updates every X minutes",
+						"name": "appUpdatePollInterval",
+						"type": "number",
+						"min": 0
 					}
 				]
 			}
@@ -490,8 +518,6 @@
 				"isGroup": true,
 				"name": "network",
 				"message": "Network",
-				"isCollapsible": true,
-				"collapsed": false,
 				"options": [
 					{
 						"message": "Network Connection",
@@ -536,6 +562,21 @@
 				"choices": [
 					"16",
 					"64"
+				]
+			},
+			{
+				"isGroup": true,
+				"isCollapsible": true,
+				"colapsed": true,
+				"name": "advanced",
+				"message": "Advanced",
+				"options": [
+					{
+						"message": "Check for updates every X minutes",
+						"name": "appUpdatePollInterval",
+						"type": "number",
+						"min": 0
+					}
 				]
 			}
 		],
@@ -685,8 +726,6 @@
 				"isGroup": true,
 				"name": "network",
 				"message": "Network",
-				"isCollapsible": true,
-				"collapsed": false,
 				"options": [
 					{
 						"message": "Network Connection",
@@ -712,6 +751,21 @@
 						"when": {
 							"network": "wifi"
 						}
+					}
+				]
+			},
+			{
+				"isGroup": true,
+				"isCollapsible": true,
+				"colapsed": true,
+				"name": "advanced",
+				"message": "Advanced",
+				"options": [
+					{
+						"message": "Check for updates every X minutes",
+						"name": "appUpdatePollInterval",
+						"type": "number",
+						"min": 0
 					}
 				]
 			}
@@ -770,8 +824,6 @@
 				"isGroup": true,
 				"name": "network",
 				"message": "Network",
-				"isCollapsible": true,
-				"collapsed": false,
 				"options": [
 					{
 						"message": "Network Connection",
@@ -797,6 +849,21 @@
 						"when": {
 							"network": "wifi"
 						}
+					}
+				]
+			},
+			{
+				"isGroup": true,
+				"isCollapsible": true,
+				"colapsed": true,
+				"name": "advanced",
+				"message": "Advanced",
+				"options": [
+					{
+						"message": "Check for updates every X minutes",
+						"name": "appUpdatePollInterval",
+						"type": "number",
+						"min": 0
 					}
 				]
 			}
