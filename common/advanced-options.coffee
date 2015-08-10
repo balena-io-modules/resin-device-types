@@ -1,7 +1,7 @@
 exports.group =
 	isGroup: true
 	isCollapsible: true
-	colapsed: true
+	collapsed: true
 	name: 'advanced'
 	message: 'Advanced'
 	options: [
