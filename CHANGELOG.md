@@ -1,5 +1,5 @@
 ## 08/10 - v. 7.1.1
-* Fix type [Eugene]
+* Fix typo [Eugene]
 
 ## 08/10 - v. 7.1.0
 * Advanced options group [Eugene]
