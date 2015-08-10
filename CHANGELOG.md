@@ -1,5 +1,7 @@
+* Verbose partitions config [Juan]
+
 ## 08/01 - v. 6.2.0
-* Add Intel NUC instructions and options [Florin]
+* Add Intel NUC instructions and options [Jon]
 
 ## 07/31 - v. 6.1.2
 
@@ -9,8 +11,8 @@
 * Fix parallella deploy artifact [Page]
 
 ## 07/28 - v. 6.1.0
-* Intel NUC [Florin]
-* Fix for beaglbone [Florin]
+* Intel NUC [Jon]
+* Fix for beaglbone [Jon]
 
 ## v6.0.1
 
