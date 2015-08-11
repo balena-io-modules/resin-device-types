@@ -66,7 +66,7 @@
 					{
 						"message": "Wifi Passphrase",
 						"name": "wifiKey",
-						"type": "text",
+						"type": "password",
 						"when": {
 							"network": "wifi"
 						}
@@ -157,7 +157,7 @@
 					{
 						"message": "Wifi Passphrase",
 						"name": "wifiKey",
-						"type": "text",
+						"type": "password",
 						"when": {
 							"network": "wifi"
 						}
@@ -261,7 +261,7 @@
 					{
 						"message": "Wifi Passphrase",
 						"name": "wifiKey",
-						"type": "text",
+						"type": "password",
 						"when": {
 							"network": "wifi"
 						}
@@ -361,7 +361,7 @@
 					{
 						"message": "Wifi Passphrase",
 						"name": "wifiKey",
-						"type": "text",
+						"type": "password",
 						"when": {
 							"network": "wifi"
 						}
@@ -453,7 +453,7 @@
 					{
 						"message": "Wifi Passphrase",
 						"name": "wifiKey",
-						"type": "text",
+						"type": "password",
 						"when": {
 							"network": "wifi"
 						}
@@ -544,7 +544,7 @@
 					{
 						"message": "Wifi Passphrase",
 						"name": "wifiKey",
-						"type": "text",
+						"type": "password",
 						"when": {
 							"network": "wifi"
 						}
@@ -753,7 +753,7 @@
 					{
 						"message": "Wifi Passphrase",
 						"name": "wifiKey",
-						"type": "text",
+						"type": "password",
 						"when": {
 							"network": "wifi"
 						}
@@ -852,7 +852,7 @@
 					{
 						"message": "Wifi Passphrase",
 						"name": "wifiKey",
-						"type": "text",
+						"type": "password",
 						"when": {
 							"network": "wifi"
 						}

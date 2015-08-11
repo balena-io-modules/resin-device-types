@@ -1,3 +1,4 @@
+## 08/10 - v. 7.3.0
 * Make the wifiKey type a password [Eugene]
 
 ## 08/10 - v. 7.2.0
