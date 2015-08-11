@@ -9,4 +9,5 @@ exports.group =
 		name: 'appUpdatePollInterval'
 		type: 'number'
 		min: 0
+		default: 1
 	]
