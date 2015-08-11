@@ -1,3 +1,5 @@
+* Make the wifiKey type a password [Eugene]
+
 ## 08/10 - v. 7.2.0
 * Add default to advanced options appUpdatePollInterval [Eugene]
 

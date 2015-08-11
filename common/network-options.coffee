@@ -14,7 +14,7 @@ exports.wifiSsid = wifiSsid =
 exports.wifiKey = wifiKey =
 	message: 'Wifi Passphrase'
 	name: 'wifiKey'
-	type: 'text'
+	type: 'password'
 	when:
 		network: 'wifi'
 
