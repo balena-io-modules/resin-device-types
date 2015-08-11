@@ -102,9 +102,9 @@
 		"aliases": [
 			"cubox-i"
 		],
-		"name": "Hummingboard (PREVIEW)",
+		"name": "Hummingboard (EXPERIMENTAL)",
 		"arch": "armv7hf",
-		"state": "PREVIEW",
+		"state": "EXPERIMENTAL",
 		"instructions": {
 			"windows": [
 				"Install <a href=\"http://sourceforge.net/projects/win32diskimager/\">Win32 Disk Imager</a>.\n<br>\nStart Win32 Disk Imager and navigate to the Device OS <code>.img</code> in your downloads.\nSelect &lt;OS-image-download&gt;.img (but replacing <code>&lt;OS-image-download&gt;</code> with your download name)\nas your “Image File”.'\n<br>\nInsert your SD card. In Win32 Disk Imager, select your SD in the drop down for “Device”\n<br>\nMake 100% sure it is the correct drive and click “Write”.\n<br>\nWait until it's finished writing.",
@@ -200,9 +200,9 @@
 		"aliases": [
 			"edison"
 		],
-		"name": "Intel Edison (EXPERIMENTAL)",
+		"name": "Intel Edison",
 		"arch": "i386",
-		"state": "EXPERIMENTAL",
+		"state": "RELEASED",
 		"gettingStartedLink": "http://docs.resin.io/#/pages/installing/gettingStarted-Edison.md",
 		"instructions": {
 			"windows": [
@@ -391,9 +391,9 @@
 		"aliases": [
 			"nitrogen6x"
 		],
-		"name": "Nitrogen 6X (PREVIEW)",
+		"name": "Nitrogen 6X (EXPERIMENTAL)",
 		"arch": "armv7hf",
-		"state": "PREVIEW",
+		"state": "EXPERIMENTAL",
 		"instructions": {
 			"windows": [
 				"Install <a href=\"http://sourceforge.net/projects/win32diskimager/\">Win32 Disk Imager</a>.\n<br>\nStart Win32 Disk Imager and navigate to the Device OS <code>.img</code> in your downloads.\nSelect &lt;OS-image-download&gt;.img (but replacing <code>&lt;OS-image-download&gt;</code> with your download name)\nas your “Image File”.'\n<br>\nInsert your SD card. In Win32 Disk Imager, select your SD in the drop down for “Device”\n<br>\nMake 100% sure it is the correct drive and click “Write”.\n<br>\nWait until it's finished writing.",

@@ -1,10 +1,12 @@
+## 08/11 - v. 7.4.0
+
 * Publish Nitrogen6x and Hummingboard [Eugene]
 * Remove Experimental flag from Edison [Eugene]
 
-## 08/10 - v. 7.3.0
+## 08/11 - v. 7.3.0
 * Make the wifiKey type a password [Eugene]
 
-## 08/10 - v. 7.2.0
+## 08/11 - v. 7.2.0
 * Add default to advanced options appUpdatePollInterval [Eugene]
 
 ## 08/10 - v. 7.1.1
