@@ -4,7 +4,7 @@ module.exports =
 	aliases: [ 'cubox-i' ]
 	name: 'Hummingboard'
 	arch: 'armv7hf'
-	state: 'preview'
+	state: 'experimental'
 
 	instructions: require('../common/common-img').instructions
 	gettingStartedLink:

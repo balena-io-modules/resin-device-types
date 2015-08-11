@@ -4,7 +4,7 @@ module.exports =
 	aliases: [ 'nitrogen6x' ]
 	name: 'Nitrogen 6X'
 	arch: 'armv7hf'
-	state: 'preview'
+	state: 'experimental'
 
 	instructions: require('../common/common-img').instructions
 	gettingStartedLink:

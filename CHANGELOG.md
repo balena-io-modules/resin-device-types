@@ -1,3 +1,6 @@
+* Publish Nitrogen6x and Hummingboard [Eugene]
+* Remove Experimental flag from Edison [Eugene]
+
 ## 08/10 - v. 7.3.0
 * Make the wifiKey type a password [Eugene]
 
