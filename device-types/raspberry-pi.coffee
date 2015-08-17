@@ -23,6 +23,8 @@ module.exports =
 		deployArtifact: 'resin-image-raspberrypi.resin-sdcard'
 
 	configuration:
-		configPartition:
-			primary: 4
-			logical: 1
+		config:
+			partition:
+				primary: 4
+				logical: 1
+			path: '/config.json'
