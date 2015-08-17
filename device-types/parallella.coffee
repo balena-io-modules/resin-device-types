@@ -60,7 +60,7 @@ module.exports =
 			from:
 				partition:
 					primary: 1
-				path: '/bistreams/parallella_e16_headless_gpiose_7020.bit.bin'
+				path: '/bitstreams/parallella_e16_headless_gpiose_7020.bit.bin'
 			to:
 				partition:
 					primary: 1
@@ -73,7 +73,7 @@ module.exports =
 			from:
 				partition:
 					primary: 1
-				path: '/bistreams/parallella_e64_headless_gpiose_7010.bit.bin'
+				path: '/bitstreams/parallella_e64_headless_gpiose_7010.bit.bin'
 			to:
 				partition:
 					primary: 1
@@ -86,7 +86,7 @@ module.exports =
 			from:
 				partition:
 					primary: 1
-				path: '/bistreams/parallella_e64_headless_gpiose_7020.bit.bin'
+				path: '/bitstreams/parallella_e64_headless_gpiose_7020.bit.bin'
 			to:
 				partition:
 					primary: 1
