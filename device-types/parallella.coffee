@@ -73,32 +73,6 @@ module.exports =
 			from:
 				partition:
 					primary: 1
-				path: '/bitstreams/parallella_e64_headless_gpiose_7010.bit.bin'
-			to:
-				partition:
-					primary: 1
-				path: '/parallella.bit.bin'
-			when:
-				coprocessorCore: '64'
-				processorType: 'Z7010'
-		,
-			command: 'copy'
-			from:
-				partition:
-					primary: 1
-				path: '/bitstreams/parallella_e64_headless_gpiose_7020.bit.bin'
-			to:
-				partition:
-					primary: 1
-				path: '/parallella.bit.bin'
-			when:
-				coprocessorCore: '64'
-				processorType: 'Z7020'
-		,
-			command: 'copy'
-			from:
-				partition:
-					primary: 1
 				path: '/device-trees/parallella-mmc-boot.dtb'
 			to:
 				partition:
