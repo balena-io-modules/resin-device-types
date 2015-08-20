@@ -19,3 +19,14 @@ exports.instructions =
 		'EJECT'
 		'CONNECT_AND_BOOT'
 	]
+
+exports.initialization =
+	options: [
+		message: 'Select a drive'
+		type: 'drive'
+		name: 'drive'
+	]
+
+	operations: [
+		command: 'burn'
+	]

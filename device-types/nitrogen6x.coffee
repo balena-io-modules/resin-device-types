@@ -1,4 +1,5 @@
 networkOptions = require '../common/network-options'
+common = require '../common/common-img'
 
 module.exports =
 	aliases: [ 'nitrogen6x' ]
@@ -6,7 +7,7 @@ module.exports =
 	arch: 'armv7hf'
 	state: 'experimental'
 
-	instructions: require('../common/common-img').instructions
+	instructions: common.instructions
 	gettingStartedLink:
 		windows: 'http://docs.resin.io/#/pages/installing/gettingStarted-Nitrogen6x.md#windows'
 		osx: 'http://docs.resin.io/#/pages/installing/gettingStarted-Nitrogen6x.md#on-mac-and-linux'
@@ -28,3 +29,5 @@ module.exports =
 				primary: 4
 				logical: 1
 			path: '/config.json'
+
+	initialization: common.initialization

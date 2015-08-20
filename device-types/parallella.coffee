@@ -1,4 +1,5 @@
 networkOptions = require '../common/network-options'
+common = require '../common/common-img'
 
 module.exports =
 	# TODO: why HDMI if it's broken?
@@ -79,3 +80,5 @@ module.exports =
 					primary: 1
 				path: '/devicetree.dtb'
 		]
+
+	initialization: common.initialization

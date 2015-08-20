@@ -1,4 +1,5 @@
 networkOptions = require '../common/network-options'
+common = require '../common/common-img'
 
 BBB_FLASH = 'Power up the <%= TYPE_NAME %> while holding down the small button near the SD slot.
 You need to keep it pressed until the blue LEDs start flashing wildly.'
@@ -51,3 +52,5 @@ module.exports =
 				primary: 4
 				logical: 1
 			path: '/config.json'
+
+	initialization: common.initialization
