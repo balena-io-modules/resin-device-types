@@ -1,9 +1,7 @@
 ## 08/17 - v 7.5.0
 
-* Fix Parallella bitstreams something-something [Juan]
-* change configPartition to config with more granular something-something [Juan]
-
-_(Lifehack: you can eliminate `something-something` by providing the changelog entries yourself :P)_
+* Fix Parallella bitstreams path typos, which referenced `bistreams` [Juan]
+* Change configPartition to config and make it consistent with copy commands [Juan]
 
 ## 08/11 - v. 7.4.0
 
