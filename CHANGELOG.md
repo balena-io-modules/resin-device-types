@@ -1,3 +1,8 @@
+## 08/26 - v. 8.0.0
+
+* Add initialization property to device types [Juan]
+* Remove invalid bitstreams e64 file copying commands from Parallela [Juan]
+
 ## 08/17 - v 7.5.0
 
 * Fix Parallella bitstreams something-something [Juan]
