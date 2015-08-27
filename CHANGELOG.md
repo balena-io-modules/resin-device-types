@@ -1,9 +1,12 @@
+## 08/27 - v. 8.1.0
+
 * Add support for via-vab820-quad
+* Add initialization property to device types [Juan]
+* Remove invalid bitstreams e64 file copying commands from Parallela [Juan]
 
 ## 08/26 - v. 8.0.0
 
-* Add initialization property to device types [Juan]
-* Remove invalid bitstreams e64 file copying commands from Parallela [Juan]
+* No build included
 
 ## 08/17 - v 7.5.0
 
