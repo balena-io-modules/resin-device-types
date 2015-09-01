@@ -1,3 +1,7 @@
+## 09/01 - v. 8.2.0
+
+* Add preview support for Zynq ZC702
+
 ## 08/27 - v. 8.1.0
 
 * Add support for via-vab820-quad
