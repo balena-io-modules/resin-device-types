@@ -1,3 +1,6 @@
+* Add preview support for ODROID XU4
+* Add preview support for ODROID C1+
+
 ## 09/01 - v. 8.2.0
 
 * Add preview support for Zynq ZC702
