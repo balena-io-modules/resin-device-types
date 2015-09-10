@@ -2,25 +2,26 @@ networkOptions = require '../common/network-options'
 common = require '../common/common-img'
 
 module.exports =
-	name: 'ODROID-C1+'
+	aliases: [ 'odroid-ux3', 'odroid-u3+' ]
+	name: 'ODROID-XU4'
 	arch: 'armv7hf'
 	state: 'preview'
 
 	instructions: common.instructions
 	gettingStartedLink:
-		windows: 'http://docs.resin.io/#/pages/installing/gettingStarted-ODROID-C1.md#windows'
-		osx: 'http://docs.resin.io/#/pages/installing/gettingStarted-ODROID-C1.md#on-mac-and-linux'
-		linux: 'http://docs.resin.io/#/pages/installing/gettingStarted-ODROID-C1.md#on-mac-and-linux'
+		windows: 'http://docs.resin.io/#/pages/installing/gettingStarted-ODROID-XU4.md#windows'
+		osx: 'http://docs.resin.io/#/pages/installing/gettingStarted-ODROID-XU4.md#on-mac-and-linux'
+		linux: 'http://docs.resin.io/#/pages/installing/gettingStarted-ODROID-XU4.md#on-mac-and-linux'
 	supportsBlink: false
 
 	options: [ networkOptions.group ]
 
 	yocto:
-		machine: 'odroid-c1'
+		machine: 'odroid-ux3'
 		image: 'resin-image'
 		fstype: 'resin-sdcard'
 		version: 'yocto-fido'
-		deployArtifact: 'resin-image-odroid-c1.resin-sdcard'
+		deployArtifact: 'resin-image-odroid-ux3.resin-sdcard'
 
 	configuration:
 		config:
