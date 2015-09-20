@@ -1,3 +1,7 @@
+## 09/20 - v. 8.4.0
+
+* Add preview support for TS-4900 [Andrei]
+
 ## 09/01 - v. 8.3.0
 
 * Add preview support for ODROID XU4 [Andrei]
