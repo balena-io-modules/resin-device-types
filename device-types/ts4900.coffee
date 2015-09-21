@@ -4,7 +4,7 @@ common = require '../common/common-img'
 module.exports =
 	name: 'Technologic TS-4900'
 	arch: 'armv7hf'
-	state: 'preview'
+	state: 'experimental'
 
 	instructions: common.instructions
 	gettingStartedLink:
