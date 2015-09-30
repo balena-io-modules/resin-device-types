@@ -55,3 +55,7 @@ exports.instructions =
 	You should see your SD card as <code>/dev/diskN</code>, (N=1,2,3,4…)'
 
 	OSX_UNMOUNT: 'Unmount your SD with <code>diskutil umountDisk /dev/diskN</code> <%= SUBSTITUTE_DISK %>.'
+
+	BOARD_SHUTDOWN: 'The device is performing a shutdown. Please wait until all LED's are off.'
+
+	REMOVE_INSTALL_MEDIA: 'Remove the resin.io installation media.'
