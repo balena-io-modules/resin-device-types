@@ -1,3 +1,4 @@
+* Add post provisioning instructions for beaglebone [Jon]
 * Add generic instructions for post provisioning [Jon]
 
 ## 09/20 - v. 8.4.0
