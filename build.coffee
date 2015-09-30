@@ -40,6 +40,14 @@ deviceTypes = fs.readdirSync(path.join(__dirname, 'device-types'))
 		# handle os-specific instructions objects
 		_.mapValues(typeDefinition.instructions, processInstructionsArray)
 
+	if typeDefinition.stateInstructions?
+		for k, v of typeDefinition.stateInstructions
+			if _.isArray(v)
+				v = processInstructionsArray(v)
+			else
+				v.instructions = processInstructionsArray(v.instructions)
+			typeDefinition.stateInstructions[k] = v
+
 	# process state
 
 	typeDefinition.state = typeDefinition.state.toUpperCase()
