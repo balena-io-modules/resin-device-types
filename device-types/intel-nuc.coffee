@@ -40,11 +40,20 @@ NUC_FLASH = '''
 	Press the F10 key while BIOS is loading in order to enter the boot menu. Next, select the "UEFI : USB" option.
 '''
 
+NUC_POWERON = 'Press the power on button on your Intel NUC.'
+
 module.exports =
 	aliases: [ 'nuc' ]
 	name: 'Intel NUC'
 	arch: 'amd64'
 	state: 'preview'
+
+	stateInstructions:
+		postProvision: [
+			'BOARD_SHUTDOWN'
+			'REMOVE_INSTALL_MEDIA'
+			NUC_POWERON
+		]
 
 	instructions:
 		windows: [
