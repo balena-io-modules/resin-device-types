@@ -1,3 +1,5 @@
+* Change vab820-quad to use the flasher image [Jon]
+
 ## 10/21 - v. 8.5.0
 
 * Add post provisioning instructions for Intel NUC [Jon]
