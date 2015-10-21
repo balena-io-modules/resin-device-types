@@ -1,3 +1,5 @@
+## 10/21 - v. 8.5.0
+
 * Add post provisioning instructions for Intel NUC [Jon]
 * Add post provisioning instructions for beaglebone [Jon]
 * Add generic instructions for post provisioning [Jon]

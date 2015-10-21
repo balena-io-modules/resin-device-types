@@ -7,6 +7,13 @@
 		"name": "BeagleBone Black",
 		"arch": "armv7hf",
 		"state": "RELEASED",
+		"stateInstructions": {
+			"postProvision": [
+				"The device is performing a shutdown. Please wait until all LEDs are off.",
+				"Remove the resin.io installation media.",
+				"Remove and re-connect power to the board."
+			]
+		},
 		"instructions": {
 			"windows": [
 				"Install <a href=\"http://sourceforge.net/projects/win32diskimager/\">Win32 Disk Imager</a>.\n<br>\nStart Win32 Disk Imager and navigate to the Device OS <code>.img</code> in your downloads.\nSelect &lt;OS-image-download&gt;.img (but replacing <code>&lt;OS-image-download&gt;</code> with your download name)\nas your “Image File”.'\n<br>\nInsert your SD card. In Win32 Disk Imager, select your SD in the drop down for “Device”\n<br>\nMake 100% sure it is the correct drive and click “Write”.\n<br>\nWait until it's finished writing.",
@@ -359,6 +366,13 @@
 		"name": "Intel NUC (PREVIEW)",
 		"arch": "amd64",
 		"state": "PREVIEW",
+		"stateInstructions": {
+			"postProvision": [
+				"The device is performing a shutdown. Please wait until all LEDs are off.",
+				"Remove the resin.io installation media.",
+				"Press the power on button on your Intel NUC."
+			]
+		},
 		"instructions": {
 			"windows": [
 				"Install <a href=\"http://sourceforge.net/projects/win32diskimager/\">Win32 Disk Imager</a>.\n<br>\nStart Win32 Disk Imager and navigate to the Device OS <code>.img</code> in your downloads.\nSelect &lt;OS-image-download&gt;.img (but replacing <code>&lt;OS-image-download&gt;</code> with your download name)\nas your “Image File”.'\n<br>\nInsert your USB key. In Win32 Disk Imager, select your USB key in the drop down for “Device”\n<br>\nMake 100% sure it is the correct drive and click “Write”.\n<br>\nWait until it's finished writing.",
