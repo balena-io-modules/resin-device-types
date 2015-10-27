@@ -1,3 +1,4 @@
+* Add missing getting started links for VIA vab820-quad [Jon]
 * Change vab820-quad to use the flasher image [Jon]
 
 ## 10/21 - v. 8.5.0

@@ -29,6 +29,11 @@ module.exports =
 			SET_JUMPER
 		]
 
+	gettingStartedLink:
+		windows: 'http://docs.resin.io/#/pages/installing/gettingStarted-VIA-VAB820.md#windows'
+		osx: 'http://docs.resin.io/#/pages/installing/gettingStarted-VIA-VAB820.md#on-mac-and-linux'
+		linux: 'http://docs.resin.io/#/pages/installing/gettingStarted-VIA-VAB820.md#on-mac-and-linux'
+
 	supportsBlink: false
 
 	yocto:
