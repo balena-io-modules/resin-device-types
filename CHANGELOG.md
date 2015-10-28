@@ -1,3 +1,5 @@
+## 10/28 - v. 8.6.0
+
 * Add post provisioning instructions for VIA vab280-quad [Jon]
 * Add post provision instruction for NUC, specifying boot drive order [Jon]
 * Add missing getting started links for VIA vab820-quad [Jon]
