@@ -1,3 +1,4 @@
+* Add post provision instruction for NUC, specifying boot drive order [Jon]
 * Add missing getting started links for VIA vab820-quad [Jon]
 * Change vab820-quad to use the flasher image [Jon]
 

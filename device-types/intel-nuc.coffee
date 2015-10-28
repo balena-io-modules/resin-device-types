@@ -42,6 +42,8 @@ NUC_FLASH = '''
 
 NUC_POWERON = 'Press the power on button on your Intel NUC.'
 
+NUC_BOOT_SETUP = 'Press F2 to enter Setup. Select the UEFI:SATA option under Boot Drive Order, save and exit Setup.'
+
 module.exports =
 	aliases: [ 'nuc' ]
 	name: 'Intel NUC'
@@ -53,6 +55,7 @@ module.exports =
 			'BOARD_SHUTDOWN'
 			'REMOVE_INSTALL_MEDIA'
 			NUC_POWERON
+			NUC_BOOT_SETUP
 		]
 
 	instructions:
