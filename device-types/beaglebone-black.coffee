@@ -13,7 +13,7 @@ module.exports =
 	state: 'released'
 
 	stateInstructions:
-		postProvision: [
+		postProvisioning: [
 			'BOARD_SHUTDOWN'
 			'REMOVE_INSTALL_MEDIA'
 			BBB_REPOWER
