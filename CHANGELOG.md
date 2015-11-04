@@ -1,3 +1,6 @@
+## 11/04 - v. 9.0.0
+* Rename postProvision -> postProvisioning for consistency with UI [Eugene]
+
 ## 10/28 - v. 8.6.0
 
 * Add post provisioning instructions for VIA vab280-quad [Jon]
