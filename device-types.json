@@ -8,7 +8,7 @@
 		"arch": "armv7hf",
 		"state": "RELEASED",
 		"stateInstructions": {
-			"postProvision": [
+			"postProvisioning": [
 				"The device is performing a shutdown. Please wait until all LEDs are off.",
 				"Remove the resin.io installation media.",
 				"Remove and re-connect power to the board."
@@ -367,7 +367,7 @@
 		"arch": "amd64",
 		"state": "PREVIEW",
 		"stateInstructions": {
-			"postProvision": [
+			"postProvisioning": [
 				"The device is performing a shutdown. Please wait until all LEDs are off.",
 				"Remove the resin.io installation media.",
 				"Press the power on button on your Intel NUC.",
@@ -1363,7 +1363,7 @@
 		"arch": "armv7hf",
 		"state": "PREVIEW",
 		"stateInstructions": {
-			"postProvision": [
+			"postProvisioning": [
 				"The device is performing a shutdown. Please wait until the device is offline in the dashboard and disconnect the power cable.",
 				"Remove the resin.io installation media.",
 				"Set J11 (just next to the micro SD card slot) to position 1-2 (the position closest to the edge of the board).",
