@@ -51,7 +51,7 @@ module.exports =
 	state: 'preview'
 
 	stateInstructions:
-		postProvision: [
+		postProvisioning: [
 			'BOARD_SHUTDOWN'
 			'REMOVE_INSTALL_MEDIA'
 			NUC_POWERON

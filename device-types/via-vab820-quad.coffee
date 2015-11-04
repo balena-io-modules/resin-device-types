@@ -13,7 +13,7 @@ module.exports =
 	state: 'preview'
 
 	stateInstructions:
-		postProvision: [
+		postProvisioning: [
 			BOARD_SHUTDOWN_VIA
 			'REMOVE_INSTALL_MEDIA'
 			SET_JUMPER_EMMC
