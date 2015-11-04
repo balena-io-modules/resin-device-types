@@ -1,4 +1,9 @@
+## 11/04 - v. 9.1.0
+
+* Add preview support for Colibri imx6DL [Theodor]
+
 ## 11/04 - v. 9.0.0
+
 * Rename postProvision -> postProvisioning for consistency with UI [Eugene]
 
 ## 10/28 - v. 8.6.0
