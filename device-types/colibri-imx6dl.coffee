@@ -10,27 +10,27 @@ module.exports =
 	state: 'experimental'
 
 	instructions:
-     		windows: [
-                        'WINDOWS_DISK_IMAGER'
-                        'EJECT'
-                        SERIAL_CABLE
-                        UBOOT 
-                ]
-                osx: [
-                        'OSX_PLUG'
-                        'OSX_UNMOUNT'
-                        'DD_BURN_IMAGE'
-                        'EJECT'
-                        SERIAL_CABLE
-                        UBOOT 
-                ]
-                linux: [
-                        'LINUX_DF'
-                        'DD_BURN_IMAGE'
-                        'EJECT'
-                        SERIAL_CABLE
-                        UBOOT
-                ]
+		windows: [
+			'WINDOWS_DISK_IMAGER'
+			'EJECT'
+			SERIAL_CABLE
+			UBOOT
+		]
+		osx: [
+			'OSX_PLUG'
+			'OSX_UNMOUNT'
+			'DD_BURN_IMAGE'
+			'EJECT'
+			SERIAL_CABLE
+			UBOOT
+		]
+		linux: [
+			'LINUX_DF'
+			'DD_BURN_IMAGE'
+			'EJECT'
+			SERIAL_CABLE
+			UBOOT
+		]
 
 	gettingStartedLink:
 		windows: 'http://docs.resin.io/#/pages/installing/gettingStarted-colibri-imx6.md#windows'
