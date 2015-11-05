@@ -1,0 +1,22 @@
+{
+  "name": "resin-device-types",
+  "version": "9.0.0",
+  "description": "Metadata about supported device types",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "coffee -c ./index.coffee && coffee ./build.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:rulemotion/resin-device-types.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "coffee-script": "~1.9.3",
+    "lodash": "^3.10.0"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": ">=0.10 <0.13"
+  }
+}
