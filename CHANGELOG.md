@@ -1,3 +1,7 @@
+## 11/05 - v. 9.1.5
+
+* Add preview support for Apalis imx6DL [Theodor]
+
 ## 11/04 - v. 9.1.0
 
 * Add preview support for Colibri imx6DL [Theodor]
