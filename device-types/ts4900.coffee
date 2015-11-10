@@ -1,12 +1,46 @@
 networkOptions = require '../common/network-options'
 common = require '../common/common-img'
 
+TS_EMMC_BOOT_SELECT = 'Disable the SD boot jumper present on your specifc base board.'
+
+TS_SD_BOOT_SELECT = 'Enable the SD boot jumper present on your specifc base board.'
+
+TS_REPOWER = 'Remove and re-connect power to the board.'
+
 module.exports =
 	name: 'Technologic TS-4900'
 	arch: 'armv7hf'
 	state: 'experimental'
 
-	instructions: common.instructions
+	stateInstructions:
+		postProvisioning: [
+			'BOARD_SHUTDOWN'
+			'REMOVE_INSTALL_MEDIA'
+			TS_EMMC_BOOT_SELECT
+			TS_REPOWER	
+		]
+
+	instructions:
+		windows: [
+			'WINDOWS_DISK_IMAGER'
+			'EJECT'
+			TS_SD_BOOT_SELECT
+		]
+		osx: [
+			'OSX_PLUG'
+			'OSX_UNMOUNT'
+			'DD_BURN_IMAGE'
+			'EJECT'
+			TS_SD_BOOT_SELECT
+		]
+		linux: [
+			'LINUX_DF'
+			'DD_BURN_IMAGE'
+			'EJECT'
+			TS_SD_BOOT_SELECT
+		]
+
+
 	gettingStartedLink:
 		windows: 'http://docs.resin.io/#/pages/installing/gettingStarted-TS-4900.md#windows'
 		osx: 'http://docs.resin.io/#/pages/installing/gettingStarted-TS-4900.md#on-mac-and-linux'
