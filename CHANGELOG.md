@@ -1,3 +1,5 @@
+## 11/10 - v. 9.2.0
+
 * Add post provisioning instructions for ts4900 [Theodor]
 * Add preview support for Apalis imx6DL [Theodor]
 
