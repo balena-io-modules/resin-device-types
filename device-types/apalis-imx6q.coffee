@@ -15,6 +15,7 @@ module.exports =
 			'EJECT'
 			SERIAL_CABLE
 			UBOOT
+			'FLASHER_WARNING'
 		]
 		osx: [
 			'OSX_PLUG'
@@ -23,6 +24,7 @@ module.exports =
 			'EJECT'
 			SERIAL_CABLE
 			UBOOT
+			'FLASHER_WARNING'
 		]
 		linux: [
 			'LINUX_DF'
@@ -30,6 +32,7 @@ module.exports =
 			'EJECT'
 			SERIAL_CABLE
 			UBOOT
+			'FLASHER_WARNING'
 		]
 
 	gettingStartedLink:

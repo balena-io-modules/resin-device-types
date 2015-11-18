@@ -20,6 +20,9 @@ exports.instructions =
 		<br>
 		Make 100% sure it is the correct drive and click “Write”.
 		<br>
+		<strong>Warning!</strong>: Please make sure you have backed-up your SD card first,
+		as this will completely erase the contents of your SD card.
+		<br>
 		Wait until it's finished writing.
 	'''
 
@@ -47,7 +50,8 @@ exports.instructions =
 		<%= SUBSTITUTE_DOWNLOAD %>
 		and replacing the <code>of=/dev/rdiskN</code> with the appropriate device name.
 		<br>
-		<strong>Warning!</strong>&nbsp;This step is dangerous. You can see a full description of this process
+		<strong>Warning!</strong>&nbsp;Please make sure you have backed-up your SD card first,
+		as this will completely erase its contents. You can see a full description of this process
 		<a href="<%= GETTING_STARTED_LINK %>">here</a>.
 	'''
 
@@ -59,3 +63,5 @@ exports.instructions =
 	BOARD_SHUTDOWN: 'The device is performing a shutdown. Please wait until all LEDs are off.'
 
 	REMOVE_INSTALL_MEDIA: 'Remove the resin.io installation media.'
+
+	FLASHER_WARNING: '<strong>Warning!</strong> This will also completely erase internal storage media, so please make a backup first.'

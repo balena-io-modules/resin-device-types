@@ -25,6 +25,7 @@ module.exports =
 			'WINDOWS_DISK_IMAGER'
 			'EJECT'
 			TS_SD_BOOT_SELECT
+			'FLASHER_WARNING'
 		]
 		osx: [
 			'OSX_PLUG'
@@ -32,12 +33,14 @@ module.exports =
 			'DD_BURN_IMAGE'
 			'EJECT'
 			TS_SD_BOOT_SELECT
+			'FLASHER_WARNING'
 		]
 		linux: [
 			'LINUX_DF'
 			'DD_BURN_IMAGE'
 			'EJECT'
 			TS_SD_BOOT_SELECT
+			'FLASHER_WARNING'
 		]
 
 

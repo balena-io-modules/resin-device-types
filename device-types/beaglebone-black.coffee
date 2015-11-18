@@ -24,6 +24,7 @@ module.exports =
 			'WINDOWS_DISK_IMAGER'
 			'EJECT'
 			BBB_FLASH
+			'FLASHER_WARNING'
 		]
 		osx: [
 			'OSX_PLUG'
@@ -31,12 +32,14 @@ module.exports =
 			'DD_BURN_IMAGE'
 			'EJECT'
 			BBB_FLASH
+			'FLASHER_WARNING'
 		]
 		linux: [
 			'LINUX_DF'
 			'DD_BURN_IMAGE'
 			'EJECT'
 			BBB_FLASH
+			'FLASHER_WARNING'
 		]
 
 	gettingStartedLink:
