@@ -1,3 +1,4 @@
+* Changes for USB and SD based boards [Jon]
 * Added image flasher warning [Akis]
 
 ## 11/10 - v. 9.2.0

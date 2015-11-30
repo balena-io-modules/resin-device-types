@@ -1,22 +1,22 @@
 exports.instructions =
 	windows: [
-		'WINDOWS_DISK_IMAGER'
-		'EJECT'
+		'WINDOWS_DISK_IMAGER_SD'
+		'EJECT_SD'
 		'CONNECT_AND_BOOT'
 	]
 
 	osx: [
-		'OSX_PLUG'
-		'OSX_UNMOUNT'
-		'DD_BURN_IMAGE'
-		'EJECT'
+		'OSX_PLUG_SD'
+		'OSX_UNMOUNT_SD'
+		'DD_BURN_IMAGE_SD'
+		'EJECT_SD'
 		'CONNECT_AND_BOOT'
 	]
 
 	linux: [
-		'LINUX_DF'
-		'DD_BURN_IMAGE'
-		'EJECT'
+		'LINUX_DF_SD'
+		'DD_BURN_IMAGE_SD'
+		'EJECT_SD'
 		'CONNECT_AND_BOOT'
 	]
 

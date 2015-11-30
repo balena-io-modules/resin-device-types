@@ -15,9 +15,9 @@ NUC_WINDOWS_DISK_IMAGER = '''
 	Wait until it's finished writing.
 '''
 
-NUC_SUBSTITUTE_DISK: 'where N is your USB key number'
+NUC_SUBSTITUTE_DISK= 'where N is your USB key number'
 
-NUC_DD_BURN_IMAGE: '''
+NUC_DD_BURN_IMAGE = '''
 	Run <code>sudo dd bs=1m if=~/Downloads/&lt;OS-image-download&gt;.img of=/dev/rdiskN</code>
 	<%= SUBSTITUTE_DOWNLOAD %>
 	and replacing the <code>of=/dev/rdiskN</code> with the appropriate device name.
@@ -27,13 +27,12 @@ NUC_DD_BURN_IMAGE: '''
 	<a href="<%= GETTING_STARTED_LINK %>">here</a>.
 '''
 
-
 NUC_EJECT = 'Safely eject the freshly burnt USB key and insert into the <%= TYPE_NAME %>.'
 
 NUC_OSX_PLUG = 'Plug your USB key into your computer and in a terminal run <code>diskutil list</code>.
 You should see your USB key as <code>/dev/diskN</code>, (N=1,2,3,4…)'
 
-NUC_OSX_UNMOUNT = 'Unmount your USB key with <code>diskutil umountDisk /dev/diskN</code> <%= NUC_SUBSTITUTE_DISK %>.'
+NUC_OSX_UNMOUNT = 'Unmount your USB key with <code>diskutil umountDisk /dev/diskN</code> <%= SUBSTITUTE_DISK %>.'
 
 NUC_LINUX_DF = '''
 	Run <code>df -h</code> to see what devices are currently mounted.
@@ -73,23 +72,23 @@ module.exports =
 
 	instructions:
 		windows: [
-			NUC_WINDOWS_DISK_IMAGER
-			NUC_EJECT
+			'WINDOWS_DISK_IMAGER_USB'
+			'EJECT_USB'
 			NUC_FLASH
 			'FLASHER_WARNING'
 		]
 		osx: [
-			NUC_OSX_PLUG
-			NUC_OSX_UNMOUNT
-			NUC_DD_BURN_IMAGE
-			NUC_EJECT
+			'OSX_PLUG_USB'
+			'OSX_UNMOUNT_USB'
+			'DD_BURN_IMAGE_USB'
+			'EJECT_USB'
 			NUC_FLASH
 			'FLASHER_WARNING'
 		]
 		linux: [
-			NUC_LINUX_DF
-			NUC_DD_BURN_IMAGE
-			NUC_EJECT
+			'LINUX_DF_USB'
+			'DD_BURN_IMAGE_USB'
+			'EJECT_USB'
 			NUC_FLASH
 			'FLASHER_WARNING'
 		]
