@@ -1,3 +1,4 @@
+* Add the post provisioning instructions to regular instructions too [Jon]
 * Changes for USB and SD based boards [Jon]
 * Added image flasher warning [Akis]
 

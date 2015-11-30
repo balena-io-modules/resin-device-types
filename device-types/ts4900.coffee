@@ -17,32 +17,43 @@ module.exports =
 			'BOARD_SHUTDOWN'
 			'REMOVE_INSTALL_MEDIA'
 			TS_EMMC_BOOT_SELECT
-			TS_REPOWER	
+			TS_REPOWER
 		]
 
 	instructions:
 		windows: [
 			'WINDOWS_DISK_IMAGER_SD'
 			'EJECT_SD'
-			TS_SD_BOOT_SELECT
 			'FLASHER_WARNING'
+			TS_SD_BOOT_SELECT
+			'BOARD_SHUTDOWN'
+			'REMOVE_INSTALL_MEDIA'
+			TS_EMMC_BOOT_SELECT
+			TS_REPOWER
 		]
 		osx: [
 			'OSX_PLUG_SD'
 			'OSX_UNMOUNT_SD'
 			'DD_BURN_IMAGE_SD'
 			'EJECT_SD'
-			TS_SD_BOOT_SELECT
 			'FLASHER_WARNING'
+			TS_SD_BOOT_SELECT
+			'BOARD_SHUTDOWN'
+			'REMOVE_INSTALL_MEDIA'
+			TS_EMMC_BOOT_SELECT
+			TS_REPOWER
 		]
 		linux: [
 			'LINUX_DF_SD'
 			'DD_BURN_IMAGE_SD'
 			'EJECT_SD'
-			TS_SD_BOOT_SELECT
 			'FLASHER_WARNING'
+			TS_SD_BOOT_SELECT
+			'BOARD_SHUTDOWN'
+			'REMOVE_INSTALL_MEDIA'
+			TS_EMMC_BOOT_SELECT
+			TS_REPOWER
 		]
-
 
 	gettingStartedLink:
 		windows: 'http://docs.resin.io/#/pages/installing/gettingStarted-TS-4900.md#windows'
