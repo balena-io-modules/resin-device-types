@@ -3,36 +3,53 @@ common = require '../common/common-img'
 
 SERIAL_CABLE = 'Connect the carrier board to a host computer using a serial cable. (This step may differ based on what carrier board you have)'
 UBOOT = 'Power the module. Press SPACE when prompted by U-Boot to stop execution and run the following command `run sdboot`'
+REPOWER = 'Remove and re-connect power to the board.'
 
 module.exports =
 	name: 'Apalis iMX6q'
 	arch: 'armv7hf'
 	state: 'experimental'
 
+	stateInstructions:
+		postProvisioning: [
+			'BOARD_SHUTDOWN'
+			'REMOVE_INSTALL_MEDIA'
+			REPOWER
+		]
+
 	instructions:
 		windows: [
 			'WINDOWS_DISK_IMAGER_SD'
 			'EJECT_SD'
+			'FLASHER_WARNING'
 			SERIAL_CABLE
 			UBOOT
-			'FLASHER_WARNING'
+			'BOARD_SHUTDOWN'
+			'REMOVE_INSTALL_MEDIA'
+			REPOWER
 		]
 		osx: [
 			'OSX_PLUG_SD'
 			'OSX_UNMOUNT_SD'
 			'DD_BURN_IMAGE_SD'
 			'EJECT_SD'
+			'FLASHER_WARNING'
 			SERIAL_CABLE
 			UBOOT
-			'FLASHER_WARNING'
+			'BOARD_SHUTDOWN'
+			'REMOVE_INSTALL_MEDIA'
+			REPOWER
 		]
 		linux: [
 			'LINUX_DF_SD'
 			'DD_BURN_IMAGE_SD'
 			'EJECT_SD'
+			'FLASHER_WARNING'
 			SERIAL_CABLE
 			UBOOT
-			'FLASHER_WARNING'
+			'BOARD_SHUTDOWN'
+			'REMOVE_INSTALL_MEDIA'
+			REPOWER
 		]
 
 	gettingStartedLink:
