@@ -5,8 +5,6 @@ TS_EMMC_BOOT_SELECT = 'Disable the SD boot jumper present on your specifc base b
 
 TS_SD_BOOT_SELECT = 'Enable the SD boot jumper present on your specifc base board.'
 
-TS_REPOWER = 'Remove and re-connect power to the board.'
-
 module.exports =
 	name: 'Technologic TS-4900'
 	arch: 'armv7hf'
@@ -17,7 +15,7 @@ module.exports =
 			'BOARD_SHUTDOWN'
 			'REMOVE_INSTALL_MEDIA'
 			TS_EMMC_BOOT_SELECT
-			TS_REPOWER
+			'BOARD_REPOWER'
 		]
 
 	instructions:
@@ -29,7 +27,7 @@ module.exports =
 			'BOARD_SHUTDOWN'
 			'REMOVE_INSTALL_MEDIA'
 			TS_EMMC_BOOT_SELECT
-			TS_REPOWER
+			'BOARD_REPOWER'
 		]
 		osx: [
 			'OSX_PLUG_SD'
@@ -41,7 +39,7 @@ module.exports =
 			'BOARD_SHUTDOWN'
 			'REMOVE_INSTALL_MEDIA'
 			TS_EMMC_BOOT_SELECT
-			TS_REPOWER
+			'BOARD_REPOWER'
 		]
 		linux: [
 			'LINUX_DF_SD'
@@ -52,7 +50,7 @@ module.exports =
 			'BOARD_SHUTDOWN'
 			'REMOVE_INSTALL_MEDIA'
 			TS_EMMC_BOOT_SELECT
-			TS_REPOWER
+			'BOARD_REPOWER'
 		]
 
 	gettingStartedLink:

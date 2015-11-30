@@ -3,7 +3,6 @@ common = require '../common/common-img'
 
 SERIAL_CABLE = 'Connect the carrier board to a host computer using a serial cable. (This step may differ based on what carrier board you have)'
 UBOOT = 'Power the module. Press SPACE when prompted by U-Boot to stop execution and run the following command `run sdboot`'
-REPOWER = 'Remove and re-connect power to the board.'
 
 module.exports =
 	name: 'Colibri iMX6dl'
@@ -14,7 +13,7 @@ module.exports =
 		postProvisioning: [
 			'BOARD_SHUTDOWN'
 			'REMOVE_INSTALL_MEDIA'
-			REPOWER
+			'BOARD_REPOWER'
 		]
 
 	instructions:
@@ -26,7 +25,7 @@ module.exports =
 			UBOOT
 			'BOARD_SHUTDOWN'
 			'REMOVE_INSTALL_MEDIA'
-			REPOWER
+			'BOARD_REPOWER'
 		]
 		osx: [
 			'OSX_PLUG_SD'
@@ -38,7 +37,7 @@ module.exports =
 			UBOOT
 			'BOARD_SHUTDOWN'
 			'REMOVE_INSTALL_MEDIA'
-			REPOWER
+			'BOARD_REPOWER'
 		]
 		linux: [
 			'LINUX_DF_SD'
@@ -49,7 +48,7 @@ module.exports =
 			UBOOT
 			'BOARD_SHUTDOWN'
 			'REMOVE_INSTALL_MEDIA'
-			REPOWER
+			'BOARD_REPOWER'
 		]
 
 	gettingStartedLink:

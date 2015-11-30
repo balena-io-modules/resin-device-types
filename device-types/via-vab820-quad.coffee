@@ -4,7 +4,6 @@ common = require '../common/common-img'
 BOARD_SHUTDOWN_VIA = 'The device is performing a shutdown. Please wait until the device is offline in the dashboard and disconnect the power cable.'
 SET_JUMPER_SD = 'Set J11 (just next to the micro SD card slot) to position 2-3 (the position furthest away from the edge of the board) and then power on the board.'
 SET_JUMPER_EMMC = 'Set J11 (just next to the micro SD card slot) to position 1-2 (the position closest to the edge of the board).'
-VIA_REPOWER = 'Re-connect power to the board.'
 
 module.exports =
 	aliases: [ 'vab820-quad' ]
@@ -17,7 +16,7 @@ module.exports =
 			BOARD_SHUTDOWN_VIA
 			'REMOVE_INSTALL_MEDIA'
 			SET_JUMPER_EMMC
-			VIA_REPOWER
+			'BOARD_REPOWER'
 		]
 
 	instructions:
@@ -29,7 +28,7 @@ module.exports =
 			BOARD_SHUTDOWN_VIA
 			'REMOVE_INSTALL_MEDIA'
 			SET_JUMPER_EMMC
-			VIA_REPOWER
+			'BOARD_REPOWER'
 		]
 		osx: [
 			'OSX_PLUG_SD'
@@ -41,7 +40,7 @@ module.exports =
 			BOARD_SHUTDOWN_VIA
 			'REMOVE_INSTALL_MEDIA'
 			SET_JUMPER_EMMC
-			VIA_REPOWER
+			'BOARD_REPOWER'
 		]
 		linux: [
 			'LINUX_DF_SD'
@@ -52,7 +51,7 @@ module.exports =
 			BOARD_SHUTDOWN_VIA
 			'REMOVE_INSTALL_MEDIA'
 			SET_JUMPER_EMMC
-			VIA_REPOWER
+			'BOARD_REPOWER'
 		]
 
 	gettingStartedLink:
