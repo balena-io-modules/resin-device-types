@@ -1,3 +1,5 @@
+## 12/01 - v. 9.3.0
+
 * Update RPi1 title [Eugene]
 * Pull up common command instruction BOARD_REPOWER [Theodor]
 * Add the post provisioning instructions for apalis and colibri boards[Theodor]
