@@ -3,7 +3,7 @@ common = require '../common/common-img'
 
 module.exports =
 	aliases: [ 'raspberrypi' ]
-	name: 'Raspberry Pi'
+	name: 'Raspberry Pi (v1 and Zero)'
 	arch: 'rpi'
 	state: 'released'
 
