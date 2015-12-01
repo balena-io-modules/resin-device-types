@@ -4,8 +4,6 @@ common = require '../common/common-img'
 BBB_FLASH = 'Power up the <%= TYPE_NAME %> while holding down the small button near the SD slot.
 You need to keep it pressed until the blue LEDs start flashing wildly.'
 
-BBB_REPOWER = 'Remove and re-connect power to the board.'
-
 module.exports =
 	aliases: [ 'beaglebone' ]
 	name: 'BeagleBone Black'
@@ -16,7 +14,7 @@ module.exports =
 		postProvisioning: [
 			'BOARD_SHUTDOWN'
 			'REMOVE_INSTALL_MEDIA'
-			BBB_REPOWER
+			'BOARD_REPOWER'
 		]
 
 	instructions:
@@ -27,7 +25,7 @@ module.exports =
 			BBB_FLASH
 			'BOARD_SHUTDOWN'
 			'REMOVE_INSTALL_MEDIA'
-			BBB_REPOWER
+			'BOARD_REPOWER'
 		]
 		osx: [
 			'OSX_PLUG_SD'
@@ -38,7 +36,7 @@ module.exports =
 			BBB_FLASH
 			'BOARD_SHUTDOWN'
 			'REMOVE_INSTALL_MEDIA'
-			BBB_REPOWER
+			'BOARD_REPOWER'
 		]
 		linux: [
 			'LINUX_DF_SD'
@@ -48,7 +46,7 @@ module.exports =
 			BBB_FLASH
 			'BOARD_SHUTDOWN'
 			'REMOVE_INSTALL_MEDIA'
-			BBB_REPOWER
+			'BOARD_REPOWER'
 		]
 
 	gettingStartedLink:

@@ -9,30 +9,46 @@ module.exports =
 	arch: 'armv7hf'
 	state: 'experimental'
 
+	stateInstructions:
+		postProvisioning: [
+			'BOARD_SHUTDOWN'
+			'REMOVE_INSTALL_MEDIA'
+			'BOARD_REPOWER'
+		]
+
 	instructions:
 		windows: [
 			'WINDOWS_DISK_IMAGER_SD'
 			'EJECT_SD'
+			'FLASHER_WARNING'
 			SERIAL_CABLE
 			UBOOT
-			'FLASHER_WARNING'
+			'BOARD_SHUTDOWN'
+			'REMOVE_INSTALL_MEDIA'
+			'BOARD_REPOWER'
 		]
 		osx: [
 			'OSX_PLUG_SD'
 			'OSX_UNMOUNT_SD'
 			'DD_BURN_IMAGE_SD'
 			'EJECT_SD'
+			'FLASHER_WARNING'
 			SERIAL_CABLE
 			UBOOT
-			'FLASHER_WARNING'
+			'BOARD_SHUTDOWN'
+			'REMOVE_INSTALL_MEDIA'
+			'BOARD_REPOWER'
 		]
 		linux: [
 			'LINUX_DF_SD'
 			'DD_BURN_IMAGE_SD'
 			'EJECT_SD'
+			'FLASHER_WARNING'
 			SERIAL_CABLE
 			UBOOT
-			'FLASHER_WARNING'
+			'BOARD_SHUTDOWN'
+			'REMOVE_INSTALL_MEDIA'
+			'BOARD_REPOWER'
 		]
 
 	gettingStartedLink:
