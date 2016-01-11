@@ -8,8 +8,7 @@
     "type": "git",
     "url": "git@bitbucket.org:rulemotion/resin-device-types.git"
   },
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "coffee-script": "~1.10.0",
     "lodash": "^3.10.1"
   },
