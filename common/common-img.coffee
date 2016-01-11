@@ -1,23 +1,25 @@
+commonInstructions = require './instructions'
+
 exports.instructions =
 	windows: [
-		'WINDOWS_DISK_IMAGER'
-		'EJECT'
-		'CONNECT_AND_BOOT'
+		commonInstructions.WINDOWS_DISK_IMAGER_SD
+		commonInstructions.EJECT_SD
+		commonInstructions.CONNECT_AND_BOOT
 	]
 
 	osx: [
-		'OSX_PLUG'
-		'OSX_UNMOUNT'
-		'DD_BURN_IMAGE'
-		'EJECT'
-		'CONNECT_AND_BOOT'
+		commonInstructions.OSX_PLUG_SD
+		commonInstructions.OSX_UNMOUNT_SD
+		commonInstructions.DD_BURN_IMAGE_SD
+		commonInstructions.EJECT_SD
+		commonInstructions.CONNECT_AND_BOOT
 	]
 
 	linux: [
-		'LINUX_DF'
-		'DD_BURN_IMAGE'
-		'EJECT'
-		'CONNECT_AND_BOOT'
+		commonInstructions.LINUX_DF_SD
+		commonInstructions.DD_BURN_IMAGE_SD
+		commonInstructions.EJECT_SD
+		commonInstructions.CONNECT_AND_BOOT
 	]
 
 exports.initialization =
