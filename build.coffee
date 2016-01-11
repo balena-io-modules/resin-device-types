@@ -7,20 +7,13 @@ sharedOptions = require('./common').sharedOptions
 
 compileTemplate = _.memoize(_.template)
 
-deviceTypes = fs.readdirSync(path.join(__dirname, 'device-types'))
-.map (filename) ->
-	slug = path.basename(filename, path.extname(filename))
-	typeDefinition = require("./device-types/#{slug}")
-	return _.extend({ slug }, typeDefinition)
-.filter (typeDefinition) ->
+module.exports = (typeDefinition, slug) ->
+	typeDefinition = _.extend({ slug }, typeDefinition)
+
 	requiredFields = [ 'state', 'yocto.deployArtifact', 'yocto.machine' ]
 	for field in requiredFields
 		if not _.has(typeDefinition, field)
-			console.warn("Ignored #{typeDefinition.slug}: `#{field}` is not set")
-			return false
-	return true
-.map (typeDefinition) ->
-	# process instructions
+			throw new Error("Ignored #{typeDefinition.slug}: `#{field}` is not set")
 
 	processInstructionsArray = (instructions, os) ->
 		gettingStartedLink = os and typeDefinition.gettingStartedLink?[os] or typeDefinition.gettingStartedLink
@@ -30,7 +23,6 @@ deviceTypes = fs.readdirSync(path.join(__dirname, 'device-types'))
 			TYPE_SLUG: typeDefinition.slug
 
 		return _.map instructions, (line) ->
-			line = sharedInstructionsSteps[line] ? line
 			template = compileTemplate(line)
 			return template(context)
 
@@ -61,5 +53,3 @@ deviceTypes = fs.readdirSync(path.join(__dirname, 'device-types'))
 	typeDefinition.options = typeDefinition.options.concat(sharedOptions)
 
 	return typeDefinition
-
-fs.writeFileSync('device-types.json', JSON.stringify(deviceTypes, null, '\t'))
