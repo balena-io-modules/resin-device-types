@@ -1,3 +1,5 @@
+## 01/19 - v. 9.5.0
+
 * Add preview support for Technologic ts7700 [Theodor]
 
 ## 12/01 - v. 9.4.0
