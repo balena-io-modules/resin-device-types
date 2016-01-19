@@ -1,3 +1,5 @@
+* Add preview support for Technologic ts7700 [Theodor]
+
 ## 12/01 - v. 9.4.0
 
 * Update RPi1 title [Eugene]
