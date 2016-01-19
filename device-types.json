@@ -1674,6 +1674,9 @@
 	},
 	{
 		"slug": "ts7700",
+		"aliases": [
+			"ts7700"
+		],
 		"name": "Technologic ts7700 (EXPERIMENTAL)",
 		"arch": "armv5e",
 		"state": "EXPERIMENTAL",
@@ -1704,7 +1707,7 @@
 		},
 		"supportsBlink": false,
 		"yocto": {
-			"machine": "pxa16",
+			"machine": "ts7700",
 			"image": "resin-image",
 			"fstype": "resin-sdcard",
 			"version": "yocto-fido",
