@@ -2,6 +2,7 @@ networkOptions = require '../common/network-options'
 common = require '../common/common-img'
 
 module.exports =
+	aliases: [ 'ts7700' ]
 	name: 'Technologic ts7700'
 	arch: 'armv5e'
 	state: 'experimental'
@@ -15,7 +16,7 @@ module.exports =
 	supportsBlink: false
 
 	yocto:
-		machine: 'pxa16'
+		machine: 'ts7700'
 		image: 'resin-image'
 		fstype: 'resin-sdcard'
 		version: 'yocto-fido'

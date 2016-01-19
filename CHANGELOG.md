@@ -1,3 +1,5 @@
+* Changed yocto machine name and added missing aliases Technologic ts7700 [Theodor]
+
 ## 01/19 - v. 9.5.0
 
 * Add preview support for Technologic ts7700 [Theodor]
