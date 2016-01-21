@@ -20,7 +20,7 @@ module.exports =
 		image: 'resin-image'
 		fstype: 'resin-sdcard'
 		version: 'yocto-fido'
-		deployArtifact: 'resin-image-pxa16.resin-sdcard'
+		deployArtifact: 'resin-image-ts7700.resin-sdcard'
 
 	options: [ networkOptions.group ]
 
