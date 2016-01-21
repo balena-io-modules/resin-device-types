@@ -1,6 +1,6 @@
 {
   "name": "resin-device-types",
-  "version": "9.5.1",
+  "version": "9.5.2",
   "description": "Metadata about supported device types",
   "main": "index.js",
   "scripts": {

@@ -1,3 +1,7 @@
+## 01/19 - v. 9.5.2
+
+* Artifact name for TS-7700 [Theodor]
+
 ## 01/19 - v. 9.5.1
 
 * Changed yocto machine name and added missing aliases Technologic ts7700 [Theodor]
