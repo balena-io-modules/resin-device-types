@@ -1,3 +1,50 @@
+DISK_IMAGER_URL = "http://sourceforge.net/projects/win32diskimager/"
+
+ETCHER_HOME = "http://www.etcher.io/"
+ETCHER_BASE_URL = "https://resin-production-downloads.s3.amazonaws.com/etcher"
+ETCHER_VERSION = "1.0.0-beta.0"
+
+OSX_ETCHER_URL = "#{ETCHER_BASE_URL}/#{ETCHER_VERSION}/Etcher-darwin-x64.dmg"
+LINUX_X86_ETCHER_URL = "#{ETCHER_BASE_URL}/#{ETCHER_VERSION}/Etcher-linux-x86.tar.gz"
+LINUX_X64_ETCHER_URL = "#{ETCHER_BASE_URL}/#{ETCHER_VERSION}/Etcher-linux-x64.tar.gz"
+WINDOWS_X86_ETCHER_URL = "#{ETCHER_BASE_URL}/#{ETCHER_VERSION}/Etcher-win32-x86.exe"
+WINDOWS_X64_ETCHER_URL = "#{ETCHER_BASE_URL}/#{ETCHER_VERSION}/Etcher-win32-x64.exe"
+
+OS_NAMES =
+	windows: 'Windows'
+	osx: 'OS X'
+	linux: 'Linux'
+
+OS_ETCHER_DOWNLOADS =
+	windows: """
+		<a href="#{WINDOWS_X86_ETCHER_URL}">x86</a>,&nbsp;
+		<a href="#{WINDOWS_X64_ETCHER_URL}">x64</a>
+	"""
+	osx: """
+		<a href="#{OSX_ETCHER_URL}">.dmg</a>
+	"""
+	linux: """
+		<a href="#{LINUX_X86_ETCHER_URL}">x86</a>,&nbsp;
+		<a href="#{LINUX_X64_ETCHER_URL}">x64</a>
+	"""
+
+buildEtcherInstructions = (os, medium) ->
+	"""
+		Download and install Etcher for #{OS_NAMES[os]}
+		(#{OS_ETCHER_DOWNLOADS[os]}) (<a href="#{ETCHER_HOME}">see all versions</a>).
+		You can also use another image writer of your choice.
+		<br>
+		Start the writer and select the &lt;OS-image-download&gt;.img (<%= SUBSTITUTE_DOWNLOAD %>) in your download folder.
+		<br>
+		Insert your #{medium} and press [Burn!].
+		<br>
+		<strong>Warning!</strong> This will erase your #{medium}, please make sure any important data is backed up.
+		<br>
+		Wait until it's finished writing.
+		<br>
+		<strong>Info</strong>: you can repeat the above steps for as many devices as you want, using the same OS image file.
+	"""
+
 module.exports =
 	CONNECT: 'Connect your device to the internet.'
 
@@ -5,8 +52,8 @@ module.exports =
 
 	WAIT: 'Your device should appear here in about 10 minutes. Have fun!'
 
-	WINDOWS_DISK_IMAGER_SD: '''
-		Install <a href="http://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a>.
+	WINDOWS_DISK_IMAGER_SD: """
+		Install <a href="#{DISK_IMAGER_URL}">Win32 Disk Imager</a>.
 		<br>
 		Start Win32 Disk Imager and navigate to the Device OS <code>.img</code> in your downloads.
 		Select &lt;OS-image-download&gt;.img (<%= SUBSTITUTE_DOWNLOAD %>)
@@ -20,10 +67,10 @@ module.exports =
 		as this will completely erase the contents of your SD card.
 		<br>
 		Wait until it's finished writing.
-	'''
+	"""
 
-	WINDOWS_DISK_IMAGER_USB: '''
-		Install <a href="http://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a>.
+	WINDOWS_DISK_IMAGER_USB: """
+		Install <a href="#{DISK_IMAGER_URL}">Win32 Disk Imager</a>.
 		<br>
 		Start Win32 Disk Imager and navigate to the Device OS <code>.img</code> in your downloads.
 		Select &lt;OS-image-download&gt;.img (<%= SUBSTITUTE_DOWNLOAD %>)
@@ -37,7 +84,14 @@ module.exports =
 		as this will completely erase the contents of your USB key.
 		<br>
 		Wait until it's finished writing.
-	'''
+	"""
+
+	OSX_ETCHER_SD: buildEtcherInstructions('osx', 'SD card'),
+	OSX_ETCHER_USB: buildEtcherInstructions('osx', 'USB key'),
+	WINDOWS_ETCHER_SD: buildEtcherInstructions('windows', 'SD card'),
+	WINDOWS_ETCHER_USB: buildEtcherInstructions('windows', 'USB key'),
+	LINUX_ETCHER_SD: buildEtcherInstructions('linux', 'SD card'),
+	LINUX_ETCHER_USB: buildEtcherInstructions('linux', 'USB key'),
 
 	LINUX_DF_SD: '''
 		Run <code>df -h</code> to see what devices are currently mounted.
