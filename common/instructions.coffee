@@ -1,40 +1,12 @@
 DISK_IMAGER_URL = "http://sourceforge.net/projects/win32diskimager/"
+ETCHER_URL = "http://www.etcher.io/"
 
-ETCHER_HOME = "http://www.etcher.io/"
-ETCHER_BASE_URL = "https://resin-production-downloads.s3.amazonaws.com/etcher"
-ETCHER_VERSION = "1.0.0-beta.0"
-
-OSX_ETCHER_URL = "#{ETCHER_BASE_URL}/#{ETCHER_VERSION}/Etcher-darwin-x64.dmg"
-LINUX_X86_ETCHER_URL = "#{ETCHER_BASE_URL}/#{ETCHER_VERSION}/Etcher-linux-x86.tar.gz"
-LINUX_X64_ETCHER_URL = "#{ETCHER_BASE_URL}/#{ETCHER_VERSION}/Etcher-linux-x64.tar.gz"
-WINDOWS_X86_ETCHER_URL = "#{ETCHER_BASE_URL}/#{ETCHER_VERSION}/Etcher-win32-x86.exe"
-WINDOWS_X64_ETCHER_URL = "#{ETCHER_BASE_URL}/#{ETCHER_VERSION}/Etcher-win32-x64.exe"
-
-OS_NAMES =
-	windows: 'Windows'
-	osx: 'OS X'
-	linux: 'Linux'
-
-OS_ETCHER_DOWNLOADS =
-	windows: """
-		<a href="#{WINDOWS_X86_ETCHER_URL}">x86</a>,&nbsp;
-		<a href="#{WINDOWS_X64_ETCHER_URL}">x64</a>
+buildEtcherInstructions = (medium) ->
 	"""
-	osx: """
-		<a href="#{OSX_ETCHER_URL}">.dmg</a>
-	"""
-	linux: """
-		<a href="#{LINUX_X86_ETCHER_URL}">x86</a>,&nbsp;
-		<a href="#{LINUX_X64_ETCHER_URL}">x64</a>
-	"""
-
-buildEtcherInstructions = (os, medium) ->
-	"""
-		Download and install Etcher for #{OS_NAMES[os]}
-		(#{OS_ETCHER_DOWNLOADS[os]}) (<a href="#{ETCHER_HOME}">see all versions</a>).
+		Download and install <a href="#{ETCHER_URL}">Etcher</a>.
 		You can also use another image writer of your choice.
 		<br>
-		Start the writer and select the &lt;OS-image-download&gt;.img (<%= SUBSTITUTE_DOWNLOAD %>) in your download folder.
+		Start the writer and select the Device OS <code>.img</code> file in your downloads folder.
 		<br>
 		Insert your #{medium} and press [Burn!].
 		<br>
@@ -86,12 +58,8 @@ module.exports =
 		Wait until it's finished writing.
 	"""
 
-	OSX_ETCHER_SD: buildEtcherInstructions('osx', 'SD card'),
-	OSX_ETCHER_USB: buildEtcherInstructions('osx', 'USB key'),
-	WINDOWS_ETCHER_SD: buildEtcherInstructions('windows', 'SD card'),
-	WINDOWS_ETCHER_USB: buildEtcherInstructions('windows', 'USB key'),
-	LINUX_ETCHER_SD: buildEtcherInstructions('linux', 'SD card'),
-	LINUX_ETCHER_USB: buildEtcherInstructions('linux', 'USB key'),
+	ETCHER_SD: buildEtcherInstructions('SD card'),
+	ETCHER_USB: buildEtcherInstructions('USB key')
 
 	LINUX_DF_SD: '''
 		Run <code>df -h</code> to see what devices are currently mounted.
