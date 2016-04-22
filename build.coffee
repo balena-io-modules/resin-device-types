@@ -7,13 +7,14 @@ sharedOptions = require('./common').sharedOptions
 
 compileTemplate = _.memoize(_.template)
 
-module.exports = (typeDefinition, slug) ->
+module.exports = (typeDefinition, slug, options = {}) ->
 	typeDefinition = _.extend({ slug }, typeDefinition)
 
-	requiredFields = [ 'state', 'yocto.deployArtifact', 'yocto.machine' ]
-	for field in requiredFields
-		if not _.has(typeDefinition, field)
-			throw new Error("Ignored #{typeDefinition.slug}: `#{field}` is not set")
+	if not options.partial
+		requiredFields = [ 'state', 'yocto.deployArtifact', 'yocto.machine' ]
+		for field in requiredFields
+			if not _.has(typeDefinition, field)
+				throw new Error("Ignored #{typeDefinition.slug}: `#{field}` is not set")
 
 	processInstructionsArray = (instructions, os) ->
 		gettingStartedLink = os and typeDefinition.gettingStartedLink?[os] or typeDefinition.gettingStartedLink
@@ -26,11 +27,12 @@ module.exports = (typeDefinition, slug) ->
 			template = compileTemplate(line)
 			return template(context)
 
-	typeDefinition.instructions = if _.isArray(typeDefinition.instructions)
-		processInstructionsArray(typeDefinition.instructions)
-	else
-		# handle os-specific instructions objects
-		_.mapValues(typeDefinition.instructions, processInstructionsArray)
+	if typeDefinition.instructions
+		typeDefinition.instructions = if _.isArray(typeDefinition.instructions)
+			processInstructionsArray(typeDefinition.instructions)
+		else
+			# handle os-specific instructions objects
+			_.mapValues(typeDefinition.instructions, processInstructionsArray)
 
 	if typeDefinition.stateInstructions?
 		for k, v of typeDefinition.stateInstructions
@@ -41,15 +43,15 @@ module.exports = (typeDefinition, slug) ->
 			typeDefinition.stateInstructions[k] = v
 
 	# process state
-
-	typeDefinition.state = typeDefinition.state.toUpperCase()
-
-	if typeDefinition.state isnt 'RELEASED'
-		typeDefinition.name += " (#{typeDefinition.state})"
+	if typeDefinition.state
+		typeDefinition.state = typeDefinition.state.toUpperCase()
+		if typeDefinition.state isnt 'RELEASED'
+			typeDefinition.name += " (#{typeDefinition.state})"
 
 	# process options
-
-	typeDefinition.options ?= []
-	typeDefinition.options = typeDefinition.options.concat(sharedOptions)
+	if not options.partial
+		typeDefinition.options ?= []
+	if typeDefinition.options
+		typeDefinition.options = typeDefinition.options.concat(sharedOptions)
 
 	return typeDefinition
