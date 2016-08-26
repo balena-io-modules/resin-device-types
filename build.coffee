@@ -8,7 +8,7 @@ sharedOptions = require('./common').sharedOptions
 compileTemplate = _.memoize(_.template)
 
 module.exports = (typeDefinition, slug, options = {}) ->
-	typeDefinition = _.extend({ slug }, typeDefinition)
+	typeDefinition = _.assign({ slug }, typeDefinition)
 
 	if not options.partial
 		requiredFields = [ 'state', 'yocto.deployArtifact', 'yocto.machine' ]
@@ -18,7 +18,7 @@ module.exports = (typeDefinition, slug, options = {}) ->
 
 	processInstructionsArray = (instructions, os) ->
 		gettingStartedLink = os and typeDefinition.gettingStartedLink?[os] or typeDefinition.gettingStartedLink
-		context = _.extend {}, sharedInstructionsSteps,
+		context = _.assign {}, sharedInstructionsSteps,
 			GETTING_STARTED_LINK: gettingStartedLink
 			TYPE_NAME: typeDefinition.name
 			TYPE_SLUG: typeDefinition.slug

@@ -1,3 +1,8 @@
+Update lodash to v4
+
+## v. 10.0.0
+???
+
 ## 10/28 - v. 8.6.0
 
 * Add post provisioning instructions for VIA vab280-quad [Jon]
