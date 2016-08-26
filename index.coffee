@@ -2,7 +2,7 @@ _ = require 'lodash'
 
 predicate = (slug) ->
 	return (deviceType) ->
-		deviceType.slug == slug or _.contains(deviceType.aliases, slug)
+		deviceType.slug == slug or _.includes(deviceType.aliases, slug)
 
 exports.findBySlug = findBySlug = (deviceTypes, slug) ->
 	_.find(deviceTypes, predicate(slug))
