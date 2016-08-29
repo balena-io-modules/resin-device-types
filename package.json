@@ -1,5 +1,5 @@
 {
-  "name": "resin-device-types",
+  "name": "@resin.io/device-types",
   "author": "Resin.io <hello@resin.io>",
   "version": "10.1.0",
   "license": "Apache-2.0",
