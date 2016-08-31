@@ -1,14 +1,14 @@
 {
   "name": "@resin.io/device-types",
   "author": "Resin.io <hello@resin.io>",
-  "version": "10.1.0",
+  "version": "10.2.0",
   "license": "Apache-2.0",
   "description": "Shared pieces for resin.io device type manifests",
   "main": "index.js",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:rulemotion/resin-device-types.git"
+    "url": "git@github.com:resin-io-modules/resin-device-types.git"
   },
   "dependencies": {
     "coffee-script": "~1.10.0",
