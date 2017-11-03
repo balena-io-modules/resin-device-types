@@ -3,18 +3,7 @@ ETCHER_URL = "http://www.etcher.io/"
 
 buildEtcherInstructions = (medium) ->
 	"""
-		Download and install <a href="#{ETCHER_URL}">Etcher</a>.
-		You can also use another image writer of your choice.
-		<br>
-		Start the writer and select the Device OS <code>.img</code> file in your downloads folder.
-		<br>
-		Insert your #{medium} and press [Burn!].
-		<br>
-		<strong>Warning!</strong> This will erase your #{medium}, please make sure any important data is backed up.
-		<br>
-		Wait until it's finished writing.
-		<br>
-		<strong>Info</strong>: you can repeat the above steps for as many devices as you want, using the same OS image file.
+		Write the OS file you downloaded to an SD card. We recommend using <a href="#{ETCHER_URL}">Etcher</a>.
 	"""
 
 module.exports =
@@ -35,7 +24,7 @@ module.exports =
 		<br>
 		Make 100% sure it is the correct drive and click “Write”.
 		<br>
-		<strong>Warning!</strong>: Please make sure you have backed-up your SD card first,
+		<strong role="alert">Warning!</strong>: Please make sure you have backed-up your SD card first,
 		as this will completely erase the contents of your SD card.
 		<br>
 		Wait until it's finished writing.
@@ -52,7 +41,7 @@ module.exports =
 		<br>
 		Make 100% sure it is the correct drive and click “Write”.
 		<br>
-		<strong>Warning!</strong>: Please make sure you have backed-up your USB key first,
+		<strong role="alert">Warning!</strong>: Please make sure you have backed-up your USB key first,
 		as this will completely erase the contents of your USB key.
 		<br>
 		Wait until it's finished writing.
@@ -87,8 +76,8 @@ module.exports =
 		Unmount your USB key with <code>umount /dev/sddN</code> where N is your USB key number.
 	'''
 
-	EJECT_SD: 'Safely eject the freshly burnt SD card and insert into the <%= TYPE_NAME %>.'
-	EJECT_USB: 'Safely eject the freshly burnt USB key and insert into the <%= TYPE_NAME %>.'
+	EJECT_SD: 'Insert the freshly burnt SD card into the <%= TYPE_NAME %>.'
+	EJECT_USB: 'Insert the freshly burnt USB key into the <%= TYPE_NAME %>.'
 
 	SUBSTITUTE_DOWNLOAD: 'but replacing <code>&lt;OS-image-download&gt;</code> with your download name'
 
@@ -97,7 +86,7 @@ module.exports =
 		<%= SUBSTITUTE_DOWNLOAD %>
 		and replacing the <code>of=/dev/rdiskN</code> with the appropriate device name.
 		<br>
-		<strong>Warning!</strong>&nbsp;Please make sure you have backed-up your SD card first,
+		<strong role="alert">Warning!</strong>&nbsp;Please make sure you have backed-up your SD card first,
 		as this will completely erase its contents. You can see a full description of this process
 		<a href="<%= GETTING_STARTED_LINK %>">here</a>.
 	'''
@@ -107,7 +96,7 @@ module.exports =
 		<%= SUBSTITUTE_DOWNLOAD %>
 		and replacing the <code>of=/dev/rdiskN</code> with the appropriate device name.
 		<br>
-		<strong>Warning!</strong>&nbsp;Please make sure you have backed-up your USB key first,
+		<strong role="alert">Warning!</strong>&nbsp;Please make sure you have backed-up your USB key first,
 		as this will completely erase its contents. You can see a full description of this process
 		<a href="<%= GETTING_STARTED_LINK %>">here</a>.
 	'''
@@ -126,6 +115,6 @@ module.exports =
 
 	BOARD_REPOWER: 'Remove and re-connect power to the board.'
 
-	REMOVE_INSTALL_MEDIA: 'Remove the resin.io installation media.'
+	REMOVE_INSTALL_MEDIA: 'Remove the resinOS installation media.'
 
-	FLASHER_WARNING: '<strong>Warning!</strong> This will also completely erase internal storage media, so please make a backup first.'
+	FLASHER_WARNING: '<strong role="alert">Warning!</strong> This will also completely erase internal storage media, so please make a backup first.'
