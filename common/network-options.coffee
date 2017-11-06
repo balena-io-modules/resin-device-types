@@ -2,7 +2,7 @@ exports.network = network =
 	message: 'Network Connection'
 	name: 'network'
 	type: 'list'
-	choices: [ 'ethernet', 'wifi' ]
+	choices: [ 'ethernet', 'wifi + ethernet' ]
 
 exports.wifiSsid = wifiSsid =
 	message: 'Wifi SSID'
