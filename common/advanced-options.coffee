@@ -8,6 +8,6 @@ exports.group =
 		message: 'Check for updates every X minutes'
 		name: 'appUpdatePollInterval'
 		type: 'number'
-		min: 0
-		default: 1
+		min: 10
+		default: 10
 	]
