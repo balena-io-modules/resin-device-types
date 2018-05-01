@@ -18,7 +18,7 @@
     "lodash": "^4.15.0"
   },
   "devDependencies": {
-    "coffee-script": "~1.10.0",
+    "coffee-script": "~1.12.7",
     "require-npm4-to-publish": "^1.0.0",
     "resin-lint": "^1.5.0"
   }
