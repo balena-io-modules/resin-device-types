@@ -1,17 +1,25 @@
 {
   "name": "@resin.io/device-types",
   "author": "Resin.io <hello@resin.io>",
-  "version": "10.4.0",
+  "version": "10.4.1",
   "license": "Apache-2.0",
   "description": "Shared pieces for resin.io device type manifests",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "lint": "resin-lint .",
+    "prepublish": "require-npm4-to-publish",
+    "prepublishOnly": "npm run lint && coffee -c index.coffee build.coffee common"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:resin-io-modules/resin-device-types.git"
   },
   "dependencies": {
-    "coffee-script": "~1.10.0",
     "lodash": "^4.15.0"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.12.7",
+    "require-npm4-to-publish": "^1.0.0",
+    "resin-lint": "^1.5.0"
   }
 }

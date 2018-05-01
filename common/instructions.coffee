@@ -1,5 +1,5 @@
-DISK_IMAGER_URL = "http://sourceforge.net/projects/win32diskimager/"
-ETCHER_URL = "http://www.etcher.io/"
+DISK_IMAGER_URL = 'http://sourceforge.net/projects/win32diskimager/'
+ETCHER_URL = 'http://www.etcher.io/'
 
 buildEtcherInstructions = (medium) ->
 	"""
