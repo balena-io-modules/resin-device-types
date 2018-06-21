@@ -3,7 +3,7 @@ ETCHER_URL = 'http://www.etcher.io/'
 
 buildEtcherInstructions = (medium) ->
 	"""
-		Write the OS file you downloaded to an SD card. We recommend using <a href="#{ETCHER_URL}">Etcher</a>.
+		Write the OS file you downloaded to your #{medium}. We recommend using <a href="#{ETCHER_URL}">Etcher</a>.
 	"""
 
 module.exports =
