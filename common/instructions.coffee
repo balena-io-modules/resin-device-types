@@ -115,6 +115,6 @@ module.exports =
 
 	BOARD_REPOWER: 'Remove and re-connect power to the board.'
 
-	REMOVE_INSTALL_MEDIA: 'Remove the resinOS installation media.'
+	REMOVE_INSTALL_MEDIA: 'Remove the balenaOS installation media.'
 
 	FLASHER_WARNING: '<strong role="alert">Warning!</strong> This will also completely erase internal storage media, so please make a backup first.'
