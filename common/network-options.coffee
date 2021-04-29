@@ -18,14 +18,14 @@ exports.wifiKey = wifiKey =
 	when:
 		network: 'wifi'
 
-exports.wifiCountry = wifiCountry =
+exports.country = country =
 	message: 'Country Code'
-	name: 'wifiCountry'
+	name: 'country'
 	type: 'text'
 	when:
 		network: 'wifi'
 
-exports.options = options = [ network, wifiSsid, wifiKey, wifiCountry ]
+exports.options = options = [ network, wifiSsid, wifiKey, country ]
 
 exports.group =
 	isGroup: true
