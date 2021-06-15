@@ -1,5 +1,5 @@
 DISK_IMAGER_URL = 'http://sourceforge.net/projects/win32diskimager/'
-ETCHER_URL = 'http://www.etcher.io/'
+ETCHER_URL = 'https://balena.io/etcher'
 
 buildEtcherInstructions = (medium) ->
 	"""
