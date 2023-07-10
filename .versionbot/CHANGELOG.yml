@@ -1,0 +1,131 @@
+- commits:
+    - subject: "package.json: Add empty test"
+      hash: a250f4890517855c17c780424db24773243cfb2a
+      body: |
+        This repository is in maintenance mode with the intention of deprecating
+        the use of `device-type.json`.
+
+        As no tests are specified in this repository just add a success
+        placeholder for flowzone to allow merges.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+    - subject: Add flowzone workflow
+      hash: e0cfec97713a3932b8100762d80275dacaf1f993
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+    - subject: Make `state` field not mandatory
+      hash: 35a8d81d1a40b22b9d2a289436305aff35fff9a3
+      body: |
+        The `state` field is being removed from `device-type.json`.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+  version: 10.5.1
+  title: ""
+  date: 2023-07-10T12:31:25.920Z
+- version: 10.5.0
+  date: 2019-03-05T16:28:11Z
+  commits:
+    - hash: 2a49c303942664f7f1dd80420d348465c1d8eb62
+      author: Matthew McGinn
+      footers:
+        change-type: minor
+        signed-off-by: Matthew McGinn <mamcgi@gmail.com>
+      subject: Rename resinOS to balenaOS
+      body: ""
+- version: 10.4.2
+  date: 2018-06-21T15:40:12Z
+  commits:
+    - hash: 21a7684a30fe4a94bebc813e5ce5a718b6262f42
+      author: zwalchuk
+      footers:
+        change-type: patch
+      subject: Update Etcher instructions to properly use medium
+      body: "Previously, instructions were only for SD cards, and didn't take into
+        account USB drives.\r
+
+        \r"
+- version: 10.4.1
+  date: 2018-05-01T20:53:28Z
+  commits:
+    - hash: 6fc8cf6d1e30fb54c819f2a8ee552830a7808aee
+      author: Pagan Gazzard
+      footers:
+        change-type: patch
+      subject: Publish built files on publish rather than compiling on demand.
+      body: ""
+    - hash: 5827a15976610cc9c17aabeb05289b5ef88584ca
+      author: Pagan Gazzard
+      footers:
+        change-type: patch
+      subject: Add resin-lint.
+      body: ""
+    - hash: 3b82f7b937a045939b70d74356f6157a883e8834
+      author: Pagan Gazzard
+      footers:
+        change-type: patch
+      subject: Add circleci tests and auto-publishing
+      body: ""
+    - hash: dc1d426e22342bc4642016667b412ee99e243a74
+      author: Pagan Gazzard
+      footers:
+        change-type: patch
+      subject: Update coffee-script to ~1.12.7
+      body: ""
+- version: 10.4.0
+  date: 2018-03-26T08:43:47Z
+  commits:
+    - hash: 7937954d13904c1e04a1f2578dfb8c5a8ab4c152
+      author: Lucian Buzzo
+      footers:
+        change-type: minor
+      subject: Increase minimum supervisor poll time to 10 minutes
+      body: ""
+- version: 10.3.0
+  date: 2017-11-03T16:01:19Z
+  commits:
+    - hash: 457bcac52e740eb7b21202b0b7d828ac82f0c584
+      author: Lucian Buzzo
+      footers:
+        change-type: minor
+      subject: Improve common instructions
+      body: "Fixes #14"
+- version: 10.2.0
+  date: 2017-11-03T10:13:12Z
+  commits:
+    - hash: a853c30aace0f3d7d4417c5e06488cf48bee44e3
+      author: Lucian Buzzo
+      subject: Versionbot prep
+      body: ""
+    - hash: dfc7d3950744f09965339e09fe4b34b727082985
+      author: Eugene Mirotin
+      subject: update lodash to v4
+      body: ""
+    - hash: 8a499bf4ffc0c6dcab391bf1921c50674f24c9e7
+      author: Eugene Mirotin
+      subject: partial manifests support
+      body: ""
+    - hash: 2cb36808185ba8b51f4f84dc765085533efdaf2a
+      author: Eugene Mirotin
+      subject: simplify etcher instructions
+      body: ""
+    - hash: 297a7d77d153078dff62fee8eb012464de4dd6b5
+      author: Eugene Mirotin
+      subject: etcher common instructions
+      body: ""
+    - hash: 6db04735b66e011c96035431681670f496697868
+      author: gaudi
+      subject: update common image
+      body: ""
