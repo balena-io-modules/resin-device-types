@@ -6,6 +6,7 @@
   "description": "Shared pieces for resin.io device type manifests",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"No test specified\" && exit 0",
     "lint": "resin-lint .",
     "prepublish": "require-npm4-to-publish",
     "prepublishOnly": "npm run lint && coffee -c index.coffee build.coffee common"

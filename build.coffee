@@ -9,7 +9,7 @@ module.exports = (typeDefinition, slug, options = {}) ->
 	typeDefinition = _.assign({ slug }, typeDefinition)
 
 	if not options.partial
-		requiredFields = [ 'state', 'yocto.deployArtifact', 'yocto.machine' ]
+		requiredFields = [ 'yocto.deployArtifact', 'yocto.machine' ]
 		for field in requiredFields
 			if not _.has(typeDefinition, field)
 				throw new Error("Ignored #{typeDefinition.slug}: `#{field}` is not set")
