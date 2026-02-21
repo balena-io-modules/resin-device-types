@@ -1,4 +1,15 @@
 - commits:
+    - subject: Delete .circleci/config.yml
+      hash: b354bed98ce98ce1a87b3698dbd461ba7a8c162e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Kyle Harding
+  version: 10.5.3
+  title: ""
+  date: 2026-02-21T09:56:26.185Z
+- commits:
     - subject: "Add id-token: write permission for NPM OIDC publishing"
       hash: e4a43e7f508eaae3b3ddc3f93f359920f4d71125
       body: ""

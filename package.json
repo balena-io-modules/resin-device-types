@@ -1,7 +1,7 @@
 {
   "name": "@resin.io/device-types",
   "author": "Resin.io <hello@resin.io>",
-  "version": "10.5.2",
+  "version": "10.5.3",
   "license": "Apache-2.0",
   "description": "Shared pieces for resin.io device type manifests",
   "main": "index.js",
@@ -24,6 +24,6 @@
     "resin-lint": "^1.5.0"
   },
   "versionist": {
-    "publishedAt": "2026-02-19T18:07:55.919Z"
+    "publishedAt": "2026-02-21T09:56:26.226Z"
   }
 }
